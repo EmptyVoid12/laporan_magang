@@ -11,7 +11,7 @@ class ProjectInitialize extends Command
      *
      * @var string
      */
-    protected $signature = 'project:init';
+    protected $signature = 'project:init {--fresh : Reset database sebelum inisialisasi proyek}';
 
     /**
      * The console command description.
@@ -25,7 +25,15 @@ class ProjectInitialize extends Command
      */
     public function handle()
     {
-        $this->call('migrate:fresh', [
+        $shouldResetDatabase = (bool) $this->option('fresh');
+
+        $this->components->info(
+            $shouldResetDatabase
+                ? 'Mode fresh aktif: database akan di-reset sebelum inisialisasi.'
+                : 'Menjalankan inisialisasi aman tanpa menghapus data yang sudah ada.'
+        );
+
+        $this->call($shouldResetDatabase ? 'migrate:fresh' : 'migrate', [
             '--force' => true,
         ]);
         $this->call('shield:generate', [

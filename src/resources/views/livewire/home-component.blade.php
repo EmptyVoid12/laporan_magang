@@ -15,7 +15,7 @@
                     </div>
                     <div>
                         <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-teal-200">Network Operation Center</p>
-                        <h1 class="mt-1 text-base font-black text-white sm:text-lg">Laporan Gangguan Perangkat Kota</h1>
+                        <h1 class="mt-1 text-base font-black text-white sm:text-lg">Laporan Gangguan Perangkat</h1>
                     </div>
                 </div>
 

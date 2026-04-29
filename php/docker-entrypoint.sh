@@ -212,8 +212,8 @@ chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 echo "🗃️ Running migrations..."
 php artisan migrate --force
 
-# Step 8: Run custom project init command
-echo "🚀 Running project:init..."
+# Step 8: Run custom project init command safely (no database reset)
+echo "🚀 Running project:init safely..."
 php artisan project:init || true
 
 # Step 9: Create storage symbolic link
