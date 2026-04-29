@@ -8,9 +8,13 @@
     <?php echo \Livewire\Mechanisms\FrontendAssets\FrontendAssets::styles(); ?>
 
 </head>
+<?php ($isHomePage = request()->routeIs('home')); ?>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal text-gray-800">
-    
-    <?php if(auth()->guard()->check()): ?>
+
+    <?php if($isHomePage): ?>
+        <?php echo e($slot); ?>
+
+    <?php elseif(auth()->check()): ?>
         <nav class="bg-blue-800 p-4 shadow-md text-white flex justify-between items-center">
             <div class="font-bold text-xl">
                 NOC Panel 

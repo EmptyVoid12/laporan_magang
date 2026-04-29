@@ -50,14 +50,14 @@
         </div>
     </div>
 
-    <!--[if BLOCK]><![endif]--><?php if(session()->has('message')): ?>
+    <?php if(session()->has('message')): ?>
         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
             <span class="block sm:inline"><?php echo e(session('message')); ?></span>
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!--[if BLOCK]><![endif]--><?php $__empty_1 = true; $__currentLoopData = $tasks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $task): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+        <?php $__empty_1 = true; $__currentLoopData = $tasks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $task): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
             <div class="border rounded-lg shadow-sm <?php echo e($task->status == 'Selesai' ? 'border-green-300 bg-green-50' : 'border-blue-300 bg-blue-50'); ?> flex flex-col h-full">
                 <div class="p-4 border-b <?php echo e($task->status == 'Selesai' ? 'border-green-200' : 'border-blue-200'); ?>">
                     <div class="flex justify-between items-start mb-2">
@@ -78,40 +78,40 @@
                     </div>
                     <p class="text-sm text-gray-600 mb-1"><span class="font-semibold">Lokasi:</span> <?php echo e($task->perangkat->lokasi); ?></p>
                     <p class="text-sm text-gray-600"><span class="font-semibold">Lap. Operator:</span> <?php echo e($task->deskripsi); ?></p>
-                    <!--[if BLOCK]><![endif]--><?php if($task->foto): ?>
+                    <?php if($task->foto): ?>
                         <a href="<?php echo e(asset('storage/' . $task->foto)); ?>" target="_blank" class="mt-2 inline-flex text-xs font-semibold text-blue-700 hover:text-blue-800">
                             Lihat foto laporan awal
                         </a>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?>
                 </div>
                 
                 <div class="p-4 flex-1 flex flex-col justify-between">
                     <div>
                         <h4 class="font-bold text-sm text-gray-700 mb-2">Riwayat Progress:</h4>
-                        <!--[if BLOCK]><![endif]--><?php if($task->proses->count() > 0): ?>
+                        <?php if($task->proses->count() > 0): ?>
                             <ul class="text-sm space-y-2 mb-4">
-                                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $task->proses->sortByDesc('id'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $task->proses->sortByDesc('id'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <li class="bg-white p-2 rounded shadow-sm text-xs border">
                                         <div class="font-semibold text-blue-800"><?php echo e($p->actor_name); ?> • <?php echo e($p->tanggal_update->format('d/m/Y')); ?></div>
                                         <div class="text-[11px] uppercase tracking-wide text-gray-500"><?php echo e($p->tipe_update); ?></div>
                                         <div><?php echo e($p->keterangan_proses); ?></div>
-                                        <!--[if BLOCK]><![endif]--><?php if($p->kendala): ?>
+                                        <?php if($p->kendala): ?>
                                             <div class="text-red-600 italic">Kendala: <?php echo e($p->kendala); ?></div>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                        <!--[if BLOCK]><![endif]--><?php if($p->has_attachment): ?>
+                                        <?php endif; ?>
+                                        <?php if($p->has_attachment): ?>
                                             <a href="<?php echo e($p->attachment_url); ?>" target="_blank" class="mt-1 inline-flex font-semibold text-blue-700 hover:text-blue-800">
                                                 Lihat lampiran
                                             </a>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?>
                                     </li>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </ul>
                         <?php else: ?>
                             <p class="text-xs text-gray-500 mb-4 italic">Belum ada progress.</p>
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?>
                     </div>
                     
-                    <!--[if BLOCK]><![endif]--><?php if($task->isAwaitingFinalVerification()): ?>
+                    <?php if($task->isAwaitingFinalVerification()): ?>
                         <div class="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-900">
                             Penyelesaian sudah dikirim dan sedang menunggu verifikasi akhir admin.
                         </div>
@@ -119,10 +119,10 @@
                         <div class="mt-3 rounded-lg border border-green-200 bg-green-50 px-3 py-2 text-xs text-green-900">
                             Tiket sudah diverifikasi final pada <?php echo e(optional($task->verified_at)->format('d M Y H:i')); ?>.
                         </div>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?>
 
                     <div class="mt-4 flex gap-2">
-                        <!--[if BLOCK]><![endif]--><?php if(!in_array($task->status, ['Selesai', 'Ditolak'])): ?>
+                        <?php if(!in_array($task->status, ['Selesai', 'Ditolak'])): ?>
                             <button wire:click="openProgressModal(<?php echo e($task->id); ?>)" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-3 rounded shadow">
                                 + Progress
                             </button>
@@ -137,7 +137,7 @@
                                 <?php echo e($task->isFinallyVerified() ? 'Tugas Selesai Terverifikasi' : ($task->status == 'Selesai' ? 'Menunggu Verifikasi Akhir' : 'Tugas Ditutup')); ?>
 
                             </div>
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -145,11 +145,11 @@
             <div class="col-span-full py-8 text-center text-gray-500 border rounded-lg bg-gray-50 border-dashed">
                 Tidak ada tugas yang diassign ke Anda saat ini.
             </div>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?>
     </div>
 
     <!-- Modal Progress -->
-    <!--[if BLOCK]><![endif]--><?php if($isOpen): ?>
+    <?php if($isOpen): ?>
     <div class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-md p-6 mx-4">
             <h3 class="text-xl font-bold mb-4 text-gray-800 border-b pb-2"><?php echo e($modalMode === 'completion' ? 'Ajukan Penyelesaian Tugas' : 'Tambah Progress Pekerjaan'); ?></h3>
@@ -158,14 +158,14 @@
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Tindakan / Keterangan</label>
                     <textarea wire:model="keterangan_proses" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3" placeholder="<?php echo e($modalMode === 'completion' ? 'Jelaskan hasil akhir pekerjaan dan kondisi perangkat.' : 'Apa yang telah dilakukan?'); ?>"></textarea>
-                    <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['keterangan_proses'];
+                    <?php $__errorArgs = ['keterangan_proses'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> <span class="text-red-500 text-xs"><?php echo e($message); ?></span><?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
+unset($__errorArgs, $__bag); ?>
                 </div>
 
                 <div class="mb-6">
@@ -177,14 +177,14 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                     <label class="block text-gray-700 text-sm font-bold mb-2">Lampiran <?php echo e($modalMode === 'completion' ? '(Wajib)' : '(Opsional)'); ?></label>
                     <input type="file" wire:model="lampiran" class="block w-full text-sm text-gray-500 file:mr-4 file:rounded file:border-0 file:bg-blue-50 file:px-4 file:py-2 file:font-semibold file:text-blue-700 hover:file:bg-blue-100">
                     <p class="mt-2 text-xs text-gray-500">Format: JPG, PNG, atau PDF. Maksimal 4MB.</p>
-                    <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['lampiran'];
+                    <?php $__errorArgs = ['lampiran'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> <span class="text-red-500 text-xs"><?php echo e($message); ?></span><?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
+unset($__errorArgs, $__bag); ?>
                 </div>
 
                 <div class="flex justify-end gap-3 border-t pt-4">
@@ -197,6 +197,6 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
             </form>
         </div>
     </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?>
 </div>
 <?php /**PATH /var/www/html/resources/views/livewire/teknisi-task-component.blade.php ENDPATH**/ ?>

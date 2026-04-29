@@ -7,9 +7,12 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
+@php($isHomePage = request()->routeIs('home'))
 <body class="bg-gray-100 font-sans leading-normal tracking-normal text-gray-800">
-    
-    @auth
+
+    @if($isHomePage)
+        {{ $slot }}
+    @elseif(auth()->check())
         <nav class="bg-blue-800 p-4 shadow-md text-white flex justify-between items-center">
             <div class="font-bold text-xl">
                 NOC Panel 
@@ -110,7 +113,7 @@
         </div>
     @else
         {{ $slot }}
-    @endauth
+    @endif
 
     @livewireScripts
 </body>

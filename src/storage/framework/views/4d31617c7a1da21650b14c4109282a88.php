@@ -20,8 +20,8 @@
                 </div>
 
                 <div class="flex flex-wrap items-center gap-2.5">
-                    <!--[if BLOCK]><![endif]--><?php if(auth()->guard()->check()): ?>
-                        <!--[if BLOCK]><![endif]--><?php if(in_array(auth()->user()->role, ['admin', 'super_admin']) || auth()->user()->hasRole('super_admin')): ?>
+                    <?php if(auth()->guard()->check()): ?>
+                        <?php if(in_array(auth()->user()->role, ['admin', 'super_admin']) || auth()->user()->hasRole('super_admin')): ?>
                             <a href="<?php echo e(url('/admin')); ?>" class="inline-flex items-center justify-center rounded-full bg-white px-4 py-2.5 text-sm font-black text-slate-950 transition hover:bg-teal-100">
                                 Panel
                             </a>
@@ -33,7 +33,7 @@
                             <a href="<?php echo e(route('user.gangguan')); ?>" class="inline-flex items-center justify-center rounded-full bg-white px-4 py-2.5 text-sm font-black text-slate-950 transition hover:bg-teal-100">
                                 Lapor
                             </a>
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?>
                     <?php else: ?>
                         <a href="<?php echo e(route('login')); ?>" class="inline-flex items-center justify-center rounded-full bg-white px-4 py-2.5 text-sm font-black text-slate-950 transition hover:bg-teal-100">
                             Login
@@ -41,7 +41,7 @@
                         <a href="<?php echo e(route('register')); ?>" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-white/25 hover:bg-white/10">
                             Daftar
                         </a>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?>
                 </div>
             </div>
         </header>
@@ -93,7 +93,7 @@
                             >
                             <span class="absolute inset-y-0 right-4 flex items-center text-slate-500">#</span>
                         </div>
-                        <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['ticketCode'];
+                        <?php $__errorArgs = ['ticketCode'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -102,7 +102,7 @@ $message = $__bag->first($__errorArgs[0]); ?>
                         <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
+unset($__errorArgs, $__bag); ?>
                     </div>
 
                     <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-cyan-300 to-sky-400 px-5 py-3.5 text-sm font-black text-slate-950 transition hover:brightness-110">
@@ -112,7 +112,7 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                 </form>
 
                 <div class="mt-5 rounded-[1.5rem] border border-white/8 bg-white/[0.04] p-4">
-                    <!--[if BLOCK]><![endif]--><?php if($ticketResult): ?>
+                    <?php if($ticketResult): ?>
                         <div class="flex flex-wrap items-start justify-between gap-4">
                             <div>
                                 <div class="text-[11px] font-bold uppercase tracking-[0.26em] text-emerald-200"><?php echo e($ticketResult->kode_tiket); ?></div>
@@ -142,7 +142,7 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                         <div class="mt-4 rounded-2xl border border-white/8 bg-slate-900/70 p-4">
                             <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Timeline Penanganan</div>
                             <div class="mt-4 space-y-3">
-                                <!--[if BLOCK]><![endif]--><?php $__empty_1 = true; $__currentLoopData = $ticketResult->proses->sortByDesc('id'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $proses): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                                <?php $__empty_1 = true; $__currentLoopData = $ticketResult->proses->sortByDesc('id'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $proses): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                     <div class="rounded-xl border border-white/10 bg-white/[0.04] p-3">
                                         <div class="flex items-start justify-between gap-3">
                                             <div>
@@ -152,15 +152,15 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                                             <div class="text-xs text-slate-400"><?php echo e(optional($proses->tanggal_update)->format('d M Y')); ?></div>
                                         </div>
                                         <div class="mt-3 text-sm text-slate-200"><?php echo e($proses->keterangan_proses); ?></div>
-                                        <!--[if BLOCK]><![endif]--><?php if($proses->kendala): ?>
+                                        <?php if($proses->kendala): ?>
                                             <div class="mt-2 text-xs text-amber-200">Kendala: <?php echo e($proses->kendala); ?></div>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?>
                                     </div>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                                     <div class="rounded-xl border border-dashed border-white/15 bg-white/[0.03] px-4 py-6 text-sm text-slate-400">
                                         Belum ada progres teknis yang dicatat untuk tiket ini.
                                     </div>
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php elseif($ticketLookupAttempted): ?>
@@ -178,7 +178,7 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                                 <span class="text-xs font-bold text-white">status, prioritas, teknisi, timeline</span>
                             </div>
                         </div>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?>
                 </div>
         </section>
 
@@ -194,7 +194,7 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
             </div>
 
             <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                <!--[if BLOCK]><![endif]--><?php $__empty_1 = true; $__currentLoopData = $recentReports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $report): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                <?php $__empty_1 = true; $__currentLoopData = $recentReports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $report): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                     <div class="flex h-full flex-col rounded-[1.6rem] border border-white/10 bg-slate-950/55 p-4 transition hover:border-cyan-300/25 hover:bg-slate-900/70">
                         <div class="flex items-start justify-between gap-3">
                             <div class="font-mono text-[11px] font-bold tracking-[0.18em] text-cyan-200"><?php echo e($report->kode_tiket); ?></div>
@@ -244,7 +244,7 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                         <h4 class="text-xl font-black text-white">Belum ada laporan terbaru</h4>
                         <p class="mt-2 text-sm leading-6 text-slate-400">Saat tiket pertama masuk, daftar aktivitas terbaru akan muncul di sini.</p>
                     </div>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?>
             </div>
         </section>
 

@@ -44,7 +44,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!--[if BLOCK]><![endif]--><?php $__empty_1 = true; $__currentLoopData = $technicianRows; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                            <?php $__empty_1 = true; $__currentLoopData = $technicianRows; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                 <tr class="border-b border-slate-100">
                                     <td class="py-3 pr-4 font-semibold text-slate-900"><?php echo e($row['name']); ?></td>
                                     <td class="py-3 pr-4"><?php echo e($row['assigned']); ?></td>
@@ -57,7 +57,7 @@
                                 <tr>
                                     <td colspan="6" class="py-8 text-center text-slate-500">Belum ada data teknisi.</td>
                                 </tr>
-                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
@@ -66,7 +66,7 @@
             <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                 <h3 class="text-lg font-bold text-slate-900">Tiket Selesai Terverifikasi Terbaru</h3>
                 <div class="mt-5 space-y-3">
-                    <!--[if BLOCK]><![endif]--><?php $__empty_1 = true; $__currentLoopData = $recentVerifiedTickets; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ticket): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                    <?php $__empty_1 = true; $__currentLoopData = $recentVerifiedTickets; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ticket): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                         <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
                             <div class="text-xs font-mono text-blue-700"><?php echo e($ticket->kode_tiket); ?></div>
                             <div class="mt-1 text-sm font-bold text-slate-900"><?php echo e($ticket->perangkat?->nama_perangkat ?: '-'); ?></div>
@@ -77,7 +77,7 @@
                         <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-8 text-center text-sm text-slate-500">
                             Belum ada tiket yang selesai dan diverifikasi.
                         </div>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

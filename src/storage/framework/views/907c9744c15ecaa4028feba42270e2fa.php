@@ -7,12 +7,12 @@
         <section class="w-full rounded-[2rem] border border-white/10 bg-slate-950/75 p-7 shadow-[0_35px_120px_rgba(2,8,23,0.55)] backdrop-blur-xl sm:p-8">
             <h1 class="text-3xl font-black text-white">Login</h1>
 
-            <!--[if BLOCK]><![endif]--><?php if(session()->has('error')): ?>
+            <?php if(session()->has('error')): ?>
                 <div class="mt-6 rounded-2xl border border-rose-400/20 bg-rose-400/10 px-4 py-3 text-sm text-rose-200" role="alert">
                     <?php echo e(session('error')); ?>
 
                 </div>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?>
 
             <form wire:submit.prevent="login" class="mt-6 space-y-5">
                 <div>
@@ -31,7 +31,7 @@ unset($__errorArgs, $__bag); ?>"
                         type="email"
                         placeholder="email@example.com"
                     >
-                    <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['email'];
+                    <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -40,7 +40,7 @@ $message = $__bag->first($__errorArgs[0]); ?>
                     <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
+unset($__errorArgs, $__bag); ?>
                 </div>
 
                 <div>
@@ -59,7 +59,7 @@ unset($__errorArgs, $__bag); ?>"
                         type="password"
                         placeholder="Masukkan password"
                     >
-                    <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['password'];
+                    <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -68,7 +68,7 @@ $message = $__bag->first($__errorArgs[0]); ?>
                     <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
+unset($__errorArgs, $__bag); ?>
                     <div class="mt-3 flex justify-end">
                         <a class="text-xs font-semibold text-cyan-200 hover:text-cyan-100" href="<?php echo e(route('password.request')); ?>">
                             Lupa Password?
