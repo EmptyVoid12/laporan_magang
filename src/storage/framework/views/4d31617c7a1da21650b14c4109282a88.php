@@ -54,13 +54,13 @@
                 <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-rose-200">Butuh Respon</div>
                 <div class="mt-4 text-4xl font-black text-white"><?php echo e($open); ?></div>
             </div>
-            <div class="rounded-[1.6rem] border border-sky-300/20 bg-gradient-to-br from-sky-300/12 to-transparent p-5">
-                <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-sky-200">Terverifikasi</div>
-                <div class="mt-4 text-4xl font-black text-white"><?php echo e($diverifikasi); ?></div>
-            </div>
             <div class="rounded-[1.6rem] border border-amber-300/20 bg-gradient-to-br from-amber-300/12 to-transparent p-5">
                 <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-amber-200">Diproses</div>
                 <div class="mt-4 text-4xl font-black text-white"><?php echo e($proses + $menunggu); ?></div>
+            </div>
+            <div class="rounded-[1.6rem] border border-sky-300/20 bg-gradient-to-br from-sky-300/12 to-transparent p-5">
+                <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-sky-200">Terverifikasi</div>
+                <div class="mt-4 text-4xl font-black text-white"><?php echo e($diverifikasi); ?></div>
             </div>
         </section>
 
@@ -199,14 +199,16 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                         <div class="flex items-start justify-between gap-3">
                             <div class="font-mono text-[11px] font-bold tracking-[0.18em] text-cyan-200"><?php echo e($report->kode_tiket); ?></div>
                             <span class="rounded-full px-3 py-1 text-[11px] font-black
-                                <?php if($report->status === 'Selesai'): ?> bg-emerald-300/15 text-emerald-200
+                                <?php if($report->isFinallyVerified()): ?> bg-cyan-300/15 text-cyan-200
+                                <?php elseif($report->isAwaitingFinalVerification()): ?> bg-lime-300/15 text-lime-200
+                                <?php elseif($report->status === 'Selesai'): ?> bg-emerald-300/15 text-emerald-200
                                 <?php elseif($report->status === 'Proses'): ?> bg-amber-300/15 text-amber-200
                                 <?php elseif($report->status === 'Diverifikasi'): ?> bg-sky-300/15 text-sky-200
                                 <?php elseif($report->status === 'Menunggu'): ?> bg-orange-300/15 text-orange-200
                                 <?php elseif($report->status === 'Ditolak'): ?> bg-slate-300/15 text-slate-200
                                 <?php else: ?> bg-rose-300/15 text-rose-200
                                 <?php endif; ?>">
-                                <?php echo e($report->status); ?>
+                                <?php echo e($report->workflow_status_label); ?>
 
                             </span>
                         </div>

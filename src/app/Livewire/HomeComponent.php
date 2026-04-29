@@ -2,8 +2,8 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
 use App\Models\Gangguan;
+use Livewire\Component;
 
 class HomeComponent extends Component
 {
@@ -36,10 +36,11 @@ class HomeComponent extends Component
     {
         $total = Gangguan::count();
         $open = Gangguan::where('status', Gangguan::STATUS_OPEN)->count();
-        $diverifikasi = Gangguan::where('status', Gangguan::STATUS_DIVERIFIKASI)->count();
         $proses = Gangguan::where('status', Gangguan::STATUS_PROSES)->count();
         $menunggu = Gangguan::where('status', Gangguan::STATUS_MENUNGGU)->count();
-        $selesai = Gangguan::where('status', Gangguan::STATUS_SELESAI)->count();
+        $diverifikasi = Gangguan::where('status', Gangguan::STATUS_SELESAI)
+            ->whereNotNull('verified_at')
+            ->count();
         $recentReports = Gangguan::with(['perangkat', 'teknisi'])
             ->latest()
             ->take(5)
@@ -48,10 +49,9 @@ class HomeComponent extends Component
         return view('livewire.home-component', [
             'total' => $total,
             'open' => $open,
-            'diverifikasi' => $diverifikasi,
             'proses' => $proses,
             'menunggu' => $menunggu,
-            'selesai' => $selesai,
+            'diverifikasi' => $diverifikasi,
             'recentReports' => $recentReports,
         ]);
     }

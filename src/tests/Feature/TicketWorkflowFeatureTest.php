@@ -1,11 +1,13 @@
 <?php
 
+use App\Livewire\HomeComponent;
 use App\Models\Gangguan;
 use App\Models\LaporanProses;
 use App\Models\Perangkat;
 use App\Models\User;
 use App\Notifications\TicketActivityNotification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Livewire\Livewire;
 
 uses(RefreshDatabase::class);
 
@@ -99,4 +101,46 @@ it('marks all notifications as read for the authenticated user', function () {
         ->assertRedirect();
 
     expect($user->fresh()->unreadNotifications)->toHaveCount(0);
+});
+
+it('shows final verified tickets as verified on the home page', function () {
+    $operator = User::factory()->create([
+        'role' => 'user',
+    ]);
+
+    $perangkat = Perangkat::create([
+        'nama_perangkat' => 'Camera Koridor',
+        'jenis' => 'CCTV',
+        'wilayah' => 'Jakarta Timur',
+        'lokasi' => 'Lantai 2',
+        'deskripsi' => 'Perangkat untuk test home page',
+    ]);
+
+    Gangguan::create([
+        'perangkat_id' => $perangkat->id,
+        'deskripsi' => 'Laporan sudah diverifikasi awal',
+        'tanggal' => now()->subDay()->toDateString(),
+        'status' => Gangguan::STATUS_DIVERIFIKASI,
+        'prioritas' => 'Sedang',
+        'operator_id' => $operator->id,
+    ]);
+
+    Gangguan::create([
+        'perangkat_id' => $perangkat->id,
+        'deskripsi' => 'Perbaikan selesai dan diverifikasi final',
+        'tanggal' => now()->toDateString(),
+        'status' => Gangguan::STATUS_SELESAI,
+        'prioritas' => 'Tinggi',
+        'operator_id' => $operator->id,
+        'submitted_for_verification_at' => now()->subHour(),
+        'verified_at' => now(),
+    ]);
+
+    Livewire::test(HomeComponent::class)
+        ->assertViewHas('diverifikasi', 1);
+
+    $this->get(route('home'))
+        ->assertOk()
+        ->assertSeeInOrder(['Diproses', 'Terverifikasi'])
+        ->assertSee('Selesai Terverifikasi');
 });
