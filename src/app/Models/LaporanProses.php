@@ -14,6 +14,7 @@ class LaporanProses extends Model
     public const TYPE_STATUS = 'status';
     public const TYPE_PROGRESS = 'progress';
     public const TYPE_COMPLETION = 'completion';
+    public const TYPE_VERIFICATION = 'verification';
 
     protected $table = 'laporan_proses';
 
@@ -24,6 +25,9 @@ class LaporanProses extends Model
         'tipe_update',
         'keterangan_proses',
         'kendala',
+        'attachment_path',
+        'attachment_name',
+        'attachment_mime',
         'tanggal_update',
     ];
 
@@ -49,5 +53,15 @@ class LaporanProses extends Model
     public function getActorNameAttribute(): string
     {
         return $this->user?->name ?? $this->teknisi?->name ?? 'Sistem';
+    }
+
+    public function getAttachmentUrlAttribute(): ?string
+    {
+        return $this->attachment_path ? asset('storage/' . $this->attachment_path) : null;
+    }
+
+    public function getHasAttachmentAttribute(): bool
+    {
+        return filled($this->attachment_path);
     }
 }

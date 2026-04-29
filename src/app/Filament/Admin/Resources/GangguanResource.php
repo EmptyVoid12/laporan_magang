@@ -4,10 +4,13 @@ namespace App\Filament\Admin\Resources;
 
 use App\Filament\Admin\Resources\GangguanResource\Pages;
 use App\Models\Gangguan;
+use App\Models\LaporanProses;
 use App\Models\Perangkat;
 use App\Models\User;
+use App\Support\GangguanNotifier;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -50,6 +53,19 @@ class GangguanResource extends Resource
                     ->options(User::where('role', 'teknisi')->pluck('name', 'id'))
                     ->searchable()
                     ->nullable(),
+                Forms\Components\Placeholder::make('final_verification_status')
+                    ->label('Status Verifikasi Akhir')
+                    ->content(fn (?Gangguan $record): string => $record?->workflow_status_label ?? '-'),
+                Forms\Components\Placeholder::make('verified_at')
+                    ->label('Diverifikasi Pada')
+                    ->content(fn (?Gangguan $record): string => optional($record?->verified_at)->format('d M Y H:i') ?: '-'),
+                Forms\Components\Placeholder::make('verifier')
+                    ->label('Verifier')
+                    ->content(fn (?Gangguan $record): string => $record?->verifier?->name ?? '-'),
+                Forms\Components\Textarea::make('verification_notes')
+                    ->label('Catatan Verifikasi')
+                    ->disabled()
+                    ->columnSpanFull(),
                 Forms\Components\Textarea::make('deskripsi')->required()->columnSpanFull(),
             ]);
     }
@@ -73,9 +89,12 @@ class GangguanResource extends Resource
                         'Rendah' => 'success',
                         default => 'gray',
                     }),
-                Tables\Columns\TextColumn::make('status')
+                Tables\Columns\TextColumn::make('workflow_status_label')
                     ->badge()
+                    ->label('Status')
                     ->color(fn (string $state): string => match ($state) {
+                        'Menunggu Verifikasi Akhir' => 'warning',
+                        'Selesai Terverifikasi' => 'success',
                         'Open' => 'danger',
                         'Diverifikasi' => 'info',
                         'Proses' => 'warning',
@@ -114,6 +133,80 @@ class GangguanResource extends Resource
                     }),
             ])
             ->actions([
+                Tables\Actions\Action::make('verifyFinal')
+                    ->label('Verifikasi Final')
+                    ->icon('heroicon-o-check-badge')
+                    ->color('success')
+                    ->visible(fn (Gangguan $record): bool => $record->isAwaitingFinalVerification())
+                    ->form([
+                        Forms\Components\Textarea::make('verification_notes')
+                            ->label('Catatan Verifikasi')
+                            ->placeholder('Contoh: Bukti pekerjaan lengkap dan perangkat kembali normal.')
+                            ->rows(4),
+                    ])
+                    ->action(function (Gangguan $record, array $data): void {
+                        $record->update([
+                            'verified_at' => now(),
+                            'verified_by' => auth()->id(),
+                            'verification_notes' => $data['verification_notes'] ?? null,
+                        ]);
+
+                        $record->logTimeline(
+                            'Admin memverifikasi penyelesaian akhir tiket.',
+                            auth()->id(),
+                            $record->teknisi_id,
+                            LaporanProses::TYPE_VERIFICATION
+                        );
+
+                        GangguanNotifier::notifyOperatorAndTeknisi(
+                            $record->fresh(['operator', 'teknisi']),
+                            'Tiket selesai terverifikasi',
+                            'Tiket ' . $record->kode_tiket . ' sudah diverifikasi final oleh admin.'
+                        );
+
+                        Notification::make()
+                            ->title('Penyelesaian akhir berhasil diverifikasi.')
+                            ->success()
+                            ->send();
+                    }),
+                Tables\Actions\Action::make('rejectFinal')
+                    ->label('Tolak Final')
+                    ->icon('heroicon-o-arrow-uturn-left')
+                    ->color('danger')
+                    ->visible(fn (Gangguan $record): bool => $record->isAwaitingFinalVerification())
+                    ->form([
+                        Forms\Components\Textarea::make('verification_notes')
+                            ->label('Alasan penolakan')
+                            ->required()
+                            ->rows(4),
+                    ])
+                    ->action(function (Gangguan $record, array $data): void {
+                        $record->update([
+                            'status' => Gangguan::STATUS_PROSES,
+                            'submitted_for_verification_at' => null,
+                            'verified_at' => null,
+                            'verified_by' => null,
+                            'verification_notes' => $data['verification_notes'],
+                        ]);
+
+                        $record->logTimeline(
+                            'Admin menolak penyelesaian akhir: ' . $data['verification_notes'],
+                            auth()->id(),
+                            $record->teknisi_id,
+                            LaporanProses::TYPE_VERIFICATION
+                        );
+
+                        GangguanNotifier::notifyOperatorAndTeknisi(
+                            $record->fresh(['operator', 'teknisi']),
+                            'Penyelesaian akhir perlu revisi',
+                            'Tiket ' . $record->kode_tiket . ' perlu ditindaklanjuti lagi. Catatan: ' . $data['verification_notes']
+                        );
+
+                        Notification::make()
+                            ->title('Penyelesaian akhir dikembalikan ke teknisi.')
+                            ->warning()
+                            ->send();
+                    }),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
@@ -138,5 +231,11 @@ class GangguanResource extends Resource
             'create' => Pages\CreateGangguan::route('/create'),
             'edit' => Pages\EditGangguan::route('/{record}/edit'),
         ];
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()
+            ->with(['perangkat', 'operator', 'teknisi', 'verifier']);
     }
 }

@@ -9,6 +9,7 @@ use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements FilamentUser, HasAvatar
@@ -68,5 +69,16 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
     public function canAccessPanel(Panel $panel): bool
     {
         return in_array($this->role, ['admin', 'operator']) || $this->hasRole('super_admin');
+    }
+
+    public function assignedGangguans(): HasMany
+    {
+        return $this->hasMany(Gangguan::class, 'teknisi_id');
+    }
+
+    public function completedGangguans(): HasMany
+    {
+        return $this->hasMany(Gangguan::class, 'teknisi_id')
+            ->whereNotNull('verified_at');
     }
 }

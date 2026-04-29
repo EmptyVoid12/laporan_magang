@@ -21,7 +21,13 @@ class HomeComponent extends Component
         $normalizedCode = strtoupper(trim($this->ticketCode));
         $this->ticketCode = $normalizedCode;
 
-        $this->ticketResult = Gangguan::with(['perangkat', 'teknisi'])
+        $this->ticketResult = Gangguan::with([
+            'perangkat',
+            'teknisi',
+            'verifier',
+            'proses.user',
+            'proses.teknisi',
+        ])
             ->where('kode_tiket', $normalizedCode)
             ->first();
     }

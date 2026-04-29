@@ -118,21 +118,26 @@
                         </td>
                         <td class="py-3 px-4">
                             <span class="px-2 py-1 rounded text-xs font-semibold
-                                @if($laporan->status == 'Selesai') bg-green-500 text-white
+                                @if($laporan->isFinallyVerified()) bg-green-600 text-white
+                                @elseif($laporan->isAwaitingFinalVerification()) bg-amber-500 text-white
+                                @elseif($laporan->status == 'Selesai') bg-green-500 text-white
                                 @elseif($laporan->status == 'Proses') bg-yellow-400 text-white
                                 @elseif($laporan->status == 'Diverifikasi') bg-blue-500 text-white
                                 @elseif($laporan->status == 'Menunggu') bg-orange-400 text-white
                                 @elseif($laporan->status == 'Ditolak') bg-gray-500 text-white
                                 @else bg-red-500 text-white @endif">
-                                {{ $laporan->status }}
+                                {{ $laporan->workflow_status_label }}
                             </span>
                         </td>
                         <td class="py-3 px-4 text-center">
-                            @if($laporan->status == 'Open')
-                            <button wire:click="deleteLaporan({{ $laporan->id }})" class="text-red-500 hover:text-red-700 text-sm font-semibold" onclick="confirm('Yakin ingin menghapus laporan ini?') || event.stopImmediatePropagation()">Hapus</button>
-                            @else
-                            <span class="text-xs text-gray-400">Terkunci</span>
-                            @endif
+                            <div class="flex items-center justify-center gap-3">
+                                <a href="{{ route('user.gangguan.show', $laporan) }}" class="text-blue-600 hover:text-blue-700 text-sm font-semibold">Detail</a>
+                                @if($laporan->status == 'Open')
+                                    <button wire:click="deleteLaporan({{ $laporan->id }})" class="text-red-500 hover:text-red-700 text-sm font-semibold" onclick="confirm('Yakin ingin menghapus laporan ini?') || event.stopImmediatePropagation()">Hapus</button>
+                                @else
+                                    <span class="text-xs text-gray-400">Terkunci</span>
+                                @endif
+                            </div>
                         </td>
                     </tr>
                     @empty

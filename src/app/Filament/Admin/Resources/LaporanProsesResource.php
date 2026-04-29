@@ -94,6 +94,7 @@ class LaporanProsesResource extends Resource
                         'status' => 'Perubahan Status',
                         'progress' => 'Progress',
                         'completion' => 'Penyelesaian',
+                        'verification' => 'Verifikasi Akhir',
                         default => ucfirst($state),
                     })
                     ->color(fn (string $state): string => match ($state) {
@@ -102,8 +103,14 @@ class LaporanProsesResource extends Resource
                         'status' => 'gray',
                         'progress' => 'primary',
                         'completion' => 'success',
+                        'verification' => 'success',
                         default => 'gray',
                     }),
+                Tables\Columns\IconColumn::make('attachment_path')
+                    ->label('Lampiran')
+                    ->boolean()
+                    ->trueIcon('heroicon-o-paper-clip')
+                    ->falseIcon('heroicon-o-minus'),
                 Tables\Columns\TextColumn::make('keterangan_proses')
                     ->label('Ringkasan Progress Terakhir')
                     ->searchable()

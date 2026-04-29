@@ -5,18 +5,41 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Gangguan;
 use App\Models\LaporanProses;
+use App\Support\GangguanNotifier;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithFileUploads;
 
 class TeknisiTaskComponent extends Component
 {
-    public $gangguan_id, $keterangan_proses, $kendala;
-    public $isOpen = false;
+    use WithFileUploads;
 
-    public function openModal($id)
+    public $gangguan_id, $keterangan_proses, $kendala, $lampiran;
+    public $isOpen = false;
+    public string $modalMode = 'progress';
+    public string $exportMonth;
+
+    public function mount(): void
+    {
+        $this->exportMonth = now()->format('Y-m');
+    }
+
+    public function openProgressModal($id)
     {
         $this->gangguan_id = $id;
         $this->keterangan_proses = '';
         $this->kendala = '';
+        $this->lampiran = null;
+        $this->modalMode = 'progress';
+        $this->isOpen = true;
+    }
+
+    public function openCompletionModal($id)
+    {
+        $this->gangguan_id = $id;
+        $this->keterangan_proses = '';
+        $this->kendala = '';
+        $this->lampiran = null;
+        $this->modalMode = 'completion';
         $this->isOpen = true;
     }
 
@@ -27,28 +50,64 @@ class TeknisiTaskComponent extends Component
 
     public function storeProses()
     {
+        $isCompletion = $this->modalMode === 'completion';
+
         $this->validate([
-            'keterangan_proses' => 'required',
-            'kendala' => 'nullable'
+            'keterangan_proses' => 'required|string',
+            'kendala' => 'nullable|string',
+            'lampiran' => [
+                $isCompletion ? 'required' : 'nullable',
+                'file',
+                'mimes:jpg,jpeg,png,pdf',
+                'max:4096',
+            ],
         ]);
+
+        $lampiranPath = $this->lampiran?->store('laporan_proses_attachments', 'public');
 
         LaporanProses::create([
             'gangguan_id' => $this->gangguan_id,
             'user_id' => Auth::id(),
             'teknisi_id' => Auth::id(),
-            'tipe_update' => LaporanProses::TYPE_PROGRESS,
+            'tipe_update' => $isCompletion ? LaporanProses::TYPE_COMPLETION : LaporanProses::TYPE_PROGRESS,
             'keterangan_proses' => $this->keterangan_proses,
             'kendala' => $this->kendala,
+            'attachment_path' => $lampiranPath,
+            'attachment_name' => $this->lampiran?->getClientOriginalName(),
+            'attachment_mime' => $this->lampiran?->getMimeType(),
             'tanggal_update' => date('Y-m-d')
         ]);
 
         $gangguan = Gangguan::find($this->gangguan_id);
-        if ($gangguan && $gangguan->status !== Gangguan::STATUS_SELESAI) {
-            $gangguan->status = $this->kendala ? Gangguan::STATUS_MENUNGGU : Gangguan::STATUS_PROSES;
-            $gangguan->save();
+        if ($gangguan) {
+            if ($isCompletion) {
+                $gangguan->submitted_for_verification_at = now();
+                $gangguan->verified_at = null;
+                $gangguan->verified_by = null;
+                $gangguan->verification_notes = null;
+                $gangguan->status = Gangguan::STATUS_SELESAI;
+                $gangguan->save();
+
+                GangguanNotifier::sendToUsers(
+                    [$gangguan->operator],
+                    'Tiket menunggu verifikasi akhir',
+                    'Teknisi telah menandai tiket ' . $gangguan->kode_tiket . ' sebagai selesai dan menunggu verifikasi akhir.',
+                    $gangguan
+                );
+            } elseif ($gangguan->status !== Gangguan::STATUS_SELESAI) {
+                $gangguan->status = $this->kendala ? Gangguan::STATUS_MENUNGGU : Gangguan::STATUS_PROSES;
+                $gangguan->save();
+
+                GangguanNotifier::sendToUsers(
+                    [$gangguan->operator],
+                    'Progress baru ditambahkan',
+                    'Ada update progres baru untuk tiket ' . $gangguan->kode_tiket . '.',
+                    $gangguan
+                );
+            }
         }
 
-        session()->flash('message', 'Progress berhasil ditambahkan.');
+        session()->flash('message', $isCompletion ? 'Penyelesaian berhasil dikirim untuk verifikasi akhir.' : 'Progress berhasil ditambahkan.');
         $this->closeModal();
     }
 
@@ -75,7 +134,8 @@ class TeknisiTaskComponent extends Component
     public function render()
     {
         $tasks = Gangguan::where('teknisi_id', Auth::id())
-            ->with(['perangkat', 'proses.user', 'proses.teknisi', 'operator'])
+            ->with(['perangkat', 'proses.user', 'proses.teknisi', 'operator', 'verifier'])
+            ->when(request('ticket'), fn ($query) => $query->where('kode_tiket', request('ticket')))
             ->latest()
             ->get();
 

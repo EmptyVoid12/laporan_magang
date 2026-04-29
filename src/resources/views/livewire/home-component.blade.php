@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                             <div class="rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-bold text-emerald-200">
-                                {{ $ticketResult->status }}
+                                {{ $ticketResult->workflow_status_label }}
                             </div>
                         </div>
 
@@ -127,6 +127,31 @@
                             <div class="rounded-2xl border border-white/8 bg-slate-900/70 p-3">
                                 <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Teknisi</div>
                                 <div class="mt-2 text-sm font-bold text-white">{{ $ticketResult->teknisi?->name ?: 'Belum diassign' }}</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 rounded-2xl border border-white/8 bg-slate-900/70 p-4">
+                            <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Timeline Penanganan</div>
+                            <div class="mt-4 space-y-3">
+                                @forelse($ticketResult->proses->sortByDesc('id') as $proses)
+                                    <div class="rounded-xl border border-white/10 bg-white/[0.04] p-3">
+                                        <div class="flex items-start justify-between gap-3">
+                                            <div>
+                                                <div class="text-sm font-bold text-white">{{ $proses->actor_name }}</div>
+                                                <div class="mt-1 text-[11px] uppercase tracking-[0.18em] text-cyan-200">{{ $proses->tipe_update }}</div>
+                                            </div>
+                                            <div class="text-xs text-slate-400">{{ optional($proses->tanggal_update)->format('d M Y') }}</div>
+                                        </div>
+                                        <div class="mt-3 text-sm text-slate-200">{{ $proses->keterangan_proses }}</div>
+                                        @if($proses->kendala)
+                                            <div class="mt-2 text-xs text-amber-200">Kendala: {{ $proses->kendala }}</div>
+                                        @endif
+                                    </div>
+                                @empty
+                                    <div class="rounded-xl border border-dashed border-white/15 bg-white/[0.03] px-4 py-6 text-sm text-slate-400">
+                                        Belum ada progres teknis yang dicatat untuk tiket ini.
+                                    </div>
+                                @endforelse
                             </div>
                         </div>
                     @elseif($ticketLookupAttempted)
@@ -141,7 +166,7 @@
                             </div>
                             <div class="flex items-center justify-between rounded-2xl border border-white/8 bg-slate-900/70 p-3">
                                 <span class="text-sm text-slate-300">Informasi tampil</span>
-                                <span class="text-xs font-bold text-white">status, prioritas, teknisi</span>
+                                <span class="text-xs font-bold text-white">status, prioritas, teknisi, timeline</span>
                             </div>
                         </div>
                     @endif

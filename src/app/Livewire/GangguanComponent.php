@@ -83,7 +83,7 @@ class GangguanComponent extends Component
             ->get();
 
         $riwayatLaporan = Gangguan::where('operator_id', Auth::id())
-            ->with('perangkat')
+            ->with(['perangkat', 'teknisi'])
             ->orderBy('created_at', 'desc')
             ->get();
 
