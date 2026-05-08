@@ -1,152 +1,167 @@
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <!-- Form Laporan -->
-    <div class="md:col-span-1 bg-white rounded shadow p-6 h-fit">
-        <h2 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">Buat Laporan Baru</h2>
-        
-        @if (session()->has('message'))
-            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
-                <span class="block sm:inline">{{ session('message') }}</span>
-            </div>
-        @endif
-
-        <form wire:submit.prevent="store">
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2">Jenis Perangkat</label>
-                <select wire:model.live="jenis" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline">
-                    <option value="">Semua Jenis</option>
-                    @foreach($jenisOptions as $value => $label)
-                        <option value="{{ $value }}">{{ $label }}</option>
-                    @endforeach
-                </select>
-            </div>
-
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2">Wilayah Jakarta</label>
-                <select wire:model.live="wilayah" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline">
-                    <option value="">Semua Wilayah</option>
-                    @foreach($wilayahOptions as $value => $label)
-                        <option value="{{ $value }}">{{ $label }}</option>
-                    @endforeach
-                </select>
-            </div>
-
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2">Pilih Perangkat</label>
-                <select wire:key="perangkat-select-{{ $jenis ?: 'semua' }}-{{ $wilayah ?: 'semua' }}" wire:model="perangkat_id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline">
-                    <option value="">-- Pilih --</option>
-                    @foreach($perangkats as $p)
-                        <option value="{{ $p->id }}">{{ $p->nama_perangkat }} - {{ $p->jenis }} - {{ $p->wilayah ?: 'Tanpa Wilayah' }} ({{ $p->lokasi }})</option>
-                    @endforeach
-                </select>
-                @error('perangkat_id') <span class="text-red-500 text-xs">{{ $message }}</span>@enderror
-                @if($perangkats->isEmpty())
-                    <span class="text-gray-500 text-xs">Belum ada perangkat yang cocok dengan jenis dan wilayah yang dipilih.</span>
-                @endif
-            </div>
-
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2">Tanggal</label>
-                <input type="date" wire:model="tanggal" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline">
-                @error('tanggal') <span class="text-red-500 text-xs">{{ $message }}</span>@enderror
-            </div>
-
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2">Prioritas</label>
-                <select wire:model="prioritas" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline">
-                    <option value="Rendah">Rendah</option>
-                    <option value="Sedang">Sedang</option>
-                    <option value="Tinggi">Tinggi</option>
-                </select>
-                @error('prioritas') <span class="text-red-500 text-xs">{{ $message }}</span>@enderror
-            </div>
-
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2">Deskripsi Kerusakan</label>
-                <textarea wire:model="deskripsi" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline" rows="4"></textarea>
-                @error('deskripsi') <span class="text-red-500 text-xs">{{ $message }}</span>@enderror
-            </div>
-
-            <div class="mb-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2">Upload Foto (Opsional)</label>
-                <input type="file" wire:model="foto" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
-                @error('foto') <span class="text-red-500 text-xs">{{ $message }}</span>@enderror
-                @if ($foto)
-                    <div class="mt-2 text-sm text-gray-500">Preview:</div>
-                    <img src="{{ $foto->temporaryUrl() }}" class="mt-1 h-32 w-auto object-cover rounded shadow-sm">
-                @endif
-            </div>
-
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow transition duration-200" wire:loading.attr="disabled">
-                <span wire:loading.remove>Kirim Laporan</span>
-                <span wire:loading>Memproses...</span>
-            </button>
-        </form>
+<div class="space-y-6">
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+            <h1 class="text-xl font-bold text-slate-900">Laporan Gangguan</h1>
+            <p class="mt-1 text-sm text-slate-500">Buat laporan baru atau pantau status laporan Anda.</p>
+        </div>
     </div>
 
-    <!-- Riwayat Laporan -->
-    <div class="md:col-span-2 bg-white rounded shadow p-6">
-        <h2 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">Riwayat Laporan Anda</h2>
-        
-        <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse">
-                <thead>
-                    <tr class="bg-gray-100 text-gray-700">
-                        <th class="py-3 px-4 border-b font-semibold">Tiket</th>
-                        <th class="py-3 px-4 border-b font-semibold">Tanggal</th>
-                        <th class="py-3 px-4 border-b font-semibold">Perangkat</th>
-                        <th class="py-3 px-4 border-b font-semibold">Prioritas</th>
-                        <th class="py-3 px-4 border-b font-semibold">Status</th>
-                        <th class="py-3 px-4 border-b font-semibold text-center">Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @forelse($riwayatLaporan as $laporan)
-                    <tr class="border-b hover:bg-gray-50">
-                        <td class="py-3 px-4 font-mono text-xs text-blue-700 font-semibold">{{ $laporan->kode_tiket }}</td>
-                        <td class="py-3 px-4">{{ $laporan->tanggal->format('d M Y') }}</td>
-                        <td class="py-3 px-4">
-                            {{ $laporan->perangkat->nama_perangkat }}
-                            <div class="text-xs text-gray-500">{{ $laporan->perangkat->jenis }} | {{ $laporan->perangkat->wilayah ?: '-' }}</div>
-                        </td>
-                        <td class="py-3 px-4">
-                            <span class="px-2 py-1 rounded text-xs font-semibold 
-                                @if($laporan->prioritas == 'Tinggi') bg-red-100 text-red-800 
-                                @elseif($laporan->prioritas == 'Sedang') bg-yellow-100 text-yellow-800 
-                                @else bg-green-100 text-green-800 @endif">
-                                {{ $laporan->prioritas }}
-                            </span>
-                        </td>
-                        <td class="py-3 px-4">
-                            <span class="px-2 py-1 rounded text-xs font-semibold
-                                @if($laporan->isFinallyVerified()) bg-green-600 text-white
-                                @elseif($laporan->isAwaitingFinalVerification()) bg-amber-500 text-white
-                                @elseif($laporan->status == 'Selesai') bg-green-500 text-white
-                                @elseif($laporan->status == 'Proses') bg-yellow-400 text-white
-                                @elseif($laporan->status == 'Diverifikasi') bg-blue-500 text-white
-                                @elseif($laporan->status == 'Menunggu') bg-orange-400 text-white
-                                @elseif($laporan->status == 'Ditolak') bg-gray-500 text-white
-                                @else bg-red-500 text-white @endif">
-                                {{ $laporan->workflow_status_label }}
-                            </span>
-                        </td>
-                        <td class="py-3 px-4 text-center">
-                            <div class="flex items-center justify-center gap-3">
-                                <a href="{{ route('user.gangguan.show', $laporan) }}" class="text-blue-600 hover:text-blue-700 text-sm font-semibold">Detail</a>
-                                @if($laporan->status == 'Open')
-                                    <button wire:click="deleteLaporan({{ $laporan->id }})" class="text-red-500 hover:text-red-700 text-sm font-semibold" onclick="confirm('Yakin ingin menghapus laporan ini?') || event.stopImmediatePropagation()">Hapus</button>
-                                @else
-                                    <span class="text-xs text-gray-400">Terkunci</span>
-                                @endif
+    <div class="grid grid-cols-1 gap-6 xl:grid-cols-3">
+        {{-- Form Laporan --}}
+        <div class="xl:col-span-1">
+            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+                <h2 class="text-base font-bold text-slate-800">Buat Laporan Baru</h2>
+                <p class="mt-1 text-xs text-slate-400">Isi formulir untuk melaporkan gangguan perangkat.</p>
+
+                @if (session()->has('message'))
+                    <div class="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
+                        {{ session('message') }}
+                    </div>
+                @endif
+
+                <form wire:submit.prevent="store" class="mt-5 space-y-4">
+                    <div>
+                        <label class="mb-1.5 block text-xs font-semibold text-slate-600">Jenis Perangkat</label>
+                        <select wire:model.live="jenis" class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100">
+                            <option value="">Semua Jenis</option>
+                            @foreach($jenisOptions as $value => $label)
+                                <option value="{{ $value }}">{{ $label }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="mb-1.5 block text-xs font-semibold text-slate-600">Wilayah Jakarta</label>
+                        <select wire:model.live="wilayah" class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100">
+                            <option value="">Semua Wilayah</option>
+                            @foreach($wilayahOptions as $value => $label)
+                                <option value="{{ $value }}">{{ $label }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="mb-1.5 block text-xs font-semibold text-slate-600">Pilih Perangkat</label>
+                        <select wire:key="perangkat-select-{{ $jenis ?: 'semua' }}-{{ $wilayah ?: 'semua' }}" wire:model="perangkat_id" class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100">
+                            <option value="">-- Pilih --</option>
+                            @foreach($perangkats as $p)
+                                <option value="{{ $p->id }}">{{ $p->nama_perangkat }} - {{ $p->jenis }} - {{ $p->wilayah ?: 'Tanpa Wilayah' }} ({{ $p->lokasi }})</option>
+                            @endforeach
+                        </select>
+                        @error('perangkat_id') <span class="mt-1 block text-xs text-red-500">{{ $message }}</span>@enderror
+                        @if($perangkats->isEmpty())
+                            <span class="mt-1 block text-xs text-slate-400">Tidak ada perangkat untuk filter ini.</span>
+                        @endif
+                    </div>
+
+                    <div>
+                        <label class="mb-1.5 block text-xs font-semibold text-slate-600">Tanggal</label>
+                        <input type="date" wire:model="tanggal" class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100">
+                        @error('tanggal') <span class="mt-1 block text-xs text-red-500">{{ $message }}</span>@enderror
+                    </div>
+
+                    <div>
+                        <label class="mb-1.5 block text-xs font-semibold text-slate-600">Prioritas</label>
+                        <select wire:model="prioritas" class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100">
+                            <option value="Rendah">Rendah</option>
+                            <option value="Sedang">Sedang</option>
+                            <option value="Tinggi">Tinggi</option>
+                        </select>
+                        @error('prioritas') <span class="mt-1 block text-xs text-red-500">{{ $message }}</span>@enderror
+                    </div>
+
+                    <div>
+                        <label class="mb-1.5 block text-xs font-semibold text-slate-600">Deskripsi Kerusakan</label>
+                        <textarea wire:model="deskripsi" rows="3" class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100" placeholder="Jelaskan detail gangguan yang terjadi..."></textarea>
+                        @error('deskripsi') <span class="mt-1 block text-xs text-red-500">{{ $message }}</span>@enderror
+                    </div>
+
+                    <div>
+                        <label class="mb-1.5 block text-xs font-semibold text-slate-600">Upload Foto (Opsional)</label>
+                        <input type="file" wire:model="foto" class="block w-full text-sm text-slate-500 file:mr-3 file:rounded-lg file:border-0 file:bg-indigo-50 file:px-4 file:py-2 file:text-xs file:font-semibold file:text-indigo-600 hover:file:bg-indigo-100">
+                        @error('foto') <span class="mt-1 block text-xs text-red-500">{{ $message }}</span>@enderror
+                        @if ($foto)
+                            <div class="mt-3">
+                                <p class="mb-1 text-xs text-slate-400">Preview:</p>
+                                <img src="{{ $foto->temporaryUrl() }}" class="h-28 w-auto rounded-lg border border-slate-200 object-cover">
                             </div>
-                        </td>
-                    </tr>
-                    @empty
-                    <tr>
-                        <td colspan="6" class="py-6 text-center text-gray-500">Anda belum pernah membuat laporan.</td>
-                    </tr>
-                    @endforelse
-                </tbody>
-            </table>
+                        @endif
+                    </div>
+
+                    <button type="submit" class="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700" wire:loading.attr="disabled">
+                        <span wire:loading.remove>Kirim Laporan</span>
+                        <span wire:loading>Memproses...</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        {{-- Riwayat Laporan --}}
+        <div class="xl:col-span-2">
+            <div class="rounded-xl border border-slate-200 bg-white shadow-sm">
+                <div class="border-b border-slate-100 px-5 py-4">
+                    <h2 class="text-base font-bold text-slate-800">Riwayat Laporan Anda</h2>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="border-b border-slate-100 text-xs uppercase tracking-wide text-slate-400">
+                                <th class="px-5 py-3 font-semibold">Tiket</th>
+                                <th class="px-5 py-3 font-semibold">Tanggal</th>
+                                <th class="px-5 py-3 font-semibold">Perangkat</th>
+                                <th class="px-5 py-3 font-semibold">Prioritas</th>
+                                <th class="px-5 py-3 font-semibold">Status</th>
+                                <th class="px-5 py-3 text-center font-semibold">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-50">
+                            @forelse($riwayatLaporan as $laporan)
+                            <tr class="transition hover:bg-slate-50/80">
+                                <td class="px-5 py-3 font-mono text-xs font-semibold text-indigo-600">{{ $laporan->kode_tiket }}</td>
+                                <td class="px-5 py-3 text-slate-600">{{ $laporan->tanggal->format('d M Y') }}</td>
+                                <td class="px-5 py-3">
+                                    <div class="font-medium text-slate-800">{{ $laporan->perangkat->nama_perangkat }}</div>
+                                    <div class="text-xs text-slate-400">{{ $laporan->perangkat->jenis }} · {{ $laporan->perangkat->wilayah ?: '-' }}</div>
+                                </td>
+                                <td class="px-5 py-3">
+                                    <span class="inline-flex rounded-full px-2 py-0.5 text-xs font-semibold
+                                        @if($laporan->prioritas == 'Tinggi') bg-red-50 text-red-600
+                                        @elseif($laporan->prioritas == 'Sedang') bg-amber-50 text-amber-600
+                                        @else bg-emerald-50 text-emerald-600 @endif">
+                                        {{ $laporan->prioritas }}
+                                    </span>
+                                </td>
+                                <td class="px-5 py-3">
+                                    <span class="inline-flex rounded-full px-2 py-0.5 text-xs font-semibold
+                                        @if($laporan->isFinallyVerified()) bg-emerald-100 text-emerald-700
+                                        @elseif($laporan->isAwaitingFinalVerification()) bg-amber-100 text-amber-700
+                                        @elseif($laporan->status == 'Selesai') bg-green-100 text-green-700
+                                        @elseif($laporan->status == 'Proses') bg-sky-100 text-sky-700
+                                        @elseif($laporan->status == 'Diverifikasi') bg-indigo-100 text-indigo-700
+                                        @elseif($laporan->status == 'Menunggu') bg-orange-100 text-orange-700
+                                        @elseif($laporan->status == 'Ditolak') bg-slate-100 text-slate-500
+                                        @else bg-red-100 text-red-700 @endif">
+                                        {{ $laporan->workflow_status_label }}
+                                    </span>
+                                </td>
+                                <td class="px-5 py-3 text-center">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <a href="{{ route('user.gangguan.show', $laporan) }}" class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-600 transition hover:bg-indigo-100">Detail</a>
+                                        @if($laporan->status == 'Open')
+                                            <button wire:click="deleteLaporan({{ $laporan->id }})" class="rounded-md bg-red-50 px-2.5 py-1 text-xs font-semibold text-red-600 transition hover:bg-red-100" onclick="confirm('Yakin ingin menghapus laporan ini?') || event.stopImmediatePropagation()">Hapus</button>
+                                        @endif
+                                    </div>
+                                </td>
+                            </tr>
+                            @empty
+                            <tr>
+                                <td colspan="6" class="px-5 py-10 text-center text-sm text-slate-400">Anda belum pernah membuat laporan.</td>
+                            </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>

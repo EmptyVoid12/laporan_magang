@@ -20,10 +20,13 @@ class RoleMiddleware
             return redirect()->route('login');
         }
 
-        if (Auth::user()->role !== $role) {
-            abort(403, 'Anda tidak memiliki akses ke halaman ini.');
+        $user = Auth::user();
+
+        // super_admin (Spatie role) atau kolom role admin bisa akses semua
+        if ($user->hasRole('super_admin') || $user->role === $role) {
+            return $next($request);
         }
 
-        return $next($request);
+        abort(403, 'Anda tidak memiliki akses ke halaman ini.');
     }
 }

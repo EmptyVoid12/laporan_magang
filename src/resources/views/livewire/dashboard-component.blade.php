@@ -1,121 +1,117 @@
 <div class="space-y-6">
-    <h2 class="text-2xl font-bold text-gray-800 border-b pb-2">Admin Dashboard</h2>
+    <div>
+        <h1 class="text-xl font-bold text-slate-900">Dashboard</h1>
+        <p class="mt-1 text-sm text-slate-500">Ringkasan data laporan gangguan perangkat.</p>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-6">
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-blue-600 transition hover:shadow-md">
-            <p class="text-sm text-gray-500 font-semibold mb-1">Total Laporan</p>
-            <p class="text-4xl font-extrabold text-blue-900">{{ $total }}</p>
+    <div class="grid grid-cols-2 gap-4 lg:grid-cols-4 xl:grid-cols-7">
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Total</p>
+            <p class="mt-2 text-2xl font-extrabold text-slate-900">{{ $total }}</p>
         </div>
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-red-500 transition hover:shadow-md">
-            <p class="text-sm text-gray-500 font-semibold mb-1">Status Open</p>
-            <p class="text-4xl font-extrabold text-red-700">{{ $open }}</p>
+        <div class="rounded-xl border-l-4 border-l-red-400 border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-red-500">Open</p>
+            <p class="mt-2 text-2xl font-extrabold text-slate-900">{{ $open }}</p>
         </div>
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-sky-500 transition hover:shadow-md">
-            <p class="text-sm text-gray-500 font-semibold mb-1">Diverifikasi</p>
-            <p class="text-4xl font-extrabold text-sky-700">{{ $diverifikasi }}</p>
+        <div class="rounded-xl border-l-4 border-l-indigo-400 border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-indigo-500">Diverifikasi</p>
+            <p class="mt-2 text-2xl font-extrabold text-slate-900">{{ $diverifikasi }}</p>
         </div>
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-yellow-500 transition hover:shadow-md">
-            <p class="text-sm text-gray-500 font-semibold mb-1">Dalam Proses</p>
-            <p class="text-4xl font-extrabold text-yellow-600">{{ $proses }}</p>
+        <div class="rounded-xl border-l-4 border-l-amber-400 border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-amber-600">Proses</p>
+            <p class="mt-2 text-2xl font-extrabold text-slate-900">{{ $proses }}</p>
         </div>
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-orange-500 transition hover:shadow-md">
-            <p class="text-sm text-gray-500 font-semibold mb-1">Menunggu</p>
-            <p class="text-4xl font-extrabold text-orange-600">{{ $menunggu }}</p>
+        <div class="rounded-xl border-l-4 border-l-orange-400 border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-orange-500">Menunggu</p>
+            <p class="mt-2 text-2xl font-extrabold text-slate-900">{{ $menunggu }}</p>
         </div>
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-green-500 transition hover:shadow-md">
-            <p class="text-sm text-gray-500 font-semibold mb-1">Telah Selesai</p>
-            <p class="text-4xl font-extrabold text-green-700">{{ $selesai }}</p>
+        <div class="rounded-xl border-l-4 border-l-emerald-400 border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-emerald-600">Selesai</p>
+            <p class="mt-2 text-2xl font-extrabold text-slate-900">{{ $selesai }}</p>
         </div>
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-gray-500 transition hover:shadow-md">
-            <p class="text-sm text-gray-500 font-semibold mb-1">Ditolak</p>
-            <p class="text-4xl font-extrabold text-gray-700">{{ $ditolak }}</p>
+        <div class="rounded-xl border-l-4 border-l-slate-400 border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Ditolak</p>
+            <p class="mt-2 text-2xl font-extrabold text-slate-900">{{ $ditolak }}</p>
         </div>
     </div>
 
-    <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
-        <div class="bg-white rounded shadow-sm border p-6">
-            <h3 class="font-bold text-lg text-gray-800 mb-4">Distribusi Laporan per Wilayah</h3>
-            <div class="space-y-3">
+    <div class="grid gap-6 xl:grid-cols-2">
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+            <h3 class="text-sm font-bold text-slate-800">Distribusi per Wilayah</h3>
+            <div class="mt-4 space-y-2.5">
                 @forelse($laporanPerWilayah as $item)
-                    <div class="flex items-center justify-between rounded bg-gray-50 px-4 py-3">
-                        <span class="font-medium text-gray-700">{{ $item->wilayah }}</span>
-                        <span class="text-sm font-bold text-blue-700">{{ $item->total }} laporan</span>
+                    @php($pct = $total > 0 ? round($item->total / $total * 100) : 0)
+                    <div>
+                        <div class="mb-1 flex items-center justify-between text-xs">
+                            <span class="font-medium text-slate-600">{{ $item->wilayah }}</span>
+                            <span class="font-bold text-slate-800">{{ $item->total }}</span>
+                        </div>
+                        <div class="h-2 overflow-hidden rounded-full bg-slate-100">
+                            <div class="h-full rounded-full bg-indigo-500" style="width: {{ $pct }}%"></div>
+                        </div>
                     </div>
                 @empty
-                    <div class="text-sm text-gray-500">Belum ada data wilayah.</div>
+                    <p class="py-4 text-center text-sm text-slate-400">Belum ada data.</p>
                 @endforelse
             </div>
         </div>
-
-        <div class="bg-white rounded shadow-sm border p-6">
-            <h3 class="font-bold text-lg text-gray-800 mb-4">Distribusi Laporan per Jenis</h3>
-            <div class="space-y-3">
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+            <h3 class="text-sm font-bold text-slate-800">Distribusi per Jenis Perangkat</h3>
+            <div class="mt-4 space-y-2.5">
                 @forelse($laporanPerJenis as $item)
-                    <div class="flex items-center justify-between rounded bg-gray-50 px-4 py-3">
-                        <span class="font-medium text-gray-700">{{ $item->jenis }}</span>
-                        <span class="text-sm font-bold text-indigo-700">{{ $item->total }} laporan</span>
+                    @php($pct = $total > 0 ? round($item->total / $total * 100) : 0)
+                    <div>
+                        <div class="mb-1 flex items-center justify-between text-xs">
+                            <span class="font-medium text-slate-600">{{ $item->jenis }}</span>
+                            <span class="font-bold text-slate-800">{{ $item->total }}</span>
+                        </div>
+                        <div class="h-2 overflow-hidden rounded-full bg-slate-100">
+                            <div class="h-full rounded-full bg-violet-500" style="width: {{ $pct }}%"></div>
+                        </div>
                     </div>
                 @empty
-                    <div class="text-sm text-gray-500">Belum ada data jenis perangkat.</div>
+                    <p class="py-4 text-center text-sm text-slate-400">Belum ada data.</p>
                 @endforelse
             </div>
         </div>
     </div>
 
-    <div class="bg-white rounded shadow-sm border p-6">
-        <h3 class="font-bold text-lg text-gray-800 mb-4">Laporan Masuk Terbaru</h3>
-        
+    <div class="rounded-xl border border-slate-200 bg-white shadow-sm">
+        <div class="border-b border-slate-100 px-5 py-4">
+            <h3 class="text-sm font-bold text-slate-800">Laporan Masuk Terbaru</h3>
+        </div>
         <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse">
+            <table class="w-full text-left text-sm">
                 <thead>
-                    <tr class="bg-gray-100 text-gray-700">
-                        <th class="py-3 px-4 border-b font-semibold">Tgl Masuk</th>
-                        <th class="py-3 px-4 border-b font-semibold">Perangkat</th>
-                        <th class="py-3 px-4 border-b font-semibold">Prioritas</th>
-                        <th class="py-3 px-4 border-b font-semibold">Status</th>
-                        <th class="py-3 px-4 border-b font-semibold">Teknisi</th>
+                    <tr class="border-b border-slate-100 text-xs uppercase tracking-wide text-slate-400">
+                        <th class="px-5 py-3 font-semibold">Tanggal</th>
+                        <th class="px-5 py-3 font-semibold">Perangkat</th>
+                        <th class="px-5 py-3 font-semibold">Prioritas</th>
+                        <th class="px-5 py-3 font-semibold">Status</th>
+                        <th class="px-5 py-3 font-semibold">Teknisi</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="divide-y divide-slate-50">
                     @forelse($recent as $r)
-                    <tr class="border-b hover:bg-gray-50">
-                        <td class="py-3 px-4">
-                            <div>{{ $r->tanggal->format('d M Y') }}</div>
-                            <div class="text-xs font-mono text-blue-700">{{ $r->kode_tiket }}</div>
+                    <tr class="hover:bg-slate-50/80">
+                        <td class="px-5 py-3">
+                            <div class="text-slate-700">{{ $r->tanggal->format('d M Y') }}</div>
+                            <div class="font-mono text-[11px] text-indigo-500">{{ $r->kode_tiket }}</div>
                         </td>
-                        <td class="py-3 px-4">
-                            <span class="font-medium text-gray-800">{{ $r->perangkat->nama_perangkat }}</span><br>
-                            <span class="text-xs text-gray-500">{{ $r->perangkat->jenis }} | {{ $r->perangkat->wilayah ?: '-' }}</span><br>
-                            <span class="text-xs text-gray-400">{{ $r->perangkat->lokasi }}</span>
+                        <td class="px-5 py-3">
+                            <div class="font-medium text-slate-800">{{ $r->perangkat->nama_perangkat }}</div>
+                            <div class="text-xs text-slate-400">{{ $r->perangkat->jenis }} · {{ $r->perangkat->wilayah ?: '-' }}</div>
                         </td>
-                        <td class="py-3 px-4">
-                            @if($r->prioritas == 'Tinggi')
-                                <span class="text-red-600 font-semibold"><i class="fas fa-exclamation-circle text-xs"></i> Tinggi</span>
-                            @elseif($r->prioritas == 'Sedang')
-                                <span class="text-yellow-600 font-semibold">Sedang</span>
-                            @else
-                                <span class="text-green-600 font-semibold">Rendah</span>
-                            @endif
+                        <td class="px-5 py-3">
+                            <span class="inline-flex rounded-full px-2 py-0.5 text-xs font-semibold @if($r->prioritas == 'Tinggi') bg-red-50 text-red-600 @elseif($r->prioritas == 'Sedang') bg-amber-50 text-amber-600 @else bg-emerald-50 text-emerald-600 @endif">{{ $r->prioritas }}</span>
                         </td>
-                        <td class="py-3 px-4">
-                            <span class="px-2 py-1 rounded text-xs font-semibold
-                                @if($r->status == 'Selesai') bg-green-500 text-white
-                                @elseif($r->status == 'Proses') bg-yellow-400 text-white
-                                @elseif($r->status == 'Diverifikasi') bg-blue-500 text-white
-                                @elseif($r->status == 'Menunggu') bg-orange-400 text-white
-                                @elseif($r->status == 'Ditolak') bg-gray-500 text-white
-                                @else bg-red-500 text-white @endif">
-                                {{ $r->status }}
-                            </span>
+                        <td class="px-5 py-3">
+                            <span class="inline-flex rounded-full px-2 py-0.5 text-xs font-semibold @if($r->status == 'Selesai') bg-emerald-100 text-emerald-700 @elseif($r->status == 'Proses') bg-sky-100 text-sky-700 @elseif($r->status == 'Diverifikasi') bg-indigo-100 text-indigo-700 @elseif($r->status == 'Menunggu') bg-orange-100 text-orange-700 @elseif($r->status == 'Ditolak') bg-slate-100 text-slate-500 @else bg-red-100 text-red-700 @endif">{{ $r->status }}</span>
                         </td>
-                        <td class="py-3 px-4 text-gray-600">
-                            {{ $r->teknisi ? $r->teknisi->name : '-' }}
-                        </td>
+                        <td class="px-5 py-3 text-slate-600">{{ $r->teknisi?->name ?: '-' }}</td>
                     </tr>
                     @empty
-                    <tr>
-                        <td colspan="5" class="py-4 text-center text-gray-500">Belum ada laporan.</td>
-                    </tr>
+                    <tr><td colspan="5" class="px-5 py-10 text-center text-sm text-slate-400">Belum ada laporan.</td></tr>
                     @endforelse
                 </tbody>
             </table>

@@ -13,6 +13,7 @@ use App\Http\Controllers\AdminReportExportController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\TechnicianMonthlyHistoryExportController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Middleware\RoleMiddleware;
 
 Route::get('/', HomeComponent::class)->name('home');
 Route::get('/login', LoginComponent::class)->name('login')->middleware('guest');
@@ -37,7 +38,14 @@ Route::middleware(['auth', 'role:teknisi'])->group(function () {
     Route::get('/teknisi/task', TeknisiTaskComponent::class)->name('teknisi.task');
 });
 
-Route::get('/exports/teknisi/riwayat-bulanan', TechnicianMonthlyHistoryExportController::class)
+// Admin internal routes (public UI, bukan Filament panel)
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/admin-panel/dashboard', DashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin-panel/perangkat', PerangkatComponent::class)->name('admin.perangkat');
+    Route::get('/admin-panel/gangguan', AdminGangguanComponent::class)->name('admin.gangguan');
+});
+
+Route::middleware(['auth'])->get('/exports/teknisi/riwayat-bulanan', TechnicianMonthlyHistoryExportController::class)
     ->name('technician.monthly-history.export');
 
 Route::middleware(['auth'])->group(function () {

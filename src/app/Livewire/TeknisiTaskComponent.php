@@ -8,139 +8,146 @@ use App\Models\LaporanProses;
 use App\Support\GangguanNotifier;
 use Illuminate\Support\Facades\Auth;
 use Livewire\WithFileUploads;
+use Livewire\WithPagination;
+use Carbon\Carbon;
 
 class TeknisiTaskComponent extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads, WithPagination;
 
-    public $gangguan_id, $keterangan_proses, $kendala, $lampiran;
+    // Filters
+    public $filterStatus = '';
+    public $filterBulan = '';
+    public $filterTahun = '';
+
+    // Modal Update Progress
     public $isOpen = false;
-    public string $modalMode = 'progress';
-    public string $exportMonth;
+    public $selectedGangguanId = null;
+    public $statusUpdate = '';
+    public $keterangan = '';
+    public $foto_bukti;
 
     public function mount(): void
     {
-        $this->exportMonth = now()->format('Y-m');
+        $this->filterBulan = date('m');
+        $this->filterTahun = date('Y');
     }
 
-    public function openProgressModal($id)
+    public function updating($field)
     {
-        $this->gangguan_id = $id;
-        $this->keterangan_proses = '';
-        $this->kendala = '';
-        $this->lampiran = null;
-        $this->modalMode = 'progress';
+        if (in_array($field, ['filterStatus', 'filterBulan', 'filterTahun'])) {
+            $this->resetPage();
+        }
+    }
+
+    public function openUpdateModal($id)
+    {
+        $this->selectedGangguanId = $id;
+        $gangguan = Gangguan::find($id);
+        if ($gangguan) {
+            $this->statusUpdate = $gangguan->status;
+        }
+        $this->keterangan = '';
+        $this->foto_bukti = null;
         $this->isOpen = true;
     }
 
-    public function openCompletionModal($id)
-    {
-        $this->gangguan_id = $id;
-        $this->keterangan_proses = '';
-        $this->kendala = '';
-        $this->lampiran = null;
-        $this->modalMode = 'completion';
-        $this->isOpen = true;
-    }
-
-    public function closeModal()
+    public function closeUpdateModal()
     {
         $this->isOpen = false;
+        $this->selectedGangguanId = null;
+        $this->reset(['statusUpdate', 'keterangan', 'foto_bukti']);
     }
 
-    public function storeProses()
+    public function updateProgress()
     {
-        $isCompletion = $this->modalMode === 'completion';
-
         $this->validate([
-            'keterangan_proses' => 'required|string',
-            'kendala' => 'nullable|string',
-            'lampiran' => [
-                $isCompletion ? 'required' : 'nullable',
-                'file',
-                'mimes:jpg,jpeg,png,pdf',
-                'max:4096',
-            ],
+            'statusUpdate' => 'required|string',
+            'keterangan' => 'required|string|min:5',
+            'foto_bukti' => 'nullable|image|max:2048',
         ]);
 
-        $lampiranPath = $this->lampiran?->store('laporan_proses_attachments', 'public');
+        $gangguan = Gangguan::find($this->selectedGangguanId);
+        if (!$gangguan) return;
 
+        $lampiranPath = $this->foto_bukti ? $this->foto_bukti->store('bukti_proses', 'public') : null;
+
+        // Catat riwayat proses
         LaporanProses::create([
-            'gangguan_id' => $this->gangguan_id,
+            'gangguan_id' => $gangguan->id,
             'user_id' => Auth::id(),
-            'teknisi_id' => Auth::id(),
-            'tipe_update' => $isCompletion ? LaporanProses::TYPE_COMPLETION : LaporanProses::TYPE_PROGRESS,
-            'keterangan_proses' => $this->keterangan_proses,
-            'kendala' => $this->kendala,
-            'attachment_path' => $lampiranPath,
-            'attachment_name' => $this->lampiran?->getClientOriginalName(),
-            'attachment_mime' => $this->lampiran?->getMimeType(),
-            'tanggal_update' => date('Y-m-d')
+            'actor_name' => Auth::user()->name,
+            'status_berubah_menjadi' => $this->statusUpdate,
+            'keterangan_proses' => $this->keterangan,
+            'foto_bukti' => $lampiranPath,
+            'tanggal_update' => now(),
         ]);
 
-        $gangguan = Gangguan::find($this->gangguan_id);
-        if ($gangguan) {
-            if ($isCompletion) {
-                $gangguan->submitted_for_verification_at = now();
-                $gangguan->verified_at = null;
-                $gangguan->verified_by = null;
-                $gangguan->verification_notes = null;
-                $gangguan->status = Gangguan::STATUS_SELESAI;
-                $gangguan->save();
-
-                GangguanNotifier::sendToUsers(
-                    [$gangguan->operator],
-                    'Tiket menunggu verifikasi akhir',
-                    'Teknisi telah menandai tiket ' . $gangguan->kode_tiket . ' sebagai selesai dan menunggu verifikasi akhir.',
-                    $gangguan
-                );
-            } elseif ($gangguan->status !== Gangguan::STATUS_SELESAI) {
-                $gangguan->status = $this->kendala ? Gangguan::STATUS_MENUNGGU : Gangguan::STATUS_PROSES;
-                $gangguan->save();
-
-                GangguanNotifier::sendToUsers(
-                    [$gangguan->operator],
-                    'Progress baru ditambahkan',
-                    'Ada update progres baru untuk tiket ' . $gangguan->kode_tiket . '.',
-                    $gangguan
-                );
-            }
+        // Update status gangguan utama
+        $gangguan->status = $this->statusUpdate;
+        
+        // Logika penyelesaian
+        if ($this->statusUpdate === Gangguan::STATUS_SELESAI) {
+            $gangguan->submitted_for_verification_at = now();
+            
+            GangguanNotifier::sendToUsers(
+                [$gangguan->operator],
+                'Tiket Selesai Diperbaiki',
+                'Teknisi telah menyelesaikan perbaikan tiket ' . $gangguan->kode_tiket . '.',
+                $gangguan
+            );
         }
 
-        session()->flash('message', $isCompletion ? 'Penyelesaian berhasil dikirim untuk verifikasi akhir.' : 'Progress berhasil ditambahkan.');
-        $this->closeModal();
+        $gangguan->save();
+
+        session()->flash('message', 'Update progres berhasil disimpan.');
+        $this->closeUpdateModal();
     }
 
-    public function updateTaskStatus($id, $status)
+    public function exportTaskBulanan()
     {
-        $gangguan = Gangguan::find($id);
-        if($gangguan) {
-            $gangguan->status = $status;
-            $gangguan->save();
+        return redirect()->route('technician.monthly-history.export', [
+            'month' => $this->filterTahun . '-' . $this->filterBulan,
+            'type' => 'pdf'
+        ]);
+    }
 
-            if ($status === Gangguan::STATUS_SELESAI) {
-                $gangguan->logTimeline(
-                    'Perbaikan selesai dan perangkat dinyatakan normal.',
-                    Auth::id(),
-                    Auth::id(),
-                    LaporanProses::TYPE_COMPLETION
-                );
-            }
-
-            session()->flash('message', 'Status tugas berhasil diperbarui.');
-        }
+    public function exportTaskBulananExcel()
+    {
+        return redirect()->route('technician.monthly-history.export', [
+            'month' => $this->filterTahun . '-' . $this->filterBulan,
+            'type' => 'excel'
+        ]);
     }
 
     public function render()
     {
-        $tasks = Gangguan::where('teknisi_id', Auth::id())
-            ->with(['perangkat', 'proses.user', 'proses.teknisi', 'operator', 'verifier'])
-            ->when(request('ticket'), fn ($query) => $query->where('kode_tiket', request('ticket')))
-            ->latest()
-            ->get();
+        $query = Gangguan::with(['perangkat', 'proses'])
+            ->where('teknisi_id', Auth::id());
+
+        if ($this->filterStatus) {
+            $query->where('status', $this->filterStatus);
+        }
+
+        if ($this->filterBulan && $this->filterTahun) {
+            $query->whereYear('tanggal', $this->filterTahun)
+                  ->whereMonth('tanggal', $this->filterBulan);
+        }
+
+        $selectedGangguan = null;
+        $riwayatProses = collect();
+        if ($this->selectedGangguanId) {
+            $selectedGangguan = Gangguan::with('perangkat', 'operator')->find($this->selectedGangguanId);
+            $riwayatProses = LaporanProses::where('gangguan_id', $this->selectedGangguanId)
+                ->orderBy('created_at', 'desc')
+                ->get();
+        }
 
         return view('livewire.teknisi-task-component', [
-            'tasks' => $tasks
+            'tasks' => $query->latest('tanggal')->paginate(10),
+            'statusOptions' => Gangguan::STATUS_OPTIONS,
+            'selectedGangguan' => $selectedGangguan,
+            'riwayatProses' => $riwayatProses,
         ]);
     }
 }
