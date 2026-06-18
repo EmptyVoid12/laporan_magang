@@ -63,7 +63,7 @@ class GangguanPolicy
      */
     public function forceDelete(User $user, Gangguan $gangguan): bool
     {
-        return $user->can('force_delete_gangguan');
+        return $user->can('{{ ForceDelete }}');
     }
 
     /**
@@ -71,7 +71,7 @@ class GangguanPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_gangguan');
+        return $user->can('{{ ForceDeleteAny }}');
     }
 
     /**
@@ -79,7 +79,7 @@ class GangguanPolicy
      */
     public function restore(User $user, Gangguan $gangguan): bool
     {
-        return $user->can('restore_gangguan');
+        return $user->can('{{ Restore }}');
     }
 
     /**
@@ -87,7 +87,7 @@ class GangguanPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_gangguan');
+        return $user->can('{{ RestoreAny }}');
     }
 
     /**
@@ -95,7 +95,7 @@ class GangguanPolicy
      */
     public function replicate(User $user, Gangguan $gangguan): bool
     {
-        return $user->can('replicate_gangguan');
+        return $user->can('{{ Replicate }}');
     }
 
     /**
@@ -103,6 +103,6 @@ class GangguanPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_gangguan');
+        return $user->can('{{ Reorder }}');
     }
 }

@@ -63,7 +63,7 @@ class LaporanProsesPolicy
      */
     public function forceDelete(User $user, LaporanProses $laporanProses): bool
     {
-        return $user->can('force_delete_laporan::proses');
+        return $user->can('{{ ForceDelete }}');
     }
 
     /**
@@ -71,7 +71,7 @@ class LaporanProsesPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_laporan::proses');
+        return $user->can('{{ ForceDeleteAny }}');
     }
 
     /**
@@ -79,7 +79,7 @@ class LaporanProsesPolicy
      */
     public function restore(User $user, LaporanProses $laporanProses): bool
     {
-        return $user->can('restore_laporan::proses');
+        return $user->can('{{ Restore }}');
     }
 
     /**
@@ -87,7 +87,7 @@ class LaporanProsesPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_laporan::proses');
+        return $user->can('{{ RestoreAny }}');
     }
 
     /**
@@ -95,7 +95,7 @@ class LaporanProsesPolicy
      */
     public function replicate(User $user, LaporanProses $laporanProses): bool
     {
-        return $user->can('replicate_laporan::proses');
+        return $user->can('{{ Replicate }}');
     }
 
     /**
@@ -103,6 +103,6 @@ class LaporanProsesPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_laporan::proses');
+        return $user->can('{{ Reorder }}');
     }
 }
