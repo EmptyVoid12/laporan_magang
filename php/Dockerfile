@@ -24,8 +24,7 @@ RUN pecl install redis mongodb-1.16.0 imagick xdebug memcached && \
     docker-php-ext-enable redis mongodb imagick xdebug memcached
 
 # Install Composer
-RUN curl -s https://getcomposer.org/installer | php && \
-    mv composer.phar /usr/local/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 # Laravel Scheduler (Cron job)
 RUN echo "* * * * * root /usr/local/bin/php /var/www/html/artisan schedule:run >> /dev/null 2>&1" > /etc/cron.d/laravel-scheduler && \

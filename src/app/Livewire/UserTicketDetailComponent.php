@@ -25,6 +25,8 @@ class UserTicketDetailComponent extends Component
 
     public function render()
     {
-        return view('livewire.user-ticket-detail-component');
+        return view('livewire.user-ticket-detail-component', [
+            'prosesLogs' => $this->gangguan->proses()->latest('tanggal_update')->get(),
+        ]);
     }
 }

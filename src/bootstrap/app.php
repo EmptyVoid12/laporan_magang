@@ -15,6 +15,12 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'role' => \App\Http\Middleware\RoleMiddleware::class,
         ]);
+        $middleware->redirectTo(function (\Illuminate\Http\Request $request) {
+            if ($request->is('adminnoc*') || $request->is('adminnoc')) {
+                return route('adminnoc.login');
+            }
+            return route('login');
+        });
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

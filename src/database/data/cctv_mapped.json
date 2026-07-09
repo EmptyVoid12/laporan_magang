@@ -1,0 +1,2298 @@
+[
+    {
+        "nama_perangkat": "801 - Grogol",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Grogol Petamburan",
+        "deskripsi": "CCTV 801 - Grogol berlokasi di Grogol Petamburan, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang POS Pengumben",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kebon Jeruk",
+        "deskripsi": "CCTV Simpang POS Pengumben berlokasi di Kebon Jeruk, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "201 - Asemka",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Taman Sari",
+        "deskripsi": "CCTV 201 - Asemka berlokasi di Taman Sari, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Kawasan Pasar Pagi Asemka",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Taman Sari",
+        "deskripsi": "CCTV Kawasan Pasar Pagi Asemka berlokasi di Taman Sari, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Pecenongan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV Simpang Pecenongan berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Simpang Kunir - Kopi",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Taman Sari",
+        "deskripsi": "CCTV Simpang Kunir - Kopi berlokasi di Taman Sari, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "JPO - Rawa Buaya E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Cengkareng",
+        "deskripsi": "CCTV JPO - Rawa Buaya E berlokasi di Cengkareng, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "JPO - Rawa Buaya W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Cengkareng",
+        "deskripsi": "CCTV JPO - Rawa Buaya W berlokasi di Cengkareng, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Kemukus",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Taman Sari",
+        "deskripsi": "CCTV Simpang Kemukus berlokasi di Taman Sari, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "PO - RS.Pelni",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Palmerah",
+        "deskripsi": "CCTV PO - RS.Pelni berlokasi di Palmerah, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Kali Besar Barat - Jl Malaka",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Taman Sari",
+        "deskripsi": "CCTV Kali Besar Barat - Jl Malaka berlokasi di Taman Sari, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "JPO - Pangeran Jayakarta W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV JPO - Pangeran Jayakarta W berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "JPO - Pangeran Jayakarta E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV JPO - Pangeran Jayakarta E berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Simpang Joglo - Taman Alfa",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kembangan",
+        "deskripsi": "CCTV Simpang Joglo - Taman Alfa berlokasi di Kembangan, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Joglo - H. mochtar",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kembangan",
+        "deskripsi": "CCTV Simpang Joglo - H. mochtar berlokasi di Kembangan, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "PO - Jl. Tali Slipi",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Palmerah",
+        "deskripsi": "CCTV PO - Jl. Tali Slipi berlokasi di Palmerah, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Meruya POS Polisi",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kembangan",
+        "deskripsi": "CCTV Simpang Meruya POS Polisi berlokasi di Kembangan, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Meruya-Pesanggrahan (Srengseng)",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kembangan",
+        "deskripsi": "CCTV Simpang Meruya-Pesanggrahan (Srengseng) berlokasi di Kembangan, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "810 - Tomang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Grogol Petamburan",
+        "deskripsi": "CCTV 810 - Tomang berlokasi di Grogol Petamburan, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Joglo - Srengseng",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kembangan",
+        "deskripsi": "CCTV Simpang Joglo - Srengseng berlokasi di Kembangan, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Binus Kebon Jeruk S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kebon Jeruk",
+        "deskripsi": "CCTV Simpang Binus Kebon Jeruk S berlokasi di Kebon Jeruk, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Binus Kebon Jeruk N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kebon Jeruk",
+        "deskripsi": "CCTV Simpang Binus Kebon Jeruk N berlokasi di Kebon Jeruk, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Puri Kembangan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kembangan",
+        "deskripsi": "CCTV Simpang Puri Kembangan berlokasi di Kembangan, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Rawa Belong Bang Pitung N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Palmerah",
+        "deskripsi": "CCTV Simpang Rawa Belong Bang Pitung N berlokasi di Palmerah, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Rawa Belong Bang Pitung S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Palmerah",
+        "deskripsi": "CCTV Simpang Rawa Belong Bang Pitung S berlokasi di Palmerah, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Kelapa Dua Pos Pengumben E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kebon Jeruk",
+        "deskripsi": "CCTV Simpang Kelapa Dua Pos Pengumben E berlokasi di Kebon Jeruk, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Simpang Kelapa Dua Pos Pengumben W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kebon Jeruk",
+        "deskripsi": "CCTV Simpang Kelapa Dua Pos Pengumben W berlokasi di Kebon Jeruk, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "PO SDN Kelapa Dua 06 E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kebon Jeruk",
+        "deskripsi": "CCTV PO SDN Kelapa Dua 06 E berlokasi di Kebon Jeruk, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "PO SDN Kelapa Dua 06 W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kebon Jeruk",
+        "deskripsi": "CCTV PO SDN Kelapa Dua 06 W berlokasi di Kebon Jeruk, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "WL RCTI OKE E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kebon Jeruk",
+        "deskripsi": "CCTV WL RCTI OKE E berlokasi di Kebon Jeruk, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "WL RCTI OKE W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kebon Jeruk",
+        "deskripsi": "CCTV WL RCTI OKE W berlokasi di Kebon Jeruk, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Terminal RawaBuaya",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Cengkareng",
+        "deskripsi": "CCTV Terminal RawaBuaya berlokasi di Cengkareng, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "JPO - Benhil S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV JPO - Benhil S berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "02.16 - Gambir N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 02.16 - Gambir N berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "05.08 - Pal Putih N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Senen",
+        "deskripsi": "CCTV 05.08 - Pal Putih N berlokasi di Senen, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "05.08 - Pal Putih S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Senen",
+        "deskripsi": "CCTV 05.08 - Pal Putih S berlokasi di Senen, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "05.12 - Jembatan Merah N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV 05.12 - Jembatan Merah N berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "05.12 - Jembatan Merah S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV 05.12 - Jembatan Merah S berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "05.10 - Lapangan Banteng S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV 05.10 - Lapangan Banteng S berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "05.10 - Lapangan Banteng N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV 05.10 - Lapangan Banteng N berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PO - DPRD",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV PO - DPRD berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Gedung Citata lt 16",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV Gedung Citata lt 16 berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ Rooftop SPLL",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV PTZ Rooftop SPLL berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ Tanah Abang Simpang Blok G",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV PTZ Tanah Abang Simpang Blok G berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Fix Tanah Abang 9 Fly Over",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV Fix Tanah Abang 9 Fly Over berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "FIX Tanah Abang Blok A Pintu Timur N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV FIX Tanah Abang Blok A Pintu Timur N berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "FIX Tanah Abang Blok A Pintu Timur S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV FIX Tanah Abang Blok A Pintu Timur S berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ Tanah Abang Blok C",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV PTZ Tanah Abang Blok C berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "105 - PTZ  Pintu Besi angkasa",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV 105 - PTZ  Pintu Besi angkasa berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PO RSUD Tanah Abang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV PO RSUD Tanah Abang berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "111 - FIX Simpang Gereja GKI",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 111 - FIX Simpang Gereja GKI berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "116 - Veteran Juanda",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 116 - Veteran Juanda berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "114 - PTZ Otepa",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 114 - PTZ Otepa berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "213 - Cideng Hasyim Ashari",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 213 - Cideng Hasyim Ashari berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "214 - PTZ Sangaji",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 214 - PTZ Sangaji berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "301 - PTZ Biak Kyai Caringin",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 301 - PTZ Biak Kyai Caringin berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "304 - PTZ Tanah Abang 2",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV 304 - PTZ Tanah Abang 2 berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "309 - PTZ Budi Kemuliaan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 309 - PTZ Budi Kemuliaan berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "310 - PTZ Hotel Millenium",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV 310 - PTZ Hotel Millenium berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "311 - PTZ Jatibaru",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV 311 - PTZ Jatibaru berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "313 - PTZ Patung Kuda",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 313 - PTZ Patung Kuda berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "314 - PTZ Thamrin",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV 314 - PTZ Thamrin berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "315 - PTZ A (B4) Sarinah",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 315 - PTZ A (B4) Sarinah berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "317 - PTZ Kebon Sirih Sabang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 317 - PTZ Kebon Sirih Sabang berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "318 - PTZ Sabang - Wahid Hasyim",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 318 - PTZ Sabang - Wahid Hasyim berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "404 - PTZ Imam Bonjol",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 404 - PTZ Imam Bonjol berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "405 - PTZ Bundaran HI",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 405 - PTZ Bundaran HI berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "405 - FIX Bundaran HI 2",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 405 - FIX Bundaran HI 2 berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "407 - PTZ Pamekasan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 407 - PTZ Pamekasan berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "409 - PTZ RS. Bunda",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 409 - PTZ RS. Bunda berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "412 - PTZ T. Suropati",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 412 - PTZ T. Suropati berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "413 - PTZ Cik Ditiro",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 413 - PTZ Cik Ditiro berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "415 - PTZ Surabaya",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 415 - PTZ Surabaya berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "416 - FIX MEGARIA",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 416 - FIX MEGARIA berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "425 - Simpang Karet Bivak",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV 425 - Simpang Karet Bivak berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "506 - PTZ Tugu Tani",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 506 - PTZ Tugu Tani berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "504 - PTZ Galur",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Johar Baru",
+        "deskripsi": "CCTV 504 - PTZ Galur berlokasi di Johar Baru, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "507 - Kwitang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Senen",
+        "deskripsi": "CCTV 507 - Kwitang berlokasi di Senen, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "508 - PTZ Cut Mutia",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 508 - PTZ Cut Mutia berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "512 - PTZ Salemba Diponegoro",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Senen",
+        "deskripsi": "CCTV 512 - PTZ Salemba Diponegoro berlokasi di Senen, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "623 - Hotel Mulia",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV 623 - Hotel Mulia berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "CCTV VMS F Mall FX Sudirman",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV CCTV VMS F Mall FX Sudirman berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "CCTV VMS F Hotel The Sultan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV CCTV VMS F Hotel The Sultan berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "CCTV VMS F Sawah Besar",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV CCTV VMS F Sawah Besar berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PO Muhammadiyah Tanah Abang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV PO Muhammadiyah Tanah Abang berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Kawasan Jiung-Kemayoran",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Kemayoran",
+        "deskripsi": "CCTV Kawasan Jiung-Kemayoran berlokasi di Kemayoran, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Stasiun Pal Merah Outbound",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV Stasiun Pal Merah Outbound berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Stasiun Pal Merah Inbound",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV Stasiun Pal Merah Inbound berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Simpang Zainul Arifin (Pemadam)",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV Simpang Zainul Arifin (Pemadam) berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "811 - PTZ Simpang Slipi S.Parman",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Palmerah",
+        "deskripsi": "CCTV 811 - PTZ Simpang Slipi S.Parman berlokasi di Palmerah, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Gereja Ayam",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV Gereja Ayam berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Pejompongan Raya",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV Pejompongan Raya berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Simpang Cemara",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV Simpang Cemara berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Simpang MABAK",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV Simpang MABAK berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "108 - PTZ Mbal",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV 108 - PTZ Mbal berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "110 - FIX Wahidin",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV 110 - FIX Wahidin berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "120-Simpang Batu",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 120-Simpang Batu berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "205 - PTZ Harmoni",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV 205 - PTZ Harmoni berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Percetakan Negara E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Cempaka Putih",
+        "deskripsi": "CCTV Percetakan Negara E berlokasi di Cempaka Putih, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Percetakan Negara W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Cempaka Putih",
+        "deskripsi": "CCTV Percetakan Negara W berlokasi di Cempaka Putih, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "FIX - Tanah Abang 1 N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV FIX - Tanah Abang 1 N berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "FIX - Tanah Abang 1 S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV FIX - Tanah Abang 1 S berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "FIX - Tanah Abang 2 N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV FIX - Tanah Abang 2 N berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "FIX - Tanah Abang 2 S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV FIX - Tanah Abang 2 S berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PO PLN Cempaka Putih N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Cempaka Putih",
+        "deskripsi": "CCTV PO PLN Cempaka Putih N berlokasi di Cempaka Putih, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PO PLN Cempaka Putih S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Cempaka Putih",
+        "deskripsi": "CCTV PO PLN Cempaka Putih S berlokasi di Cempaka Putih, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Stasiun Mangga Besar",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV Stasiun Mangga Besar berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ - PO Santa Maria Ursula New Market",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Sawah Besar",
+        "deskripsi": "CCTV PTZ - PO Santa Maria Ursula New Market berlokasi di Sawah Besar, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "403 - Taman Menteng N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 403 - Taman Menteng N berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "403 - Taman Menteng S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 403 - Taman Menteng S berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "408-Teuku Umar-Sutan Syahrir N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 408-Teuku Umar-Sutan Syahrir N berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "408-Teuku Umar-Sutan Syahrir S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Menteng",
+        "deskripsi": "CCTV 408-Teuku Umar-Sutan Syahrir S berlokasi di Menteng, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "426-Pejompongan SPBU N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV 426-Pejompongan SPBU N berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "426-Pejompongan SPBU S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV 426-Pejompongan SPBU S berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ Simpang Senayan City",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV PTZ Simpang Senayan City berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Rawasari Serong E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Cempaka Putih",
+        "deskripsi": "CCTV Rawasari Serong E berlokasi di Cempaka Putih, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Rawasari Serong W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Cempaka Putih",
+        "deskripsi": "CCTV Rawasari Serong W berlokasi di Cempaka Putih, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Veteran Istana Negara",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV Veteran Istana Negara berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "IRTI IN",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV IRTI IN berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "IRTI OUT",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Gambir",
+        "deskripsi": "CCTV IRTI OUT berlokasi di Gambir, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "06.02 - SMK 57 N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV 06.02 - SMK 57 N berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "06.02 - SMK 57 S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV 06.02 - SMK 57 S berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "06.08 - Imigrasi S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV 06.08 - Imigrasi S berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "06.14 - GOR Sumantri N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Setiabudi",
+        "deskripsi": "CCTV 06.14 - GOR Sumantri N berlokasi di Setiabudi, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "06.14 - GOR Sumantri S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Setiabudi",
+        "deskripsi": "CCTV 06.14 - GOR Sumantri S berlokasi di Setiabudi, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "06.11 - Karet Kuningan S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Setiabudi",
+        "deskripsi": "CCTV 06.11 - Karet Kuningan S berlokasi di Setiabudi, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "06.11 - Karet Kuningan N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Setiabudi",
+        "deskripsi": "CCTV 06.11 - Karet Kuningan N berlokasi di Setiabudi, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "06.09 - Mampang Prapatan S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV 06.09 - Mampang Prapatan S berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "06.09 - Mampang Prapatan N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV 06.09 - Mampang Prapatan N berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PTZ Halte Duren Tiga",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV PTZ Halte Duren Tiga berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "605 - PTZ Simpang CSW (ASEAN) B14",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV 605 - PTZ Simpang CSW (ASEAN) B14 berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "610 - FIX Simpang Tendean Wijaya 1",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV 610 - FIX Simpang Tendean Wijaya 1 berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Blok M - Adityawarman",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV Blok M - Adityawarman berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "613 - FIX Terminal Blok M",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV 613 - FIX Terminal Blok M berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Bundaran Gultik Bulungan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV Bundaran Gultik Bulungan berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Terminal BUS Blok M (IN)",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV Terminal BUS Blok M (IN) berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Taman Gultik Mahakam Blok M",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV Taman Gultik Mahakam Blok M berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "615 - Wijaya 2",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV 615 - Wijaya 2 berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "602 - PTZ Bun. Senayan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV 602 - PTZ Bun. Senayan berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "622 - Pintu Satu Senayan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV 622 - Pintu Satu Senayan berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "625 - PTZ P.Polim (Monalisa/B15)",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV 625 - PTZ P.Polim (Monalisa/B15) berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "629 - FIX RS Fatmawati",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV 629 - FIX RS Fatmawati berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "630 - PTZ Dep.Tan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pasar Minggu",
+        "deskripsi": "CCTV 630 - PTZ Dep.Tan berlokasi di Pasar Minggu, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "632 - PTZ Tugu Pancoran",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pancoran",
+        "deskripsi": "CCTV 632 - PTZ Tugu Pancoran berlokasi di Pancoran, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "634 - FIX Pejaten Village",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pasar Minggu",
+        "deskripsi": "CCTV 634 - FIX Pejaten Village berlokasi di Pasar Minggu, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "638 - Simpang Duren Tiga Selatan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV 638 - Simpang Duren Tiga Selatan berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "641 - PTZ Kartini - Simatupang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV 641 - PTZ Kartini - Simatupang berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "651 - Lebak Bulus-cirendeu",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV 651 - Lebak Bulus-cirendeu berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "653 - PTZ Poltangan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Jagakarsa",
+        "deskripsi": "CCTV 653 - PTZ Poltangan berlokasi di Jagakarsa, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "903 - Tmp. Kalibata",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pancoran",
+        "deskripsi": "CCTV 903 - Tmp. Kalibata berlokasi di Pancoran, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "905 - Perdatam",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pancoran",
+        "deskripsi": "CCTV 905 - Perdatam berlokasi di Pancoran, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PTZ - Simpang Fedex",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Lama",
+        "deskripsi": "CCTV PTZ - Simpang Fedex berlokasi di Kebayoran Lama, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Adiyaksa-Lebak Bulus",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV Adiyaksa-Lebak Bulus berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "655 DEPLU-Veteran Fix",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pesanggrahan",
+        "deskripsi": "CCTV 655 DEPLU-Veteran Fix berlokasi di Pesanggrahan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Organon-Veteran RC",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV Organon-Veteran RC berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ CCTV VMS F Kemenpan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV PTZ CCTV VMS F Kemenpan berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PTZ CCTV VMS Bundaran Senayan (PANIN)",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV PTZ CCTV VMS Bundaran Senayan (PANIN) berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PTC CCTV VMS Semanggi Timur",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Setiabudi",
+        "deskripsi": "CCTV PTC CCTV VMS Semanggi Timur berlokasi di Setiabudi, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PTZ CCTV VMS F Atma Jaya",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Setiabudi",
+        "deskripsi": "CCTV PTZ CCTV VMS F Atma Jaya berlokasi di Setiabudi, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PTZ CCTV VMS F Plaza Sentral",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Setiabudi",
+        "deskripsi": "CCTV PTZ CCTV VMS F Plaza Sentral berlokasi di Setiabudi, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "CCTV VMS F CIMB Niaga",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Setiabudi",
+        "deskripsi": "CCTV CCTV VMS F CIMB Niaga berlokasi di Setiabudi, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "CCTV VMS Jati Padang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pasar Minggu",
+        "deskripsi": "CCTV CCTV VMS Jati Padang berlokasi di Pasar Minggu, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "CCTV VMS Kuningan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Setiabudi",
+        "deskripsi": "CCTV CCTV VMS Kuningan berlokasi di Setiabudi, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PO RS Fatmawati S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV PO RS Fatmawati S berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PO RS Fatmawati N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV PO RS Fatmawati N berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "JPO KOKAS E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Tebet",
+        "deskripsi": "CCTV JPO KOKAS E berlokasi di Tebet, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "JPO KOKAS W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Tebet",
+        "deskripsi": "CCTV JPO KOKAS W berlokasi di Tebet, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "JPO Antasari S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV JPO Antasari S berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "JPO Antasari N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV JPO Antasari N berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "JPO UI INBOUND",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Jagakarsa",
+        "deskripsi": "CCTV JPO UI INBOUND berlokasi di Jagakarsa, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "JPO UI OUTBOUND",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Jagakarsa",
+        "deskripsi": "CCTV JPO UI OUTBOUND berlokasi di Jagakarsa, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PTZ CCTV VMS UI",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Jagakarsa",
+        "deskripsi": "CCTV PTZ CCTV VMS UI berlokasi di Jagakarsa, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PTZ - Stasiun Manggarai",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Tebet",
+        "deskripsi": "CCTV PTZ - Stasiun Manggarai berlokasi di Tebet, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PO Tanjung Barat",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Jagakarsa",
+        "deskripsi": "CCTV PO Tanjung Barat berlokasi di Jagakarsa, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PO H.Tohir Lenteng Agung",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Jagakarsa",
+        "deskripsi": "CCTV PO H.Tohir Lenteng Agung berlokasi di Jagakarsa, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Kawasan Pasar Minggu",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pasar Minggu",
+        "deskripsi": "CCTV Kawasan Pasar Minggu berlokasi di Pasar Minggu, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Pasar Jum'at Lebak Bulus",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV Pasar Jum'at Lebak Bulus berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Mc D Kemang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV Simpang Mc D Kemang berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "SDN Cilandak OUT",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV SDN Cilandak OUT berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "SDN Cilandak IN",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV SDN Cilandak IN berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Tebet Supomo",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Tebet",
+        "deskripsi": "CCTV Simpang Tebet Supomo berlokasi di Tebet, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Stm Penerbangan / Kfc Gunawarman",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV Stm Penerbangan / Kfc Gunawarman berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Margaguna - Radio Dalam",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Lama",
+        "deskripsi": "CCTV Margaguna - Radio Dalam berlokasi di Kebayoran Lama, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "JPO Stasiun Lenteng Agung",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Jagakarsa",
+        "deskripsi": "CCTV JPO Stasiun Lenteng Agung berlokasi di Jagakarsa, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "635 - Simpang Jati Padang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pasar Minggu",
+        "deskripsi": "CCTV 635 - Simpang Jati Padang berlokasi di Pasar Minggu, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PO Stasiun Universitas Pancasila N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Jagakarsa",
+        "deskripsi": "CCTV PO Stasiun Universitas Pancasila N berlokasi di Jagakarsa, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PO Stasiun Universitas Pancasila S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Jagakarsa",
+        "deskripsi": "CCTV PO Stasiun Universitas Pancasila S berlokasi di Jagakarsa, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "FIX - Terminal Manggarai N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Tebet",
+        "deskripsi": "CCTV FIX - Terminal Manggarai N berlokasi di Tebet, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "FIX - Terminal Manggarai S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Tebet",
+        "deskripsi": "CCTV FIX - Terminal Manggarai S berlokasi di Tebet, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PO Pal Batu Tebet N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Tebet",
+        "deskripsi": "CCTV PO Pal Batu Tebet N berlokasi di Tebet, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PO Pal Batu Tebet S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Tebet",
+        "deskripsi": "CCTV PO Pal Batu Tebet S berlokasi di Tebet, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PTZ Pakubuwono SMK 30",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV PTZ Pakubuwono SMK 30 berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Habibie Center Kemang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV Simpang Habibie Center Kemang berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Ampera Madrasah N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pasar Minggu",
+        "deskripsi": "CCTV Simpang Ampera Madrasah N berlokasi di Pasar Minggu, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Ampera Madrasah S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pasar Minggu",
+        "deskripsi": "CCTV Simpang Ampera Madrasah S berlokasi di Pasar Minggu, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Pejaten Barat-Ampera",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pasar Minggu",
+        "deskripsi": "CCTV Simpang Pejaten Barat-Ampera berlokasi di Pasar Minggu, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Koperasi Jatipadang W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV Simpang Koperasi Jatipadang W berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Simpang Koperasi Jatipadang E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV Simpang Koperasi Jatipadang E berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "TL Jamblang Keb.Lama N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Lama",
+        "deskripsi": "CCTV TL Jamblang Keb.Lama N berlokasi di Kebayoran Lama, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "TL Jamblang Keb.Lama S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Lama",
+        "deskripsi": "CCTV TL Jamblang Keb.Lama S berlokasi di Kebayoran Lama, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PO Ayam Suharti Tendean E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV PO Ayam Suharti Tendean E berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "PO Ayam Suharti Tendean W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV PO Ayam Suharti Tendean W berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Basmar N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV Simpang Basmar N berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Basmar S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV Simpang Basmar S berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "TL Hang Tuah-Pakubuwono N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV TL Hang Tuah-Pakubuwono N berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "TL Hang Tuah-Pakubuwono S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV TL Hang Tuah-Pakubuwono S berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "604 - B13 Al Azhar",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV 604 - B13 Al Azhar berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "640 - Pasar Impres Cipete (Pasar Cipete Selatan)",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV 640 - Pasar Impres Cipete (Pasar Cipete Selatan) berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "616 - Kemang prapanca N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV 616 - Kemang prapanca N berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "617 - Kemang prapanca S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Mampang Prapatan",
+        "deskripsi": "CCTV 617 - Kemang prapanca S berlokasi di Mampang Prapatan, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "617-PTZ Brawijaya Antasari",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Kebayoran Baru",
+        "deskripsi": "CCTV 617-PTZ Brawijaya Antasari berlokasi di Kebayoran Baru, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Gunung Balong Firdaus N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV Simpang Gunung Balong Firdaus N berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Simpang Gunung Balong Firdaus S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV Simpang Gunung Balong Firdaus S berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Terminal Lebak Bulus",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Cilandak",
+        "deskripsi": "CCTV Terminal Lebak Bulus berlokasi di Cilandak, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "07.01 - Kampung Melayu N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV 07.01 - Kampung Melayu N berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "07.01 - Kampung Melayu S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV 07.01 - Kampung Melayu S berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Fix Terminal kp.Melayu 2",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV Fix Terminal kp.Melayu 2 berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PTZ Terminal Kampung Melayu 1",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV PTZ Terminal Kampung Melayu 1 berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "07.02 - Bidara Cina N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV 07.02 - Bidara Cina N berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "07.02 - Bidara Cina S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV 07.02 - Bidara Cina S berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "07.06 - Cawang UKI N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Kramat Jati",
+        "deskripsi": "CCTV 07.06 - Cawang UKI N berlokasi di Kramat Jati, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "07.06 - Cawang UKI S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Kramat Jati",
+        "deskripsi": "CCTV 07.06 - Cawang UKI S berlokasi di Kramat Jati, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "FIX Kp. Rambutan 1",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Ciracas",
+        "deskripsi": "CCTV FIX Kp. Rambutan 1 berlokasi di Ciracas, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PTZ Kp. Rambutan 2",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Ciracas",
+        "deskripsi": "CCTV PTZ Kp. Rambutan 2 berlokasi di Ciracas, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "514 - PTZ Slamet Riyadi",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Matraman",
+        "deskripsi": "CCTV 514 - PTZ Slamet Riyadi berlokasi di Matraman, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "707 - PTZ TU Gas",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pulo Gadung",
+        "deskripsi": "CCTV 707 - PTZ TU Gas berlokasi di Pulo Gadung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "708 - Fix Simpang Jatinegara Kodim",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV 708 - Fix Simpang Jatinegara Kodim berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "710 - FIX MCD Buaran",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV 710 - FIX MCD Buaran berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "711 - FIX JGC CAKUNG (relokasi dari tambak)",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Cakung",
+        "deskripsi": "CCTV 711 - FIX JGC CAKUNG (relokasi dari tambak) berlokasi di Cakung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "712 - PTZ Buaran",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV 712 - PTZ Buaran berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "725 - FIX Terminal Pulogadung",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pulo Gadung",
+        "deskripsi": "CCTV 725 - FIX Terminal Pulogadung berlokasi di Pulo Gadung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "902 - PTZ Jambul",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Kramat Jati",
+        "deskripsi": "CCTV 902 - PTZ Jambul berlokasi di Kramat Jati, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "720 - Bekasi raya Pulo Gebang Ujung Menteng",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Cakung",
+        "deskripsi": "CCTV 720 - Bekasi raya Pulo Gebang Ujung Menteng berlokasi di Cakung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "901 - PTZ  PGC Cililitan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Kramat Jati",
+        "deskripsi": "CCTV 901 - PTZ  PGC Cililitan berlokasi di Kramat Jati, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO DitBekangad 1",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Kramat Jati",
+        "deskripsi": "CCTV PO DitBekangad 1 berlokasi di Kramat Jati, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO DitBekangad 2",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Kramat Jati",
+        "deskripsi": "CCTV PO DitBekangad 2 berlokasi di Kramat Jati, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Cipinang Baru",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pulo Gadung",
+        "deskripsi": "CCTV Simpang Cipinang Baru berlokasi di Pulo Gadung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Cipinang Bunder",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pulo Gadung",
+        "deskripsi": "CCTV Simpang Cipinang Bunder berlokasi di Pulo Gadung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Persahabatan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pulo Gadung",
+        "deskripsi": "CCTV Simpang Persahabatan berlokasi di Pulo Gadung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "SImpang Rajiman",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Cakung",
+        "deskripsi": "CCTV SImpang Rajiman berlokasi di Cakung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO RS Ridwan TMII",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Makasar",
+        "deskripsi": "CCTV PO RS Ridwan TMII berlokasi di Makasar, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Condet- TB Simatupang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Kramat Jati",
+        "deskripsi": "CCTV Condet- TB Simatupang berlokasi di Kramat Jati, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Lubang Buaya",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Cipayung",
+        "deskripsi": "CCTV Lubang Buaya berlokasi di Cipayung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO SDN 01 Ciracas IN",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Ciracas",
+        "deskripsi": "CCTV PO SDN 01 Ciracas IN berlokasi di Ciracas, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO SDN 01 Ciracas Out",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Ciracas",
+        "deskripsi": "CCTV PO SDN 01 Ciracas Out berlokasi di Ciracas, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Pondok Kelapa Kalimalang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV Simpang Pondok Kelapa Kalimalang berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO SMK Pelita 3 N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV PO SMK Pelita 3 N berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO SMK Pelita 3 S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV PO SMK Pelita 3 S berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "912 - Pangkalan Jati",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV 912 - Pangkalan Jati berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "VMS Pangkalan Jati",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV VMS Pangkalan Jati berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "906 - Pasar Rebo",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pasar Rebo",
+        "deskripsi": "CCTV 906 - Pasar Rebo berlokasi di Pasar Rebo, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "718 - Garuda TMII",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Makasar",
+        "deskripsi": "CCTV 718 - Garuda TMII berlokasi di Makasar, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Pondok Bambu - BKT",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV Simpang Pondok Bambu - BKT berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Raden Inten - Kalimalang",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV Simpang Raden Inten - Kalimalang berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "JPO Dr.Sumarno",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Cakung",
+        "deskripsi": "CCTV JPO Dr.Sumarno berlokasi di Cakung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "706 - PTZ Arion",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pulo Gadung",
+        "deskripsi": "CCTV 706 - PTZ Arion berlokasi di Pulo Gadung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Alu alu",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pulo Gadung",
+        "deskripsi": "CCTV Simpang Alu alu berlokasi di Pulo Gadung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Gedong Pasar Rebo",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pasar Rebo",
+        "deskripsi": "CCTV Simpang Gedong Pasar Rebo berlokasi di Pasar Rebo, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Fix Robusta Pondok Kopi",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Taman Sari",
+        "deskripsi": "CCTV Fix Robusta Pondok Kopi berlokasi di Taman Sari, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "Jatinegara BRI S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV Jatinegara BRI S berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Jatinegara BRI N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV Jatinegara BRI N berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Arundina Lap Tembaka2an W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Ciracas",
+        "deskripsi": "CCTV Simpang Arundina Lap Tembaka2an W berlokasi di Ciracas, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Arundina Lap Tembaka2an E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Ciracas",
+        "deskripsi": "CCTV Simpang Arundina Lap Tembaka2an E berlokasi di Ciracas, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PTZ Pintu 1 TMII",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Makasar",
+        "deskripsi": "CCTV PTZ Pintu 1 TMII berlokasi di Makasar, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PTZ Simpang Pendidikan-Raden Inten",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV PTZ Simpang Pendidikan-Raden Inten berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO PEDATI DI PANDJAITAN S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV PO PEDATI DI PANDJAITAN S berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PO PEDATI DI PANDJAITAN N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV PO PEDATI DI PANDJAITAN N berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "TL Mawar Merah Soekamto E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV TL Mawar Merah Soekamto E berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "TL Mawar Merah Soekamto W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV TL Mawar Merah Soekamto W berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO LRT Taman Mini S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV PO LRT Taman Mini S berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PO LRT Taman Mini N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV PO LRT Taman Mini N berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "TL Waru-Balai Pustaka N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pulo Gadung",
+        "deskripsi": "CCTV TL Waru-Balai Pustaka N berlokasi di Pulo Gadung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "TL Waru-Balai Pustaka S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pulo Gadung",
+        "deskripsi": "CCTV TL Waru-Balai Pustaka S berlokasi di Pulo Gadung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO SDN PEKAYON 05 N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pasar Rebo",
+        "deskripsi": "CCTV PO SDN PEKAYON 05 N berlokasi di Pasar Rebo, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PO SDN PEKAYON 05 S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Pasar Rebo",
+        "deskripsi": "CCTV PO SDN PEKAYON 05 S berlokasi di Pasar Rebo, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Pondok Bambu Permai",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV Simpang Pondok Bambu Permai berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Simpang Dermaga Pahlawan Revolusi",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV Simpang Dermaga Pahlawan Revolusi berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Simpang Perumnas Raden Inten",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV Simpang Perumnas Raden Inten berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PTZ Sukanto Pom Bensin H.Jali",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV PTZ Sukanto Pom Bensin H.Jali berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PTZ Exit Tol Cakoeng",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Cakung",
+        "deskripsi": "CCTV PTZ Exit Tol Cakoeng berlokasi di Cakung, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Simpang Bandan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Pademangan",
+        "deskripsi": "CCTV Simpang Bandan berlokasi di Pademangan, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "121 - Fix Ancol",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Pademangan",
+        "deskripsi": "CCTV 121 - Fix Ancol berlokasi di Pademangan, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "122 - FIX Mangga Dua",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Jakarta Pusat",
+        "deskripsi": "CCTV 122 - FIX Mangga Dua berlokasi di Jakarta Pusat, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "128- Simpang Enggano",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV 128- Simpang Enggano berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "132 - Simpang Sunter Pizzahut",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV 132 - Simpang Sunter Pizzahut berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "724 - PTZ Simpang JICT",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV 724 - PTZ Simpang JICT berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "806 - PTZ Pluit Junction",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Penjaringan",
+        "deskripsi": "CCTV 806 - PTZ Pluit Junction berlokasi di Penjaringan, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "131-Simpang Jubilee",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV 131-Simpang Jubilee berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "JPO ANGKASA KEMAYORAN W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Kemayoran",
+        "deskripsi": "CCTV JPO ANGKASA KEMAYORAN W berlokasi di Kemayoran, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "JPO ANGKASA KEMAYORAN E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Kemayoran",
+        "deskripsi": "CCTV JPO ANGKASA KEMAYORAN E berlokasi di Kemayoran, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ Cilincing - Marunda",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Cilincing",
+        "deskripsi": "CCTV PTZ Cilincing - Marunda berlokasi di Cilincing, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Boulevard - Nias Kelapa Gading",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Kelapa Gading",
+        "deskripsi": "CCTV Boulevard - Nias Kelapa Gading berlokasi di Kelapa Gading, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "FIX Jembatan 3 N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Penjaringan",
+        "deskripsi": "CCTV FIX Jembatan 3 N berlokasi di Penjaringan, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "FIX Jembatan 3 S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Penjaringan",
+        "deskripsi": "CCTV FIX Jembatan 3 S berlokasi di Penjaringan, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "PTZ Karya Beton Sunter",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV PTZ Karya Beton Sunter berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "PO Jakarta Islamic Center",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Koja",
+        "deskripsi": "CCTV PO Jakarta Islamic Center berlokasi di Koja, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "127 - Simpang Permai",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV 127 - Simpang Permai berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Simpang Pluit Raya DIPO/ASTON",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Penjaringan",
+        "deskripsi": "CCTV Simpang Pluit Raya DIPO/ASTON berlokasi di Penjaringan, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Simpang Pasir Putih Ancol",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Pademangan",
+        "deskripsi": "CCTV Simpang Pasir Putih Ancol berlokasi di Pademangan, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Simpang Kramat Tunggak",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Koja",
+        "deskripsi": "CCTV Simpang Kramat Tunggak berlokasi di Koja, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "701 - Simpang Perintis Kemerdekaan Kelapa Gading",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Kelapa Gading",
+        "deskripsi": "CCTV 701 - Simpang Perintis Kemerdekaan Kelapa Gading berlokasi di Kelapa Gading, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Simpang Sunter Toyota",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV Simpang Sunter Toyota berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "130 - Fix Kebantenan Tj.Priok",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Cilincing",
+        "deskripsi": "CCTV 130 - Fix Kebantenan Tj.Priok berlokasi di Cilincing, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Simpang Cilincing Tanjung Priok",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Cilincing",
+        "deskripsi": "CCTV Simpang Cilincing Tanjung Priok berlokasi di Cilincing, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Simpang Tongkol S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Pademangan",
+        "deskripsi": "CCTV Simpang Tongkol S berlokasi di Pademangan, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Simpang Tongkol W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Pademangan",
+        "deskripsi": "CCTV Simpang Tongkol W berlokasi di Pademangan, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Simpang Kec Klp Gading E",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Kelapa Gading",
+        "deskripsi": "CCTV Simpang Kec Klp Gading E berlokasi di Kelapa Gading, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Simpang Kec Klp Gading W",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Kelapa Gading",
+        "deskripsi": "CCTV Simpang Kec Klp Gading W berlokasi di Kelapa Gading, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "PO Jembatan item Sunter N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV PO Jembatan item Sunter N berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "PO Jembatan item Sunter S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV PO Jembatan item Sunter S berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Terminal Muara Angke",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Penjaringan",
+        "deskripsi": "CCTV Terminal Muara Angke berlokasi di Penjaringan, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "Tanah Abang Fachrudin",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV Tanah Abang Fachrudin berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ-Tanah Abang Blok A",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV PTZ-Tanah Abang Blok A berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ Tanah Abang Blok B",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV PTZ Tanah Abang Blok B berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Fix Tanah abang Pemadam",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV Fix Tanah abang Pemadam berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ Tanah Abang Pemadam Blok F",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV PTZ Tanah Abang Pemadam Blok F berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "PTZ -Tanah Abang Pospol (Tanah Abang jati Bunder)",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV PTZ -Tanah Abang Pospol (Tanah Abang jati Bunder) berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "FIX Tanah Abang Stasiun",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV FIX Tanah Abang Stasiun berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "FIX Tanah Abang Stasiun (2)",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Pusat",
+        "lokasi": "Tanah Abang",
+        "deskripsi": "CCTV FIX Tanah Abang Stasiun (2) berlokasi di Tanah Abang, Jakarta Pusat."
+    },
+    {
+        "nama_perangkat": "Terminal Kali Deres",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Barat",
+        "lokasi": "Kalideres",
+        "deskripsi": "CCTV Terminal Kali Deres berlokasi di Kalideres, Jakarta Barat."
+    },
+    {
+        "nama_perangkat": "PTZ Terminal Klender",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Duren Sawit",
+        "deskripsi": "CCTV PTZ Terminal Klender berlokasi di Duren Sawit, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "Terminal Pasar Minggu",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Pasar Minggu",
+        "deskripsi": "CCTV Terminal Pasar Minggu berlokasi di Pasar Minggu, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Terminal Pinang Ranti",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Makasar",
+        "deskripsi": "CCTV Terminal Pinang Ranti berlokasi di Makasar, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "PTZ - Terminal Ragunan",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Selatan",
+        "lokasi": "Jagakarsa",
+        "deskripsi": "CCTV PTZ - Terminal Ragunan berlokasi di Jagakarsa, Jakarta Selatan."
+    },
+    {
+        "nama_perangkat": "Terminal Tanjung Priok",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Utara",
+        "lokasi": "Tanjung Priok",
+        "deskripsi": "CCTV Terminal Tanjung Priok berlokasi di Tanjung Priok, Jakarta Utara."
+    },
+    {
+        "nama_perangkat": "WL Jambore Cibubur",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Ciracas",
+        "deskripsi": "CCTV WL Jambore Cibubur berlokasi di Ciracas, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "WL Kebon Nanas Samsat N",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV WL Kebon Nanas Samsat N berlokasi di Jatinegara, Jakarta Timur."
+    },
+    {
+        "nama_perangkat": "WL Kebon Nanas Samsat S",
+        "jenis": "CCTV",
+        "wilayah": "Jakarta Timur",
+        "lokasi": "Jatinegara",
+        "deskripsi": "CCTV WL Kebon Nanas Samsat S berlokasi di Jatinegara, Jakarta Timur."
+    }
+]

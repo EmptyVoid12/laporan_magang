@@ -13,6 +13,7 @@ use App\Http\Controllers\AdminReportExportController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\TechnicianMonthlyHistoryExportController;
 use Illuminate\Support\Facades\Auth;
+use App\Livewire\AdminPortalComponent;
 use App\Http\Middleware\RoleMiddleware;
 
 Route::get('/', HomeComponent::class)->name('home');
@@ -27,6 +28,18 @@ Route::post('/logout', function (\Illuminate\Http\Request $request) {
     return redirect('/');
 })->name('logout');
 
+// Admin NOC Mandiri Routes
+Route::get('/adminnoc/login', \App\Livewire\AdminNocLoginComponent::class)->name('adminnoc.login');
+Route::post('/adminnoc/logout', function (\Illuminate\Http\Request $request) {
+    Auth::guard('admin')->logout();
+    $request->session()->regenerateToken();
+    return redirect()->route('adminnoc.login');
+})->name('adminnoc.logout');
+
+Route::middleware(['auth:admin', 'role:admin'])->group(function () {
+    Route::get('/adminnoc', \App\Livewire\AdminPortalComponent::class)->name('adminnoc.portal');
+});
+
 // User Routes
 Route::middleware(['auth', 'role:user'])->group(function () {
     Route::get('/user/gangguan', GangguanComponent::class)->name('user.gangguan');
@@ -39,16 +52,17 @@ Route::middleware(['auth', 'role:teknisi'])->group(function () {
 });
 
 // Admin internal routes (public UI, bukan Filament panel)
-Route::middleware(['auth', 'role:admin'])->group(function () {
+Route::middleware(['auth:admin,web', 'role:admin'])->group(function () {
     Route::get('/admin-panel/dashboard', DashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin-panel/perangkat', PerangkatComponent::class)->name('admin.perangkat');
     Route::get('/admin-panel/gangguan', AdminGangguanComponent::class)->name('admin.gangguan');
+    Route::get('/admin-panel/portal', AdminPortalComponent::class)->name('admin.portal');
 });
 
-Route::middleware(['auth'])->get('/exports/teknisi/riwayat-bulanan', TechnicianMonthlyHistoryExportController::class)
+Route::middleware(['auth:admin,web'])->get('/exports/teknisi/riwayat-bulanan', TechnicianMonthlyHistoryExportController::class)
     ->name('technician.monthly-history.export');
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth:admin,web'])->group(function () {
     Route::post('/notifications/{notification}/read', [NotificationController::class, 'markAsRead'])->name('notifications.read');
     Route::post('/notifications/read-all', [NotificationController::class, 'markAllAsRead'])->name('notifications.read-all');
     Route::get('/admin/reports/export/{type}', AdminReportExportController::class)->name('admin.reports.export');

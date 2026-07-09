@@ -16,11 +16,14 @@ class RoleMiddleware
      */
     public function handle(Request $request, Closure $next, string $role): Response
     {
-        if (!Auth::check()) {
+        $user = Auth::user() ?? Auth::guard('admin')->user() ?? Auth::guard('web')->user();
+
+        if (!$user) {
+            if ($request->is('adminnoc*')) {
+                return redirect()->route('adminnoc.login');
+            }
             return redirect()->route('login');
         }
-
-        $user = Auth::user();
 
         // super_admin (Spatie role) atau kolom role admin bisa akses semua
         if ($user->hasRole('super_admin') || $user->role === $role) {

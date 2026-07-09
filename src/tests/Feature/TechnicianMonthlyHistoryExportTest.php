@@ -49,9 +49,11 @@ it('allows teknisi to download their own monthly work history', function () {
 
     $response->assertOk();
     $response->assertHeader('content-type', 'text/csv; charset=UTF-8');
-    $response->assertSee('Riwayat Kerja Bulanan Teknisi', false);
-    $response->assertSee('Jumlah Update Bulan Ini', false);
-    $response->assertSee('Pengecekan jaringan dilakukan', false);
+    
+    $content = $response->streamedContent();
+    expect($content)->toContain('Riwayat Kerja Bulanan Teknisi');
+    expect($content)->toContain('Jumlah Update Bulan Ini');
+    expect($content)->toContain('Pengecekan jaringan dilakukan');
 });
 
 it('prevents teknisi from downloading another technicians monthly work history', function () {
@@ -119,9 +121,11 @@ it('allows admin guard user to download selected technicians monthly work histor
         ]));
 
     $response->assertOk();
-    $response->assertSee('Teknisi Export', false);
-    $response->assertSee('Jumlah Update Bulan Ini', false);
-    $response->assertSee('Perbaikan selesai', false);
+    
+    $content = $response->streamedContent();
+    expect($content)->toContain('Teknisi Export');
+    expect($content)->toContain('Jumlah Update Bulan Ini');
+    expect($content)->toContain('Perbaikan selesai');
 });
 
 it('prioritizes the admin session when admin and web sessions are both active', function () {
@@ -177,6 +181,8 @@ it('prioritizes the admin session when admin and web sessions are both active', 
         ]));
 
     $response->assertOk();
-    $response->assertSee('Teknisi Panel', false);
-    $response->assertSee('Analisis awal dilakukan', false);
+    
+    $content = $response->streamedContent();
+    expect($content)->toContain('Teknisi Panel');
+    expect($content)->toContain('Analisis awal dilakukan');
 });

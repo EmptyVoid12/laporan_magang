@@ -33,11 +33,17 @@ return new class extends Migration
             $table->unique('kode_tiket');
         });
 
-        DB::statement("
-            ALTER TABLE gangguans
-            MODIFY COLUMN status ENUM('Open', 'Diverifikasi', 'Proses', 'Menunggu', 'Selesai', 'Ditolak')
-            DEFAULT 'Open'
-        ");
+        if (DB::getDriverName() === 'sqlite') {
+            Schema::table('gangguans', function (Blueprint $table) {
+                $table->string('status')->default('Open')->change();
+            });
+        } else {
+            DB::statement("
+                ALTER TABLE gangguans
+                MODIFY COLUMN status ENUM('Open', 'Diverifikasi', 'Proses', 'Menunggu', 'Selesai', 'Ditolak')
+                DEFAULT 'Open'
+            ");
+        }
     }
 
     /**
@@ -53,11 +59,17 @@ return new class extends Migration
             ->where('status', 'Ditolak')
             ->update(['status' => 'Open']);
 
-        DB::statement("
-            ALTER TABLE gangguans
-            MODIFY COLUMN status ENUM('Open', 'Proses', 'Selesai')
-            DEFAULT 'Open'
-        ");
+        if (DB::getDriverName() === 'sqlite') {
+            Schema::table('gangguans', function (Blueprint $table) {
+                $table->string('status')->default('Open')->change();
+            });
+        } else {
+            DB::statement("
+                ALTER TABLE gangguans
+                MODIFY COLUMN status ENUM('Open', 'Proses', 'Selesai')
+                DEFAULT 'Open'
+            ");
+        }
 
         Schema::table('gangguans', function (Blueprint $table) {
             $table->dropUnique(['kode_tiket']);

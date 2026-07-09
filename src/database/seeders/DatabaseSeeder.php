@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             UserSeeder::class,
             DummySeeder::class,
+            CctvSeeder::class,
+            TrafficLightSeeder::class,
         ]);
     }
 }

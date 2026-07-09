@@ -24,7 +24,6 @@ class LoginComponent extends Component
             
             if (in_array($role, ['admin', 'operator']) || Auth::user()->hasRole('super_admin')) {
                 Auth::logout();
-                session()->flash('error', 'Akses Ditolak: Anda adalah Administrator/Staff. Silakan login melalui halaman /admin/login');
                 return redirect()->to('/login');
             }
             
@@ -36,7 +35,7 @@ class LoginComponent extends Component
 
             return redirect()->to('/');
         } else {
-            session()->flash('error', 'Kredensial tidak valid.');
+            session()->flash('error', 'Email atau Password salah.');
         }
     }
 

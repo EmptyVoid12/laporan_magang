@@ -144,3 +144,25 @@ it('shows final verified tickets as verified on the home page', function () {
         ->assertSeeInOrder(['Diproses', 'Terverifikasi'])
         ->assertSee('Selesai Terverifikasi');
 });
+
+it('mounts AdminPortalComponent with the tab parameter and sanitizes invalid tabs', function () {
+    $admin = User::factory()->create([
+        'role' => 'admin',
+    ]);
+
+    // Test default tab
+    Livewire::actingAs($admin, 'admin')
+        ->test(\App\Livewire\AdminPortalComponent::class)
+        ->assertSet('activeTab', 'gangguan');
+
+    // Test perangkat tab
+    Livewire::actingAs($admin, 'admin')
+        ->test(\App\Livewire\AdminPortalComponent::class, ['tab' => 'perangkat'])
+        ->assertSet('activeTab', 'perangkat');
+
+    // Test invalid tab sanitization
+    Livewire::actingAs($admin, 'admin')
+        ->test(\App\Livewire\AdminPortalComponent::class, ['tab' => 'invalid-tab-value'])
+        ->assertSet('activeTab', 'gangguan');
+});
+

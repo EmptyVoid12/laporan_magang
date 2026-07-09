@@ -20,12 +20,13 @@
     </style>
 </head>
 <?php ($isHomePage = request()->routeIs('home')); ?>
+<?php ($actor = Auth::guard('admin')->user() ?? Auth::guard('web')->user()); ?>
 <body class="bg-slate-50 text-slate-700 antialiased">
 
     <?php if($isHomePage): ?>
         <?php echo e($slot); ?>
 
-    <?php elseif(auth()->check()): ?>
+    <?php elseif($actor): ?>
         
         <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur-md">
             <div class="flex h-16 items-center justify-between px-4 lg:px-6">
@@ -46,7 +47,7 @@
                 <div class="flex items-center gap-2">
                     
                     <div x-data="{ open: false }" class="relative" @click.away="open = false">
-                        <?php ($unreadCount = auth()->user()->unreadNotifications()->count()); ?>
+                        <?php ($unreadCount = $actor->unreadNotifications()->count()); ?>
                         <button @click="open = !open" class="relative rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-700">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/></svg>
                             <?php if($unreadCount > 0): ?>
@@ -62,7 +63,7 @@
                                 </form>
                             </div>
                             <div class="mt-3 max-h-80 space-y-2 overflow-y-auto">
-                                <?php $__empty_1 = true; $__currentLoopData = auth()->user()->notifications()->latest()->take(8)->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $notification): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                                <?php $__empty_1 = true; $__currentLoopData = $actor->notifications()->latest()->take(8)->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $notification): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                     <div class="rounded-lg p-3 <?php echo e($notification->read_at ? 'bg-slate-50' : 'border-l-2 border-indigo-500 bg-indigo-50/50'); ?>">
                                         <div class="flex items-start justify-between gap-2">
                                             <div class="min-w-0">
@@ -92,13 +93,13 @@
 
                     
                     <div class="hidden items-center gap-2 border-l border-slate-200 pl-3 sm:flex">
-                        <div class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-200 text-xs font-bold text-slate-600"><?php echo e(strtoupper(substr(auth()->user()->name, 0, 1))); ?></div>
+                        <div class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-200 text-xs font-bold text-slate-600"><?php echo e(strtoupper(substr($actor->name, 0, 1))); ?></div>
                         <div>
-                            <div class="text-sm font-semibold text-slate-800"><?php echo e(auth()->user()->name); ?></div>
-                            <div class="text-[11px] capitalize text-slate-400"><?php echo e(auth()->user()->role); ?></div>
+                            <div class="text-sm font-semibold text-slate-800"><?php echo e($actor->name); ?></div>
+                            <div class="text-[11px] capitalize text-slate-400"><?php echo e($actor->role); ?></div>
                         </div>
                     </div>
-                    <form method="POST" action="<?php echo e(route('logout')); ?>">
+                    <form method="POST" action="<?php echo e(Auth::guard('admin')->check() ? route('adminnoc.logout') : route('logout')); ?>">
                         <?php echo csrf_field(); ?>
                         <button type="submit" class="rounded-lg px-3 py-1.5 text-xs font-semibold text-red-600 hover:bg-red-50">Keluar</button>
                     </form>
@@ -110,34 +111,42 @@
             
             <aside class="hidden w-56 shrink-0 border-r border-slate-200 bg-white lg:block">
                 <nav class="space-y-0.5 px-2 py-4">
-                    <?php if(auth()->user()->role === 'admin'): ?>
-                        <a href="<?php echo e(route('admin.dashboard')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('admin.dashboard') ? 'active' : ''); ?>">
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                            Dashboard
+                    <?php if($actor->role === 'admin'): ?>
+                        <?php if(!request()->routeIs('adminnoc.portal')): ?>
+                            <a href="<?php echo e(route('admin.dashboard')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('admin.dashboard') ? 'active' : ''); ?>">
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                                Dashboard
+                            </a>
+                        <?php endif; ?>
+                        <a href="<?php echo e(route('adminnoc.portal')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-bold text-slate-600 <?php echo e(request()->routeIs('adminnoc.portal') && !request()->has('tab') ? 'active' : ''); ?>">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                            Portal Admin
                         </a>
-                        <a href="<?php echo e(route('admin.perangkat')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('admin.perangkat') ? 'active' : ''); ?>">
+                        <a href="<?php echo e(route('adminnoc.portal', ['tab' => 'perangkat'])); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e((request()->routeIs('adminnoc.portal') && request()->query('tab') === 'perangkat') || request()->routeIs('admin.perangkat') ? 'active' : ''); ?>">
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/></svg>
                             Perangkat
                         </a>
-                        <a href="<?php echo e(route('admin.gangguan')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('admin.gangguan') ? 'active' : ''); ?>">
+                        <a href="<?php echo e(route('adminnoc.portal', ['tab' => 'gangguan'])); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e((request()->routeIs('adminnoc.portal') && request()->query('tab') === 'gangguan') || request()->routeIs('admin.gangguan') ? 'active' : ''); ?>">
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                             Laporan Masuk
                         </a>
-                        <a href="<?php echo e(url('/admin')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600">
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            Filament Panel
-                        </a>
-                    <?php elseif(auth()->user()->role === 'operator'): ?>
+                        <?php if(!request()->routeIs('adminnoc.portal')): ?>
+                            <a href="<?php echo e(url('/admin')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600">
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                Filament Panel
+                            </a>
+                        <?php endif; ?>
+                    <?php elseif($actor->role === 'operator'): ?>
                         <a href="<?php echo e(route('user.gangguan')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('user.gangguan*') ? 'active' : ''); ?>">
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
                             Buat Laporan
                         </a>
-                    <?php elseif(auth()->user()->role === 'teknisi'): ?>
+                    <?php elseif($actor->role === 'teknisi'): ?>
                         <a href="<?php echo e(route('teknisi.task')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('teknisi.task') ? 'active' : ''); ?>">
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
                             Daftar Tugas
                         </a>
-                    <?php elseif(auth()->user()->role === 'user'): ?>
+                    <?php elseif($actor->role === 'user'): ?>
                         <a href="<?php echo e(route('user.gangguan')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('user.gangguan*') ? 'active' : ''); ?>">
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
                             Laporan Saya
@@ -161,15 +170,18 @@
                         </button>
                     </div>
                     <nav class="space-y-0.5 px-2 py-3">
-                        <?php if(auth()->user()->role === 'admin'): ?>
-                            <a href="<?php echo e(route('admin.dashboard')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Dashboard</a>
-                            <a href="<?php echo e(route('admin.perangkat')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Perangkat</a>
-                            <a href="<?php echo e(route('admin.gangguan')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Laporan Masuk</a>
-                        <?php elseif(auth()->user()->role === 'operator'): ?>
+                        <?php if($actor->role === 'admin'): ?>
+                            <?php if(!request()->routeIs('adminnoc.portal')): ?>
+                                <a href="<?php echo e(route('admin.dashboard')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Dashboard</a>
+                            <?php endif; ?>
+                            <a href="<?php echo e(route('adminnoc.portal')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-bold text-slate-600 <?php echo e(request()->routeIs('adminnoc.portal') && !request()->has('tab') ? 'active' : ''); ?>" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Portal Admin</a>
+                            <a href="<?php echo e(route('adminnoc.portal', ['tab' => 'perangkat'])); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e((request()->routeIs('adminnoc.portal') && request()->query('tab') === 'perangkat') || request()->routeIs('admin.perangkat') ? 'active' : ''); ?>" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Perangkat</a>
+                            <a href="<?php echo e(route('adminnoc.portal', ['tab' => 'gangguan'])); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e((request()->routeIs('adminnoc.portal') && request()->query('tab') === 'gangguan') || request()->routeIs('admin.gangguan') ? 'active' : ''); ?>" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Laporan Masuk</a>
+                        <?php elseif($actor->role === 'operator'): ?>
                             <a href="<?php echo e(route('user.gangguan')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600">Buat Laporan</a>
-                        <?php elseif(auth()->user()->role === 'teknisi'): ?>
+                        <?php elseif($actor->role === 'teknisi'): ?>
                             <a href="<?php echo e(route('teknisi.task')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600">Daftar Tugas</a>
-                        <?php elseif(auth()->user()->role === 'user'): ?>
+                        <?php elseif($actor->role === 'user'): ?>
                             <a href="<?php echo e(route('user.gangguan')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600">Laporan Saya</a>
                         <?php endif; ?>
                         <a href="<?php echo e(route('home')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600">Beranda</a>
