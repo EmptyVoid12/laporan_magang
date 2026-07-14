@@ -1,23 +1,33 @@
-<div class="relative min-h-screen overflow-hidden bg-slate-50 text-slate-700">
+<div class="relative min-h-screen overflow-hidden bg-slate-50 text-slate-700 dark:bg-slate-950 dark:text-slate-300">
     <div class="pointer-events-none absolute inset-0">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(99,102,241,0.08),_transparent_26%),radial-gradient(circle_at_top_right,_rgba(56,189,248,0.08),_transparent_22%),linear-gradient(180deg,_#f8fafc_0%,_#f1f5f9_100%)]"></div>
-        <div class="absolute inset-0 opacity-40" style="background-image: linear-gradient(rgba(148,163,184,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.1) 1px, transparent 1px); background-size: 30px 30px;"></div>
-        <div class="absolute -left-20 top-20 h-72 w-72 rounded-full bg-indigo-400/10 blur-3xl"></div>
-        <div class="absolute right-0 top-0 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(99,102,241,0.08),_transparent_26%),radial-gradient(circle_at_top_right,_rgba(56,189,248,0.08),_transparent_22%),linear-gradient(180deg,_#f8fafc_0%,_#f1f5f9_100%)] dark:bg-[radial-gradient(circle_at_top_left,_rgba(99,102,241,0.03),_transparent_26%),radial-gradient(circle_at_top_right,_rgba(56,189,248,0.03),_transparent_22%),linear-gradient(180deg,_#090d16_0%,_#0f172a_100%)]"></div>
+        <div class="absolute inset-0 opacity-40 dark:opacity-20" style="background-image: linear-gradient(rgba(148,163,184,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.1) 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="absolute -left-20 top-20 h-72 w-72 rounded-full bg-indigo-400/10 dark:bg-indigo-500/5 blur-3xl"></div>
+        <div class="absolute right-0 top-0 h-80 w-80 rounded-full bg-sky-400/10 dark:bg-sky-500/5 blur-3xl"></div>
     </div>
 
     <div class="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-6 px-5 py-5 sm:px-6 lg:px-10 lg:py-8">
-        <header class="rounded-2xl border border-slate-200 bg-white/80 px-5 py-4 shadow-sm backdrop-blur-xl">
+        <header class="rounded-2xl border border-slate-200 bg-white/80 px-5 py-4 shadow-sm backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/80">
             <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                 <div class="flex items-center gap-4">
                     <img src="{{ asset('images/logo-dishub.png') }}" alt="Logo Dinas Perhubungan" class="h-12 w-auto object-contain" />
                     <div>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-indigo-600">Dinas Perhubungan DKI Jakarta</p>
-                        <h1 class="mt-1 text-base font-black text-slate-900 sm:text-lg">Laporan Gangguan Perangkat</h1>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-indigo-600 dark:text-indigo-400">Dinas Perhubungan DKI Jakarta</p>
+                        <h1 class="mt-1 text-base font-black text-slate-900 sm:text-lg dark:text-white">Laporan Gangguan Perangkat</h1>
                     </div>
                 </div>
 
                 <div class="flex flex-wrap items-center gap-2.5">
+                    {{-- Theme Toggle --}}
+                    <button class="theme-toggle-btn inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-300" aria-label="Toggle dark mode">
+                        <svg class="theme-toggle-dark-icon hidden h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                        </svg>
+                        <svg class="theme-toggle-light-icon hidden h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                        </svg>
+                    </button>
+
                     @php($portalActor = Auth::guard('web')->user())
                     @php($portalActor = $portalActor && in_array($portalActor->role, ['user', 'teknisi'], true) ? $portalActor : null)
                     @if($portalActor)
@@ -31,7 +41,7 @@
                             </a>
                         @endif
                     @else
-                        <a href="{{ route('login') }}" class="inline-flex items-center justify-center rounded-lg bg-white border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 shadow-sm">
+                        <a href="{{ route('login') }}" class="inline-flex items-center justify-center rounded-lg bg-white border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 shadow-sm dark:bg-slate-800 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-700">
                             Login
                         </a>
                         <a href="{{ route('register') }}" class="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-700 shadow-sm">
@@ -44,104 +54,104 @@
 
         <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             <!-- Card 1: Total Laporan -->
-            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group dark:border-slate-800 dark:bg-slate-900">
                 <div class="flex items-center justify-between">
-                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-slate-500">Total Laporan</div>
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Total Laporan</div>
                     <div class="text-slate-400 group-hover:text-indigo-500 transition-colors">
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                     </div>
                 </div>
-                <div class="mt-4 text-4xl font-black text-slate-900">{{ $total }}</div>
-                <div class="mt-2 text-[10px] text-slate-400 font-medium">Akumulasi aduan masuk</div>
+                <div class="mt-4 text-4xl font-black text-slate-900 dark:text-white">{{ $total }}</div>
+                <div class="mt-2 text-[10px] text-slate-400 dark:text-slate-500 font-medium">Akumulasi aduan masuk</div>
             </div>
 
             <!-- Card 2: Belum Ditangani -->
-            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-red-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-red-300">
+            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-red-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-red-300 dark:border-slate-800 dark:border-l-red-500 dark:bg-slate-900">
                 <div class="flex items-center justify-between">
-                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-red-500">Belum Ditangani</div>
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-red-500 dark:text-red-400">Belum Ditangani</div>
                     <div class="text-red-400 group-hover:text-red-600 transition-colors">
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                     </div>
                 </div>
-                <div class="mt-4 text-4xl font-black text-slate-900">{{ $open }}</div>
-                <div class="mt-2 text-[10px] text-slate-400 font-medium">Menunggu respon admin</div>
+                <div class="mt-4 text-4xl font-black text-slate-900 dark:text-white">{{ $open }}</div>
+                <div class="mt-2 text-[10px] text-slate-400 dark:text-slate-500 font-medium">Menunggu respon admin</div>
             </div>
 
             <!-- Card 3: Dalam Penanganan -->
-            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-sky-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-sky-300">
+            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-sky-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-sky-300 dark:border-slate-800 dark:border-l-sky-500 dark:bg-slate-900">
                 <div class="flex items-center justify-between">
-                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-sky-500">Dalam Penanganan</div>
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-sky-500 dark:text-sky-400">Dalam Penanganan</div>
                     <div class="text-sky-400 group-hover:text-sky-600 transition-colors">
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
                 </div>
-                <div class="mt-4 text-4xl font-black text-slate-900">{{ $proses }}</div>
-                <div class="mt-2 text-[10px] text-slate-400 font-medium">Pekerjaan aktif teknisi</div>
+                <div class="mt-4 text-4xl font-black text-slate-900 dark:text-white">{{ $proses }}</div>
+                <div class="mt-2 text-[10px] text-slate-400 dark:text-slate-500 font-medium">Pekerjaan aktif teknisi</div>
             </div>
 
             <!-- Card 4: Tertunda -->
-            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-orange-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-orange-300">
+            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-orange-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-orange-300 dark:border-slate-800 dark:border-l-orange-500 dark:bg-slate-900">
                 <div class="flex items-center justify-between">
-                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-orange-500">Tertunda</div>
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-orange-500 dark:text-orange-400">Tertunda</div>
                     <div class="text-orange-400 group-hover:text-orange-600 transition-colors">
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
                 </div>
-                <div class="mt-4 text-4xl font-black text-slate-900">{{ $menunggu }}</div>
-                <div class="mt-2 text-[10px] text-slate-400 font-medium">Penanganan ditunda</div>
+                <div class="mt-4 text-4xl font-black text-slate-900 dark:text-white">{{ $menunggu }}</div>
+                <div class="mt-2 text-[10px] text-slate-400 dark:text-slate-500 font-medium">Penanganan ditunda</div>
             </div>
 
             <!-- Card 5: Menunggu Verifikasi -->
-            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-yellow-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-yellow-300">
+            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-yellow-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-yellow-300 dark:border-slate-800 dark:border-l-yellow-500 dark:bg-slate-900">
                 <div class="flex items-center justify-between">
-                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-yellow-500">Menunggu Verifikasi</div>
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-yellow-500 dark:text-yellow-400">Menunggu Verifikasi</div>
                     <div class="text-yellow-400 group-hover:text-yellow-600 transition-colors">
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
                     </div>
                 </div>
-                <div class="mt-4 text-4xl font-black text-slate-900">{{ $selesai }}</div>
-                <div class="mt-2 text-[10px] text-slate-400 font-medium">Menunggu validasi admin</div>
+                <div class="mt-4 text-4xl font-black text-slate-900 dark:text-white">{{ $selesai }}</div>
+                <div class="mt-2 text-[10px] text-slate-400 dark:text-slate-500 font-medium">Menunggu validasi admin</div>
             </div>
 
             <!-- Card 6: Selesai Terverifikasi -->
-            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-emerald-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-emerald-300">
+            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-emerald-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-emerald-300 dark:border-slate-800 dark:border-l-emerald-500 dark:bg-slate-900">
                 <div class="flex items-center justify-between">
-                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-emerald-500">Selesai Terverifikasi</div>
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-emerald-500 dark:text-emerald-400">Selesai Terverifikasi</div>
                     <div class="text-emerald-400 group-hover:text-emerald-600 transition-colors">
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     </div>
                 </div>
-                <div class="mt-4 text-4xl font-black text-slate-900">{{ $diverifikasi }}</div>
-                <div class="mt-2 text-[10px] text-slate-400 font-medium">Terselesaikan sepenuhnya</div>
+                <div class="mt-4 text-4xl font-black text-slate-900 dark:text-white">{{ $diverifikasi }}</div>
+                <div class="mt-2 text-[10px] text-slate-400 dark:text-slate-500 font-medium">Terselesaikan sepenuhnya</div>
             </div>
         </section>
 
-        <section class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+        <section class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6 dark:border-slate-800 dark:bg-slate-900">
                 <div class="flex items-start justify-between gap-4">
                     <div>
-                        <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-indigo-600">Ticket Lookup</div>
-                        <h3 class="mt-2 text-2xl font-black text-slate-900">Cek status tiket</h3>
+                        <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-indigo-600 dark:text-indigo-400">Ticket Lookup</div>
+                        <h3 class="mt-2 text-2xl font-black text-slate-900 dark:text-white">Cek status tiket</h3>
                     </div>
-                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 dark:bg-indigo-950/30 dark:text-indigo-400">
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m1.85-4.65a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"/>
                         </svg>
                     </div>
                 </div>
 
-                <p class="mt-3 text-sm leading-6 text-slate-500">
+                <p class="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-400">
                     Masukkan kode tiket untuk melihat progres penanganan terbaru.
                 </p>
 
                 <form wire:submit.prevent="searchTicket" class="mt-5 space-y-4">
                     <div>
-                        <label class="mb-2 block text-[11px] font-bold uppercase tracking-[0.24em] text-slate-500">Kode Tiket</label>
+                        <label class="mb-2 block text-[11px] font-bold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Kode Tiket</label>
                         <div class="relative">
                             <input
                                 type="text"
                                 wire:model="ticketCode"
                                 placeholder="NOC-20260421-0001"
-                                class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 pr-12 text-sm font-semibold tracking-[0.05em] text-slate-900 placeholder:text-slate-400 focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-100"
+                                class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 pr-12 text-sm font-semibold tracking-[0.05em] text-slate-900 placeholder:text-slate-400 focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-100 dark:border-slate-800 dark:bg-slate-950 dark:text-white dark:focus:ring-indigo-950/50"
                             >
                             <span class="absolute inset-y-0 right-4 flex items-center text-slate-400">#</span>
                         </div>
@@ -156,89 +166,89 @@
                     </button>
                 </form>
 
-                <div class="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <div class="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950/50">
                     @if($ticketResult)
                         <div class="flex flex-wrap items-start justify-between gap-4">
                             <div>
-                                <div class="text-[11px] font-bold uppercase tracking-[0.26em] text-indigo-600">{{ $ticketResult->kode_tiket }}</div>
-                                <div class="mt-2 text-xl font-bold text-slate-900">{{ $ticketResult->perangkat->nama_perangkat }}</div>
-                                <div class="mt-2 text-sm leading-6 text-slate-500">
+                                <div class="text-[11px] font-bold uppercase tracking-[0.26em] text-indigo-600 dark:text-indigo-400">{{ $ticketResult->kode_tiket }}</div>
+                                <div class="mt-2 text-xl font-bold text-slate-900 dark:text-white">{{ $ticketResult->perangkat->nama_perangkat }}</div>
+                                <div class="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">
                                     {{ $ticketResult->perangkat->jenis }} • {{ $ticketResult->perangkat->wilayah ?: '-' }} • {{ $ticketResult->perangkat->lokasi }}
                                 </div>
                             </div>
-                            <div class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-700">
+                            <div class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-450">
                                 {{ $ticketResult->workflow_status_label }}
                             </div>
                         </div>
 
                         <div class="mt-4 grid gap-3 sm:grid-cols-2">
-                            <div class="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
-                                <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Prioritas</div>
-                                <div class="mt-2 text-sm font-bold text-slate-900">{{ $ticketResult->prioritas }}</div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-3 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Prioritas</div>
+                                <div class="mt-2 text-sm font-bold text-slate-900 dark:text-white">{{ $ticketResult->prioritas }}</div>
                             </div>
-                            <div class="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
-                                <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Teknisi</div>
-                                <div class="mt-2 text-sm font-bold text-slate-900">{{ $ticketResult->teknisi?->name ?: 'Belum diassign' }}</div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-3 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Teknisi</div>
+                                <div class="mt-2 text-sm font-bold text-slate-900 dark:text-white">{{ $ticketResult->teknisi?->name ?: 'Belum diassign' }}</div>
                             </div>
                         </div>
 
-                        <div class="mt-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-                            <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Timeline Penanganan</div>
+                        <div class="mt-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                            <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Timeline Penanganan</div>
                             <div class="mt-4 space-y-3">
                                 @forelse($ticketResult->proses->sortByDesc('id') as $proses)
-                                    <div class="rounded-xl border border-slate-100 bg-slate-50 p-3">
+                                    <div class="rounded-xl border border-slate-100 bg-slate-50 p-3 dark:border-slate-800 dark:bg-slate-950">
                                         <div class="flex items-start justify-between gap-3">
                                             <div>
-                                                <div class="text-sm font-bold text-slate-900">{{ $proses->actor_name }}</div>
-                                                <div class="mt-1 text-[11px] uppercase tracking-[0.18em] text-indigo-600">{{ $proses->tipe_update }}</div>
+                                                <div class="text-sm font-bold text-slate-900 dark:text-white">{{ $proses->actor_name }}</div>
+                                                <div class="mt-1 text-[11px] uppercase tracking-[0.18em] text-indigo-600 dark:text-indigo-400">{{ $proses->tipe_update }}</div>
                                             </div>
-                                            <div class="text-xs text-slate-400">{{ optional($proses->tanggal_update)->format('d M Y') }}</div>
+                                            <div class="text-xs text-slate-400 dark:text-slate-500">{{ optional($proses->tanggal_update)->format('d M Y') }}</div>
                                         </div>
-                                        <div class="mt-3 text-sm text-slate-600">{{ $proses->keterangan_proses }}</div>
+                                        <div class="mt-3 text-sm text-slate-600 dark:text-slate-350">{{ $proses->keterangan_proses }}</div>
                                         @if($proses->kendala)
-                                            <div class="mt-2 text-xs text-amber-600">Kendala: {{ $proses->kendala }}</div>
+                                            <div class="mt-2 text-xs text-amber-600 dark:text-amber-450">Kendala: {{ $proses->kendala }}</div>
                                         @endif
                                     </div>
                                 @empty
-                                    <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-6 text-sm text-slate-500 text-center">
+                                    <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-6 text-sm text-slate-500 text-center dark:border-slate-700 dark:bg-slate-950 dark:text-slate-400">
                                         Belum ada progres teknis yang dicatat untuk tiket ini.
                                     </div>
                                 @endforelse
                             </div>
                         </div>
                     @elseif($ticketLookupAttempted)
-                        <div class="rounded-xl border border-red-200 bg-red-50 p-4 text-sm leading-6 text-red-600">
+                        <div class="rounded-xl border border-red-200 bg-red-50 p-4 text-sm leading-6 text-red-600 dark:border-red-950/40 dark:bg-red-950/20 dark:text-red-400">
                             Tiket belum ditemukan. Coba cek lagi kode tiket yang Anda masukkan.
                         </div>
                     @else
                         <div class="grid gap-3">
-                            <div class="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
-                                <span class="text-sm text-slate-500">Format tiket</span>
-                                <span class="font-mono text-xs font-bold text-indigo-600">NOC-YYYYMMDD-XXXX</span>
+                            <div class="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <span class="text-sm text-slate-500 dark:text-slate-400">Format tiket</span>
+                                <span class="font-mono text-xs font-bold text-indigo-600 dark:text-indigo-400">NOC-YYYYMMDD-XXXX</span>
                             </div>
-                            <div class="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
-                                <span class="text-sm text-slate-500">Informasi tampil</span>
-                                <span class="text-xs font-bold text-slate-900">status, prioritas, teknisi, timeline</span>
+                            <div class="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <span class="text-sm text-slate-500 dark:text-slate-400">Informasi tampil</span>
+                                <span class="text-xs font-bold text-slate-900 dark:text-white">status, prioritas, teknisi, timeline</span>
                             </div>
                         </div>
                     @endif
                 </div>
         </section>
 
-        <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
             <div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
                 <div>
-                    <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-indigo-600">Live Feed</div>
-                    <h3 class="mt-2 text-3xl font-bold text-slate-900">Tiket terbaru</h3>
+                    <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-indigo-600 dark:text-indigo-400">Live Feed</div>
+                    <h3 class="mt-2 text-3xl font-bold text-slate-900 dark:text-white">Tiket terbaru</h3>
                 </div>
-                <p class="max-w-xl text-sm leading-6 text-slate-500">
+                <p class="max-w-xl text-sm leading-6 text-slate-500 dark:text-slate-400">
                     Ringkasan singkat aktivitas laporan terbaru.
                 </p>
             </div>
 
             <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                 @forelse($recentReports as $report)
-                    <div class="flex h-full flex-col rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-indigo-300/50 hover:bg-white shadow-sm">
+                    <div class="flex h-full flex-col rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-indigo-300/50 hover:bg-white shadow-sm dark:border-slate-800 dark:bg-slate-950/50 dark:hover:bg-slate-900">
                         <div class="flex items-start justify-between gap-3">
                             <div class="font-mono text-[11px] font-bold tracking-[0.18em] text-indigo-600">{{ $report->kode_tiket }}</div>
                             <span class="rounded-full px-3 py-1 text-[11px] font-bold
@@ -256,8 +266,8 @@
                         </div>
 
                         <div class="mt-4">
-                            <h4 class="text-lg font-bold text-slate-900">{{ $report->perangkat->nama_perangkat }}</h4>
-                            <div class="mt-2 text-sm leading-6 text-slate-500">
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white">{{ $report->perangkat->nama_perangkat }}</h4>
+                            <div class="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">
                                 {{ $report->perangkat->jenis }}<br>
                                 {{ $report->perangkat->wilayah ?: '-' }}<br>
                                 {{ $report->perangkat->lokasi }}
@@ -265,17 +275,17 @@
                         </div>
 
                         <div class="mt-5 grid gap-3 text-sm">
-                            <div class="rounded-xl border border-slate-200 bg-white px-3 py-3 shadow-sm">
-                                <div class="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-400">Prioritas</div>
-                                <div class="mt-2 font-bold text-slate-900">{{ $report->prioritas }}</div>
+                            <div class="rounded-xl border border-slate-200 bg-white px-3 py-3 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <div class="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">Prioritas</div>
+                                <div class="mt-2 font-bold text-slate-900 dark:text-white">{{ $report->prioritas }}</div>
                             </div>
-                            <div class="rounded-xl border border-slate-200 bg-white px-3 py-3 shadow-sm">
-                                <div class="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-400">Teknisi</div>
-                                <div class="mt-2 font-bold text-slate-900">{{ $report->teknisi?->name ?: 'Belum diassign' }}</div>
+                            <div class="rounded-xl border border-slate-200 bg-white px-3 py-3 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <div class="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">Teknisi</div>
+                                <div class="mt-2 font-bold text-slate-900 dark:text-white">{{ $report->teknisi?->name ?: 'Belum diassign' }}</div>
                             </div>
                         </div>
 
-                        <div class="mt-5 border-t border-slate-200 pt-4 text-xs text-slate-400">
+                        <div class="mt-5 border-t border-slate-200 pt-4 text-xs text-slate-400 dark:border-slate-800 dark:text-slate-500">
                             Dibuat {{ optional($report->tanggal)->format('d M Y') ?: '-' }}
                         </div>
                     </div>
@@ -288,8 +298,8 @@
             </div>
         </section>
 
-        <footer class="pb-2 text-center text-sm text-slate-500">
-            <span class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">
+        <footer class="pb-2 text-center text-sm text-slate-500 dark:text-slate-400">
+            <span class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <span class="h-2 w-2 rounded-full bg-indigo-500"></span>
                 &copy; {{ date('Y') }} Dinas Perhubungan DKI Jakarta
             </span>
