@@ -12,9 +12,8 @@ use App\Livewire\UserTicketDetailComponent;
 use App\Http\Controllers\AdminReportExportController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\TechnicianMonthlyHistoryExportController;
-use Illuminate\Support\Facades\Auth;
-use App\Livewire\AdminPortalComponent;
 use App\Http\Middleware\RoleMiddleware;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', HomeComponent::class)->name('home');
 Route::get('/login', LoginComponent::class)->name('login')->middleware('guest');
@@ -28,17 +27,7 @@ Route::post('/logout', function (\Illuminate\Http\Request $request) {
     return redirect('/');
 })->name('logout');
 
-// Admin NOC Mandiri Routes
-Route::get('/adminnoc/login', \App\Livewire\AdminNocLoginComponent::class)->name('adminnoc.login');
-Route::post('/adminnoc/logout', function (\Illuminate\Http\Request $request) {
-    Auth::guard('admin')->logout();
-    $request->session()->regenerateToken();
-    return redirect()->route('adminnoc.login');
-})->name('adminnoc.logout');
 
-Route::middleware(['auth:admin', 'role:admin'])->group(function () {
-    Route::get('/adminnoc', \App\Livewire\AdminPortalComponent::class)->name('adminnoc.portal');
-});
 
 // User Routes
 Route::middleware(['auth', 'role:user'])->group(function () {
@@ -52,11 +41,10 @@ Route::middleware(['auth', 'role:teknisi'])->group(function () {
 });
 
 // Admin internal routes (public UI, bukan Filament panel)
-Route::middleware(['auth:admin,web', 'role:admin'])->group(function () {
+Route::middleware(['auth:admin,web', 'role:admin,operator'])->group(function () {
     Route::get('/admin-panel/dashboard', DashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin-panel/perangkat', PerangkatComponent::class)->name('admin.perangkat');
     Route::get('/admin-panel/gangguan', AdminGangguanComponent::class)->name('admin.gangguan');
-    Route::get('/admin-panel/portal', AdminPortalComponent::class)->name('admin.portal');
 });
 
 Route::middleware(['auth:admin,web'])->get('/exports/teknisi/riwayat-bulanan', TechnicianMonthlyHistoryExportController::class)

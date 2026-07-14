@@ -13,18 +13,20 @@ class Gangguan extends Model
     use HasFactory;
 
     public const STATUS_OPEN = 'Open';
-    public const STATUS_DIVERIFIKASI = 'Diverifikasi';
+    public const STATUS_DITERIMA = 'Diterima';
     public const STATUS_PROSES = 'Proses';
     public const STATUS_MENUNGGU = 'Menunggu';
     public const STATUS_SELESAI = 'Selesai';
+    public const STATUS_DIVERIFIKASI = 'Diverifikasi';
     public const STATUS_DITOLAK = 'Ditolak';
 
     public const STATUS_OPTIONS = [
         self::STATUS_OPEN => self::STATUS_OPEN,
-        self::STATUS_DIVERIFIKASI => self::STATUS_DIVERIFIKASI,
+        self::STATUS_DITERIMA => self::STATUS_DITERIMA,
         self::STATUS_PROSES => self::STATUS_PROSES,
         self::STATUS_MENUNGGU => self::STATUS_MENUNGGU,
         self::STATUS_SELESAI => self::STATUS_SELESAI,
+        self::STATUS_DIVERIFIKASI => self::STATUS_DIVERIFIKASI,
         self::STATUS_DITOLAK => self::STATUS_DITOLAK,
     ];
 
@@ -61,7 +63,7 @@ class Gangguan extends Model
         static::created(function (Gangguan $gangguan): void {
             if (! $gangguan->kode_tiket) {
                 $gangguan->updateQuietly([
-                    'kode_tiket' => static::generateKodeTiket($gangguan->id, $gangguan->tanggal),
+                    'kode_tiket' => 'NOC-' . now()->format('Ymd') . '-' . str_pad($gangguan->id, 4, '0', STR_PAD_LEFT),
                 ]);
             }
 
@@ -132,6 +134,22 @@ class Gangguan extends Model
                 }
             }
         });
+
+        static::saving(function (Gangguan $gangguan): void {
+            if ($gangguan->isDirty('status')) {
+                if ($gangguan->status === self::STATUS_DIVERIFIKASI) {
+                    if (!$gangguan->verified_at) {
+                        $gangguan->verified_at = now();
+                    }
+                    if (!$gangguan->verified_by) {
+                        $gangguan->verified_by = auth()->id() ?? User::where('role', 'admin')->first()?->id;
+                    }
+                } else {
+                    $gangguan->verified_at = null;
+                    $gangguan->verified_by = null;
+                }
+            }
+        });
     }
 
     public static function generateKodeTiket(int $id, $tanggal): string
@@ -166,15 +184,12 @@ class Gangguan extends Model
 
     public function isAwaitingFinalVerification(): bool
     {
-        return $this->status === self::STATUS_SELESAI
-            && $this->submitted_for_verification_at !== null
-            && $this->verified_at === null;
+        return $this->status === self::STATUS_SELESAI;
     }
 
     public function isFinallyVerified(): bool
     {
-        return $this->status === self::STATUS_SELESAI
-            && $this->verified_at !== null;
+        return $this->status === self::STATUS_DIVERIFIKASI;
     }
 
     public function getWorkflowStatusLabelAttribute(): string
@@ -193,9 +208,10 @@ class Gangguan extends Model
     public static function statusColor(string $status): string
     {
         return match ($status) {
-            self::STATUS_SELESAI => 'green',
-            self::STATUS_PROSES => 'yellow',
-            self::STATUS_DIVERIFIKASI => 'blue',
+            self::STATUS_DIVERIFIKASI => 'green',
+            self::STATUS_SELESAI => 'yellow',
+            self::STATUS_PROSES => 'sky',
+            self::STATUS_DITERIMA => 'blue',
             self::STATUS_MENUNGGU => 'orange',
             self::STATUS_DITOLAK => 'gray',
             default => 'red',

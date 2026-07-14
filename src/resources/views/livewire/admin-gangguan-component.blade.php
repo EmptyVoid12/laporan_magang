@@ -64,7 +64,7 @@
                             <span class="inline-flex rounded-full px-2 py-0.5 text-xs font-semibold @if($g->prioritas == 'Tinggi') bg-red-50 text-red-600 @elseif($g->prioritas == 'Sedang') bg-amber-50 text-amber-600 @else bg-emerald-50 text-emerald-600 @endif">{{ $g->prioritas }}</span>
                         </td>
                         <td class="px-4 py-3">
-                            <span class="inline-flex rounded-full px-2 py-0.5 text-xs font-semibold @if($g->status == 'Selesai') bg-emerald-100 text-emerald-700 @elseif($g->status == 'Proses') bg-sky-100 text-sky-700 @elseif($g->status == 'Diverifikasi') bg-indigo-100 text-indigo-700 @elseif($g->status == 'Menunggu') bg-orange-100 text-orange-700 @elseif($g->status == 'Ditolak') bg-slate-100 text-slate-500 @else bg-red-100 text-red-700 @endif">{{ $g->status }}</span>
+                            <span class="inline-flex rounded-full px-2 py-0.5 text-xs font-semibold @if($g->status == 'Diverifikasi') bg-emerald-100 text-emerald-700 @elseif($g->status == 'Selesai') bg-yellow-100 text-yellow-700 @elseif($g->status == 'Proses') bg-sky-100 text-sky-700 @elseif($g->status == 'Diterima') bg-indigo-100 text-indigo-700 @elseif($g->status == 'Menunggu') bg-orange-100 text-orange-700 @elseif($g->status == 'Ditolak') bg-slate-100 text-slate-500 @else bg-red-100 text-red-700 @endif">{{ $g->status }}</span>
                         </td>
                         <td class="px-4 py-3">
                             <select wire:change="assignTeknisi({{ $g->id }}, $event.target.value)" class="w-full rounded-md border border-slate-200 bg-slate-50 px-2 py-1.5 text-xs outline-none focus:border-indigo-300">

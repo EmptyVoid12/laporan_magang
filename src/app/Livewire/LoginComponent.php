@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 
 class LoginComponent extends Component
 {
@@ -19,24 +20,39 @@ class LoginComponent extends Component
     {
         $this->validate();
 
-        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
-            $role = Auth::user()->role;
-            
-            if (in_array($role, ['admin', 'operator']) || Auth::user()->hasRole('super_admin')) {
-                Auth::logout();
-                return redirect()->to('/login');
-            }
-            
-            if ($role === 'user') {
-                return redirect()->to('/user/gangguan');
-            } elseif ($role === 'teknisi') {
-                return redirect()->to('/teknisi/task');
+        $credentials = [
+            'email' => $this->email,
+            'password' => $this->password,
+        ];
+
+        if (Auth::guard('web')->attempt($credentials)) {
+            $user = Auth::guard('web')->user();
+            $role = $user->role;
+
+            if (in_array($role, ['admin', 'operator'], true) || $user->hasRole('super_admin')) {
+                Auth::guard('web')->logout();
+
+                throw ValidationException::withMessages([
+                    'email' => 'Email atau Password salah',
+                ]);
             }
 
-            return redirect()->to('/');
-        } else {
-            session()->flash('error', 'Email atau Password salah.');
+            session()->regenerate();
+
+            if ($role === 'user') {
+                return redirect()->intended(route('user.gangguan'));
+            }
+
+            if ($role === 'teknisi') {
+                return redirect()->intended(route('teknisi.task'));
+            }
+
+            Auth::guard('web')->logout();
         }
+
+        throw ValidationException::withMessages([
+            'email' => 'Email atau Password salah',
+        ]);
     }
 
     public function render()

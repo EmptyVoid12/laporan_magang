@@ -28,6 +28,20 @@ class PerangkatResource extends Resource
                     ->options(Perangkat::WILAYAH_OPTIONS)
                     ->required(),
                 Forms\Components\TextInput::make('lokasi')->required(),
+                Forms\Components\Grid::make(2)
+                    ->schema([
+                        Forms\Components\TextInput::make('latitude')
+                            ->numeric()
+                            ->step('any')
+                            ->minValue(-90)
+                            ->maxValue(90)
+                            ->helperText('Koordinat otomatis dipakai untuk hotspot gangguan pada dashboard admin.'),
+                        Forms\Components\TextInput::make('longitude')
+                            ->numeric()
+                            ->step('any')
+                            ->minValue(-180)
+                            ->maxValue(180),
+                    ]),
                 Forms\Components\Textarea::make('deskripsi'),
             ]);
     }
@@ -40,6 +54,14 @@ class PerangkatResource extends Resource
                 Tables\Columns\TextColumn::make('jenis')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('wilayah')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('lokasi')->searchable(),
+                Tables\Columns\TextColumn::make('latitude')
+                    ->numeric(decimalPlaces: 6)
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('longitude')
+                    ->numeric(decimalPlaces: 6)
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

@@ -14,19 +14,20 @@ class RoleMiddleware
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, string $role): Response
+    public function handle(Request $request, Closure $next, ...$roles): Response
     {
         $user = Auth::user() ?? Auth::guard('admin')->user() ?? Auth::guard('web')->user();
 
         if (!$user) {
-            if ($request->is('adminnoc*')) {
-                return redirect()->route('adminnoc.login');
-            }
-            return redirect()->route('login');
+            return redirect()->route(
+                $request->is('admin*') || $request->is('admin-panel*')
+                    ? 'filament.admin.auth.login'
+                    : 'login'
+            );
         }
 
-        // super_admin (Spatie role) atau kolom role admin bisa akses semua
-        if ($user->hasRole('super_admin') || $user->role === $role) {
+        // super_admin (Spatie role) atau kolom role ada di list yang diizinkan
+        if ($user->hasRole('super_admin') || in_array($user->role, $roles, true)) {
             return $next($request);
         }
 

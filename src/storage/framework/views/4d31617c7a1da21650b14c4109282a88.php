@@ -10,22 +10,18 @@
         <header class="rounded-2xl border border-slate-200 bg-white/80 px-5 py-4 shadow-sm backdrop-blur-xl">
             <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                 <div class="flex items-center gap-4">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600 text-sm font-black text-white shadow-sm">
-                        NOC
-                    </div>
+                    <img src="<?php echo e(asset('images/logo-dishub.png')); ?>" alt="Logo Dinas Perhubungan" class="h-12 w-auto object-contain" />
                     <div>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-indigo-600">Network Operation Center</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-indigo-600">Dinas Perhubungan DKI Jakarta</p>
                         <h1 class="mt-1 text-base font-black text-slate-900 sm:text-lg">Laporan Gangguan Perangkat</h1>
                     </div>
                 </div>
 
                 <div class="flex flex-wrap items-center gap-2.5">
-                    <!--[if BLOCK]><![endif]--><?php if(auth()->guard()->check()): ?>
-                        <!--[if BLOCK]><![endif]--><?php if(in_array(auth()->user()->role, ['admin', 'super_admin']) || auth()->user()->hasRole('super_admin')): ?>
-                            <a href="<?php echo e(url('/admin')); ?>" class="inline-flex items-center justify-center rounded-lg bg-white border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 shadow-sm">
-                                Panel Admin
-                            </a>
-                        <?php elseif(auth()->user()->role === 'teknisi'): ?>
+                    <?php ($portalActor = Auth::guard('web')->user()); ?>
+                    <?php ($portalActor = $portalActor && in_array($portalActor->role, ['user', 'teknisi'], true) ? $portalActor : null); ?>
+                    <!--[if BLOCK]><![endif]--><?php if($portalActor): ?>
+                        <!--[if BLOCK]><![endif]--><?php if($portalActor->role === 'teknisi'): ?>
                             <a href="<?php echo e(route('teknisi.task')); ?>" class="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-700 shadow-sm">
                                 Daftar Tugas
                             </a>
@@ -46,22 +42,77 @@
             </div>
         </header>
 
-        <section class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-slate-500">Total Tiket</div>
+        <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+            <!-- Card 1: Total Laporan -->
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group">
+                <div class="flex items-center justify-between">
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-slate-500">Total Laporan</div>
+                    <div class="text-slate-400 group-hover:text-indigo-500 transition-colors">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                </div>
                 <div class="mt-4 text-4xl font-black text-slate-900"><?php echo e($total); ?></div>
+                <div class="mt-2 text-[10px] text-slate-400 font-medium">Akumulasi aduan masuk</div>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-red-500">Butuh Respon</div>
+
+            <!-- Card 2: Belum Ditangani -->
+            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-red-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-red-300">
+                <div class="flex items-center justify-between">
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-red-500">Belum Ditangani</div>
+                    <div class="text-red-400 group-hover:text-red-600 transition-colors">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    </div>
+                </div>
                 <div class="mt-4 text-4xl font-black text-slate-900"><?php echo e($open); ?></div>
+                <div class="mt-2 text-[10px] text-slate-400 font-medium">Menunggu respon admin</div>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-amber-500">Diproses</div>
-                <div class="mt-4 text-4xl font-black text-slate-900"><?php echo e($proses + $menunggu); ?></div>
+
+            <!-- Card 3: Dalam Penanganan -->
+            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-sky-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-sky-300">
+                <div class="flex items-center justify-between">
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-sky-500">Dalam Penanganan</div>
+                    <div class="text-sky-400 group-hover:text-sky-600 transition-colors">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                </div>
+                <div class="mt-4 text-4xl font-black text-slate-900"><?php echo e($proses); ?></div>
+                <div class="mt-2 text-[10px] text-slate-400 font-medium">Pekerjaan aktif teknisi</div>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-emerald-500">Terverifikasi</div>
+
+            <!-- Card 4: Tertunda -->
+            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-orange-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-orange-300">
+                <div class="flex items-center justify-between">
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-orange-500">Tertunda</div>
+                    <div class="text-orange-400 group-hover:text-orange-600 transition-colors">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                </div>
+                <div class="mt-4 text-4xl font-black text-slate-900"><?php echo e($menunggu); ?></div>
+                <div class="mt-2 text-[10px] text-slate-400 font-medium">Penanganan ditunda</div>
+            </div>
+
+            <!-- Card 5: Menunggu Verifikasi -->
+            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-yellow-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-yellow-300">
+                <div class="flex items-center justify-between">
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-yellow-500">Menunggu Verifikasi</div>
+                    <div class="text-yellow-400 group-hover:text-yellow-600 transition-colors">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    </div>
+                </div>
+                <div class="mt-4 text-4xl font-black text-slate-900"><?php echo e($selesai); ?></div>
+                <div class="mt-2 text-[10px] text-slate-400 font-medium">Menunggu validasi admin</div>
+            </div>
+
+            <!-- Card 6: Selesai Terverifikasi -->
+            <div class="rounded-2xl border border-slate-200 border-l-4 border-l-emerald-500 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group hover:border-emerald-300">
+                <div class="flex items-center justify-between">
+                    <div class="text-[10px] font-bold uppercase tracking-[0.24em] text-emerald-500">Selesai Terverifikasi</div>
+                    <div class="text-emerald-400 group-hover:text-emerald-600 transition-colors">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                </div>
                 <div class="mt-4 text-4xl font-black text-slate-900"><?php echo e($diverifikasi); ?></div>
+                <div class="mt-2 text-[10px] text-slate-400 font-medium">Terselesaikan sepenuhnya</div>
             </div>
         </section>
 
@@ -204,7 +255,7 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                                 <?php elseif($report->isAwaitingFinalVerification()): ?> bg-lime-100 text-lime-700
                                 <?php elseif($report->status === 'Selesai'): ?> bg-green-100 text-green-700
                                 <?php elseif($report->status === 'Proses'): ?> bg-sky-100 text-sky-700
-                                <?php elseif($report->status === 'Diverifikasi'): ?> bg-indigo-100 text-indigo-700
+                                <?php elseif($report->status === 'Diterima'): ?> bg-indigo-100 text-indigo-700
                                 <?php elseif($report->status === 'Menunggu'): ?> bg-orange-100 text-orange-700
                                 <?php elseif($report->status === 'Ditolak'): ?> bg-slate-200 text-slate-600
                                 <?php else: ?> bg-red-100 text-red-700
@@ -252,7 +303,7 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
         <footer class="pb-2 text-center text-sm text-slate-500">
             <span class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">
                 <span class="h-2 w-2 rounded-full bg-indigo-500"></span>
-                &copy; <?php echo e(date('Y')); ?> Network Operation Center
+                &copy; <?php echo e(date('Y')); ?> Dinas Perhubungan DKI Jakarta
             </span>
         </footer>
     </div>

@@ -118,9 +118,9 @@ it('shows final verified tickets as verified on the home page', function () {
 
     Gangguan::create([
         'perangkat_id' => $perangkat->id,
-        'deskripsi' => 'Laporan sudah diverifikasi awal',
+        'deskripsi' => 'Laporan sudah diterima',
         'tanggal' => now()->subDay()->toDateString(),
-        'status' => Gangguan::STATUS_DIVERIFIKASI,
+        'status' => Gangguan::STATUS_DITERIMA,
         'prioritas' => 'Sedang',
         'operator_id' => $operator->id,
     ]);
@@ -129,7 +129,7 @@ it('shows final verified tickets as verified on the home page', function () {
         'perangkat_id' => $perangkat->id,
         'deskripsi' => 'Perbaikan selesai dan diverifikasi final',
         'tanggal' => now()->toDateString(),
-        'status' => Gangguan::STATUS_SELESAI,
+        'status' => Gangguan::STATUS_DIVERIFIKASI,
         'prioritas' => 'Tinggi',
         'operator_id' => $operator->id,
         'submitted_for_verification_at' => now()->subHour(),
@@ -141,28 +141,56 @@ it('shows final verified tickets as verified on the home page', function () {
 
     $this->get(route('home'))
         ->assertOk()
-        ->assertSeeInOrder(['Diproses', 'Terverifikasi'])
+        ->assertSeeInOrder(['Dalam Penanganan', 'Selesai Terverifikasi'])
         ->assertSee('Selesai Terverifikasi');
 });
 
-it('mounts AdminPortalComponent with the tab parameter and sanitizes invalid tabs', function () {
+it('allows admin or operator to assign a technician using AdminGangguanComponent', function () {
     $admin = User::factory()->create([
         'role' => 'admin',
     ]);
 
-    // Test default tab
-    Livewire::actingAs($admin, 'admin')
-        ->test(\App\Livewire\AdminPortalComponent::class)
-        ->assertSet('activeTab', 'gangguan');
+    $operator = User::factory()->create([
+        'role' => 'operator',
+    ]);
 
-    // Test perangkat tab
-    Livewire::actingAs($admin, 'admin')
-        ->test(\App\Livewire\AdminPortalComponent::class, ['tab' => 'perangkat'])
-        ->assertSet('activeTab', 'perangkat');
+    $teknisi = User::factory()->create([
+        'role' => 'teknisi',
+    ]);
 
-    // Test invalid tab sanitization
-    Livewire::actingAs($admin, 'admin')
-        ->test(\App\Livewire\AdminPortalComponent::class, ['tab' => 'invalid-tab-value'])
-        ->assertSet('activeTab', 'gangguan');
+    $perangkat = Perangkat::create([
+        'nama_perangkat' => 'CCTV Test',
+        'jenis' => 'CCTV',
+        'wilayah' => 'Jakarta Pusat',
+        'lokasi' => 'Bundle Test',
+        'deskripsi' => 'Perangkat untuk test',
+    ]);
+
+    $gangguan = Gangguan::create([
+        'perangkat_id' => $perangkat->id,
+        'deskripsi' => 'Gambar tidak tampil',
+        'tanggal' => now()->toDateString(),
+        'status' => Gangguan::STATUS_OPEN,
+        'prioritas' => 'Sedang',
+        'operator_id' => $admin->id,
+    ]);
+
+    // Test assignment by Admin
+    Livewire::actingAs($admin)
+        ->test(\App\Livewire\AdminGangguanComponent::class)
+        ->call('assignTeknisi', $gangguan->id, $teknisi->id);
+
+    expect($gangguan->fresh()->teknisi_id)->toBe($teknisi->id);
+    expect($gangguan->fresh()->status)->toBe(Gangguan::STATUS_DITERIMA);
+
+    // Reset technician
+    $gangguan->update(['teknisi_id' => null, 'status' => Gangguan::STATUS_OPEN]);
+
+    // Test assignment by Operator
+    Livewire::actingAs($operator)
+        ->test(\App\Livewire\AdminGangguanComponent::class)
+        ->call('assignTeknisi', $gangguan->id, $teknisi->id);
+
+    expect($gangguan->fresh()->teknisi_id)->toBe($teknisi->id);
 });
 

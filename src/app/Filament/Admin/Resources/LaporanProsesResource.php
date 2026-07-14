@@ -65,11 +65,12 @@ class LaporanProsesResource extends Resource
                     ->label('Status Laporan')
                     ->badge()
                     ->color(fn (?string $state): string => match ($state) {
-                        'Selesai' => 'success',
+                        'Selesai' => 'warning',
                         'Proses' => 'warning',
-                        'Diverifikasi' => 'info',
+                        'Diterima' => 'info',
                         'Menunggu' => 'gray',
                         'Ditolak' => 'danger',
+                        'Diverifikasi' => 'success',
                         default => 'primary',
                     }),
                 Tables\Columns\TextColumn::make('gangguan.teknisi.name')

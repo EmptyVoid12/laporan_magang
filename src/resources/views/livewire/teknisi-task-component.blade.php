@@ -70,7 +70,7 @@
                             <span class="inline-flex rounded-full px-2 py-0.5 text-xs font-semibold @if($t->prioritas == 'Tinggi') bg-red-50 text-red-600 @elseif($t->prioritas == 'Sedang') bg-amber-50 text-amber-600 @else bg-emerald-50 text-emerald-600 @endif">{{ $t->prioritas }}</span>
                         </td>
                         <td class="px-5 py-3">
-                            <span class="inline-flex rounded-full px-2 py-0.5 text-xs font-semibold @if($t->status == 'Selesai') bg-emerald-100 text-emerald-700 @elseif($t->status == 'Proses') bg-sky-100 text-sky-700 @elseif($t->status == 'Diverifikasi') bg-indigo-100 text-indigo-700 @elseif($t->status == 'Menunggu') bg-orange-100 text-orange-700 @elseif($t->status == 'Ditolak') bg-slate-100 text-slate-500 @else bg-red-100 text-red-700 @endif">{{ $t->status }}</span>
+                            <span class="inline-flex rounded-full px-2 py-0.5 text-xs font-semibold @if($t->status == 'Diverifikasi') bg-emerald-100 text-emerald-700 @elseif($t->status == 'Selesai') bg-yellow-100 text-yellow-700 @elseif($t->status == 'Proses') bg-sky-100 text-sky-700 @elseif($t->status == 'Diterima') bg-indigo-100 text-indigo-700 @elseif($t->status == 'Menunggu') bg-orange-100 text-orange-700 @elseif($t->status == 'Ditolak') bg-slate-100 text-slate-500 @else bg-red-100 text-red-700 @endif">{{ $t->status }}</span>
                         </td>
                         <td class="px-5 py-3 text-center">
                             <button wire:click="openUpdateModal({{ $t->id }})" class="rounded-md bg-indigo-50 px-3 py-1.5 text-xs font-semibold text-indigo-600 hover:bg-indigo-100">Update Progres</button>

@@ -4,6 +4,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tanah Abang",
+        "latitude": -6.1716331206181625,
+        "longitude": 106.85187337718558,
         "deskripsi": "Traffic Light Jl. Danau Tondano-Jl. Pejompongan (SPBU) berlokasi di Tanah Abang, Jakarta Pusat."
     },
     {
@@ -11,6 +13,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Kemayoran",
+        "latitude": -6.179528966977148,
+        "longitude": 106.83583639018896,
         "deskripsi": "Traffic Light Jl. Angkasa - Jl. Garuda berlokasi di Kemayoran, Jakarta Pusat."
     },
     {
@@ -18,6 +22,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tambora",
+        "latitude": -6.186224770946999,
+        "longitude": 106.81282384197944,
         "deskripsi": "Traffic Light Jl. Mangga Besar - Jl. Karanganyar Utara (Dibawah Rel KA) berlokasi di Tambora, Jakarta Pusat."
     },
     {
@@ -25,6 +31,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Kemayoran",
+        "latitude": -6.202951740580889,
+        "longitude": 106.82209769777454,
         "deskripsi": "Traffic Light Jl. Bungur Besar - Jl. Gunung Sahari I berlokasi di Kemayoran, Jakarta Pusat."
     },
     {
@@ -32,6 +40,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tanah Abang",
+        "latitude": -6.188354082262768,
+        "longitude": 106.8329432947304,
         "deskripsi": "Traffic Light Bendungan Hilir - Danau Tondano berlokasi di Tanah Abang, Jakarta Pusat."
     },
     {
@@ -39,6 +49,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tanah Abang",
+        "latitude": -6.204019657963195,
+        "longitude": 106.84661550311873,
         "deskripsi": "Traffic Light Pejompongan - Danau Tondano berlokasi di Tanah Abang, Jakarta Pusat."
     },
     {
@@ -46,6 +58,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Senen",
+        "latitude": -6.173630563414207,
+        "longitude": 106.82891888705355,
         "deskripsi": "Traffic Light Jl. Percetakan Negara - Jl. Paseban berlokasi di Senen, Jakarta Pusat."
     },
     {
@@ -53,6 +67,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Sawah Besar",
+        "latitude": -6.187391887069756,
+        "longitude": 106.83528085114062,
         "deskripsi": "Traffic Light Jl. H. Samanhudi - Jl. Gereja Ayam berlokasi di Sawah Besar, Jakarta Pusat."
     },
     {
@@ -60,6 +76,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Senen",
+        "latitude": -6.184408793096872,
+        "longitude": 106.83758192303911,
         "deskripsi": "Traffic Light Jl. Stasiun Senen - Jl. Senen Raya (HKSN) berlokasi di Senen, Jakarta Pusat."
     },
     {
@@ -67,6 +85,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Johar Baru",
+        "latitude": -6.176262482880092,
+        "longitude": 106.85021521020104,
         "deskripsi": "Traffic Light Jl. Tanah Tinggi Barat - Jl. Kali Baru Timur (TIMUR) berlokasi di Johar Baru, Jakarta Pusat."
     },
     {
@@ -74,6 +94,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Johar Baru",
+        "latitude": -6.177271082488315,
+        "longitude": 106.83197308568268,
         "deskripsi": "Traffic Light Jl. Tanah Tinggi Barat - Jl. Kali Baru Timur (BARAT) berlokasi di Johar Baru, Jakarta Pusat."
     },
     {
@@ -81,6 +103,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Setiabudi",
+        "latitude": -6.206076731155277,
+        "longitude": 106.81049272537538,
         "deskripsi": "Traffic Light Jl. Denpasar - Jl. Gilimanuk berlokasi di Setiabudi, Jakarta Pusat."
     },
     {
@@ -88,6 +112,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Menteng",
+        "latitude": -6.210550652304765,
+        "longitude": 106.82636283494753,
         "deskripsi": "Traffic Light Jl. Blora - Jl. Kendal berlokasi di Menteng, Jakarta Pusat."
     },
     {
@@ -95,6 +121,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Cempaka Putih",
+        "latitude": -6.210677057964735,
+        "longitude": 106.81098869593853,
         "deskripsi": "Traffic Light Jl. A. Yani - Jl. Rawa Sari Selatan berlokasi di Cempaka Putih, Jakarta Pusat."
     },
     {
@@ -102,6 +130,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Duren Sawit",
+        "latitude": -6.19359264609597,
+        "longitude": 106.83600523237807,
         "deskripsi": "Traffic Light Jln. Sukamto - Jln. Mawar (Swadaya) berlokasi di Duren Sawit, Jakarta Pusat."
     },
     {
@@ -109,6 +139,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Senen",
+        "latitude": -6.203266268285405,
+        "longitude": 106.85223611792424,
         "deskripsi": "Traffic Light Jln. Percetakan Negara - Rutan Salemba berlokasi di Senen, Jakarta Pusat."
     },
     {
@@ -116,6 +148,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Menteng",
+        "latitude": -6.1707549176021015,
+        "longitude": 106.84689726468254,
         "deskripsi": "Traffic Light Jl. Sutan Syahrir - Jl. Cokroaminoto berlokasi di Menteng, Jakarta Pusat."
     },
     {
@@ -123,6 +157,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Gambir",
+        "latitude": -6.170892887192991,
+        "longitude": 106.85241086698542,
         "deskripsi": "Traffic Light Jl. Merdeka Utara - Jl. Veteran III berlokasi di Gambir, Jakarta Pusat."
     },
     {
@@ -130,6 +166,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Gambir",
+        "latitude": -6.164544793384045,
+        "longitude": 106.84564569310685,
         "deskripsi": "Traffic Light Jl. Merdeka Utara - Dp. SUAD (PO) berlokasi di Gambir, Jakarta Pusat."
     },
     {
@@ -137,6 +175,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Gambir",
+        "latitude": -6.181327430530723,
+        "longitude": 106.80581470617932,
         "deskripsi": "Traffic Light Jl. Ir. Djuanda - Jl. Veteran III berlokasi di Gambir, Jakarta Pusat."
     },
     {
@@ -144,6 +184,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Sawah Besar",
+        "latitude": -6.1623811462619935,
+        "longitude": 106.80742028951485,
         "deskripsi": "Traffic Light Jl. H. Samanhudi - Jl. Pecenongan berlokasi di Sawah Besar, Jakarta Pusat."
     },
     {
@@ -151,6 +193,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Gambir",
+        "latitude": -6.206507709786162,
+        "longitude": 106.84731811298909,
         "deskripsi": "Traffic Light Jl. Zainul Arifin - Jl. Cideng berlokasi di Gambir, Jakarta Pusat."
     },
     {
@@ -158,6 +202,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tanah Abang",
+        "latitude": -6.207667958813088,
+        "longitude": 106.82371126370066,
         "deskripsi": "Traffic Light Jl. Tanah Abang II - Jl. Kesehatan berlokasi di Tanah Abang, Jakarta Pusat."
     },
     {
@@ -165,6 +211,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tanah Abang",
+        "latitude": -6.162661822794407,
+        "longitude": 106.83847560286542,
         "deskripsi": "Traffic Light Jl. Bendungan Hilir - Jl. Danau Tondano berlokasi di Tanah Abang, Jakarta Pusat."
     },
     {
@@ -172,6 +220,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tanah Abang",
+        "latitude": -6.20023469234802,
+        "longitude": 106.80495212698038,
         "deskripsi": "Traffic Light Jl. Danau Tondano - Jl. Pejompongan berlokasi di Tanah Abang, Jakarta Pusat."
     },
     {
@@ -179,6 +229,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tanah Abang",
+        "latitude": -6.170163645555977,
+        "longitude": 106.85309851921366,
         "deskripsi": "Traffic Light Jl. KH. Mas mansyur - Jl. Karet Pasar Baru Timur (Dp. TPU) berlokasi di Tanah Abang, Jakarta Pusat."
     },
     {
@@ -186,6 +238,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Gambir",
+        "latitude": -6.161589424791306,
+        "longitude": 106.81508028069469,
         "deskripsi": "Traffic Light Jl. Moh. Mansyur - Jl. Zainal Arifin berlokasi di Gambir, Jakarta Pusat."
     },
     {
@@ -193,6 +247,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tanah Abang",
+        "latitude": -6.162615747916993,
+        "longitude": 106.85091108400289,
         "deskripsi": "Traffic Light Jl. Abdul Muis - Jl. Tanah Abang I berlokasi di Tanah Abang, Jakarta Pusat."
     },
     {
@@ -200,6 +256,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tanah Abang",
+        "latitude": -6.172334733748167,
+        "longitude": 106.84526538210773,
         "deskripsi": "Traffic Light Jl. Abdul Muis - Jl. Tanah Abang II berlokasi di Tanah Abang, Jakarta Pusat."
     },
     {
@@ -207,6 +265,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Menteng",
+        "latitude": -6.178994167413408,
+        "longitude": 106.81201151639527,
         "deskripsi": "Traffic Light Jl. Agus Salim - Jl. KH. Wahid Hasyim berlokasi di Menteng, Jakarta Pusat."
     },
     {
@@ -214,6 +274,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Menteng",
+        "latitude": -6.167565207224774,
+        "longitude": 106.80968448922427,
         "deskripsi": "Traffic Light Jl. KH. Wahid Hasyim - Jl. Johar - Jl. Cokroaminoto berlokasi di Menteng, Jakarta Pusat."
     },
     {
@@ -221,6 +283,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Menteng",
+        "latitude": -6.166394189637324,
+        "longitude": 106.83853814161954,
         "deskripsi": "Traffic Light Jl. Cokroaminoto - Jl. Sam Ratulangi berlokasi di Menteng, Jakarta Pusat."
     },
     {
@@ -228,6 +292,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Menteng",
+        "latitude": -6.201015951031457,
+        "longitude": 106.83530501582135,
         "deskripsi": "Traffic Light Jl. Sam Ratulangi - Jl. Cemara berlokasi di Menteng, Jakarta Pusat."
     },
     {
@@ -235,6 +301,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Menteng",
+        "latitude": -6.1926198770362815,
+        "longitude": 106.83894027897506,
         "deskripsi": "Traffic Light Jl. Agus Salim - Jl. Sutan Syahrir berlokasi di Menteng, Jakarta Pusat."
     },
     {
@@ -242,6 +310,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Gambir",
+        "latitude": -6.190384901520038,
+        "longitude": 106.83196876356853,
         "deskripsi": "Traffic Light Jl. Moh Mansyur - Jl. Zainul Arifin (Pemadam) berlokasi di Gambir, Jakarta Pusat."
     },
     {
@@ -249,6 +319,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Tanah Abang",
+        "latitude": -6.204461453696958,
+        "longitude": 106.82534716332505,
         "deskripsi": "Traffic Light Jl. Abdul Muis - Jl. Tanah Abang III berlokasi di Tanah Abang, Jakarta Pusat."
     },
     {
@@ -256,6 +328,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Menteng",
+        "latitude": -6.1743115653279315,
+        "longitude": 106.8359181044983,
         "deskripsi": "Traffic Light Jl. Teuku Cik Ditiro - Jl. Sam Surizal berlokasi di Menteng, Jakarta Pusat."
     },
     {
@@ -263,6 +337,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Pusat",
         "lokasi": "Senen",
+        "latitude": -6.175160546599248,
+        "longitude": 106.85401297186084,
         "deskripsi": "Traffic Light Jl. Percetakan Negara - Jl. Mardani Raya berlokasi di Senen, Jakarta Pusat."
     },
     {
@@ -270,6 +346,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Mampang Prapatan",
+        "latitude": -6.272958813288546,
+        "longitude": 106.78800456901168,
         "deskripsi": "Traffic Light Jl. Mampang Prapatan - Jl. Duren 3 Selatan berlokasi di Mampang Prapatan, Jakarta Selatan."
     },
     {
@@ -277,6 +355,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Mampang Prapatan",
+        "latitude": -6.271671612280767,
+        "longitude": 106.82313892949081,
         "deskripsi": "Traffic Light Jl. Mampang Prapatan - Jl. Duren 3 Utara berlokasi di Mampang Prapatan, Jakarta Selatan."
     },
     {
@@ -284,6 +364,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.255842028490363,
+        "longitude": 106.81902839567788,
         "deskripsi": "Traffic Light Jl. Ampera - Jl. Pejaten Raya(Barat) berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -291,6 +373,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.268564439726934,
+        "longitude": 106.80900873084056,
         "deskripsi": "Traffic Light Jl. Ampera - Jl. Madrasah berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -298,6 +382,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.262471959116936,
+        "longitude": 106.79370635776117,
         "deskripsi": "Traffic Light Jl Warung Jati Barat - Jl Ragunan berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -305,6 +391,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.24432508118378,
+        "longitude": 106.83457213425972,
         "deskripsi": "Traffic Light Jl. Ampera ( Cilandak KKO ) - Jl. TB Simatupang berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -312,6 +400,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Cilandak",
+        "latitude": -6.253223927947973,
+        "longitude": 106.79957592541074,
         "deskripsi": "Traffic Light Jl. Fatmawati-Jl. TB Simatupang berlokasi di Cilandak, Jakarta Selatan."
     },
     {
@@ -319,6 +409,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Cilandak",
+        "latitude": -6.275754891265859,
+        "longitude": 106.83020769136205,
         "deskripsi": "Traffic Light Jl. Fatmawati-Jl. Hj Nawi Raya berlokasi di Cilandak, Jakarta Selatan."
     },
     {
@@ -326,6 +418,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Cilandak",
+        "latitude": -6.2857912690056965,
+        "longitude": 106.80543526624554,
         "deskripsi": "Traffic Light Jl. Fatmawati-Jl. Cipete Raya berlokasi di Cilandak, Jakarta Selatan."
     },
     {
@@ -333,6 +427,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.284232505919397,
+        "longitude": 106.82076620742846,
         "deskripsi": "Traffic Light Jl. Metro Pd Indah-JL. Sekolah Duta berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -340,6 +436,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.2387650051736125,
+        "longitude": 106.82553903176273,
         "deskripsi": "Traffic Light Jl. Ciputat Raya-Jl. Gedung Hijau (DEPLU) berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -347,6 +445,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Gambir",
+        "latitude": -6.240203588751148,
+        "longitude": 106.79572260037295,
         "deskripsi": "Traffic Light Jl. Kesehatan Raya-Jl. RC Veteran (Organon) berlokasi di Gambir, Jakarta Selatan."
     },
     {
@@ -354,6 +454,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.2445092994600735,
+        "longitude": 106.80916644578492,
         "deskripsi": "Traffic Light Jl. RC Veteran (Pizza Hut) - Jalan Deplu Raya berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -361,6 +463,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.2608922745239335,
+        "longitude": 106.8191668395664,
         "deskripsi": "Traffic Light Jl. Supeno-Jl. Permata Hijau (ITC) berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -368,6 +472,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.285438414550421,
+        "longitude": 106.78933187015298,
         "deskripsi": "Traffic Light Jl. Kebayoran lama -Jl. Prof Suharso (RS PERMATA MEDIKA) berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -375,6 +481,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.2629078065657735,
+        "longitude": 106.80833441818932,
         "deskripsi": "Traffic Light Jl. Pos Pengumben-Jl. Prof Suharso berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -382,6 +490,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.260731717608067,
+        "longitude": 106.79422160767004,
         "deskripsi": "Traffic Light Jl. Pos Pengumben-Jl. Kebayoran Lama berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -389,6 +499,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.276832737462764,
+        "longitude": 106.79365279393798,
         "deskripsi": "Traffic Light Jl. Pos Pengumben-Jl. Kelapa Dua berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -396,6 +508,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kembangan",
+        "latitude": -6.252055779459783,
+        "longitude": 106.79499743891306,
         "deskripsi": "Traffic Light Jl. Pos Pengumben-Jl. Srengseng berlokasi di Kembangan, Jakarta Selatan."
     },
     {
@@ -403,6 +517,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.285266998386168,
+        "longitude": 106.79068835378244,
         "deskripsi": "Traffic Light Jl. Tentara Pelajar-Jl. Permata Hijau berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -410,6 +526,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Cilandak",
+        "latitude": -6.237077455987551,
+        "longitude": 106.82800660081232,
         "deskripsi": "Traffic Light Jl. P. Antasari-Jl. Cipete Raya berlokasi di Cilandak, Jakarta Selatan."
     },
     {
@@ -417,6 +535,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.285723760662509,
+        "longitude": 106.8307888845992,
         "deskripsi": "Traffic Light Jl. Brawijaya-Jl. Darmawangsa berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -424,6 +544,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.24846286691783,
+        "longitude": 106.78781471692487,
         "deskripsi": "Traffic Light Jl. Darmawangsa Raya-Jl. Prapanca berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -431,6 +553,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pesanggrahan",
+        "latitude": -6.256871595945586,
+        "longitude": 106.79542797189777,
         "deskripsi": "Traffic Light Jl. Ciledug Raya-Jl. Ulu Jami (Ps. Cipulir) berlokasi di Pesanggrahan, Jakarta Selatan."
     },
     {
@@ -438,6 +562,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pesanggrahan",
+        "latitude": -6.24968712742267,
+        "longitude": 106.8207709067333,
         "deskripsi": "Traffic Light Jl. Ciledug Raya-Jl. M. Saidi (Kostrad) berlokasi di Pesanggrahan, Jakarta Selatan."
     },
     {
@@ -445,6 +571,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pesanggrahan",
+        "latitude": -6.260400425160166,
+        "longitude": 106.82907361281798,
         "deskripsi": "Traffic Light Jl. Ciledug Raya-Jl. Swadarma Raya berlokasi di Pesanggrahan, Jakarta Selatan."
     },
     {
@@ -452,6 +580,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pesanggrahan",
+        "latitude": -6.240186329986407,
+        "longitude": 106.79545011447269,
         "deskripsi": "Traffic Light Jl. Ciledug Raya-Jl. SESKOAL berlokasi di Pesanggrahan, Jakarta Selatan."
     },
     {
@@ -459,6 +589,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.2395437694361515,
+        "longitude": 106.82580146123173,
         "deskripsi": "Traffic Light Jl. Ciputat (Jalan Lebak Bulus Raya) -Jl. Pasar Jum'at berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -466,6 +598,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.246663935666777,
+        "longitude": 106.80987836044014,
         "deskripsi": "Traffic Light Jl. Karang Tengah-Jl. Cirendeu (Jl.Lebak Bulus Raya) berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -473,6 +607,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.279387620881666,
+        "longitude": 106.8093676009845,
         "deskripsi": "Traffic Light Jl. Kemang Raya -Jl. Madrasah / Jl. Ampera berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -480,6 +616,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.281399640591782,
+        "longitude": 106.81247429964601,
         "deskripsi": "Traffic Light Jl Jatipadang-Jl. Ragunan berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -487,6 +625,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.255541791609433,
+        "longitude": 106.83175545255595,
         "deskripsi": "Traffic Light Jl. Kemang Raya (Selatan)-Jl. Kemang Timur berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -494,6 +634,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.282687718137149,
+        "longitude": 106.78633092964732,
         "deskripsi": "Traffic Light Jl. Kemang Raya-Habibie Centre berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -501,6 +643,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.278869786926238,
+        "longitude": 106.82892432639414,
         "deskripsi": "Traffic Light Jl. Darmawangsa Raya 7/8 berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -508,6 +652,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.239245390231436,
+        "longitude": 106.8054572657693,
         "deskripsi": "Traffic Light Jl. P. Antasari-Jl. Manunggal Juang berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -515,6 +661,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.2516908324184355,
+        "longitude": 106.8181459393902,
         "deskripsi": "Traffic Light Jl. P. Antasari-Jl. Pelita (Abdul Majid) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -522,6 +670,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.270939255829451,
+        "longitude": 106.81302629050683,
         "deskripsi": "Traffic Light Jl. P. Antasari-Jl. Taman Brawijaya berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -529,6 +679,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.271254679446265,
+        "longitude": 106.83125177175069,
         "deskripsi": "Traffic Light Jl. Kebayoran Lama-Jl. Cidodol berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -536,6 +688,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.248283085134965,
+        "longitude": 106.81498032259285,
         "deskripsi": "Traffic Light Jl. Pasar Minggu (Pancoran Timur Raya) - Jl. Perdatam berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -543,6 +697,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Mampang Prapatan",
+        "latitude": -6.266918414864751,
+        "longitude": 106.82068536595106,
         "deskripsi": "Traffic Light Jl. Pasar Minggu - Jl. Duren Tiga berlokasi di Mampang Prapatan, Jakarta Selatan."
     },
     {
@@ -550,6 +706,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.248321061264632,
+        "longitude": 106.79377254657693,
         "deskripsi": "Traffic Light Jl. Pasar Minggu - Jl. Kalibata berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -557,6 +715,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.270697306282173,
+        "longitude": 106.80563301487251,
         "deskripsi": "Traffic Light Jl. Pasar Minggu - Jl. Pejaten berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -564,6 +724,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.260316158802547,
+        "longitude": 106.80032553050285,
         "deskripsi": "Traffic Light Jl. TB. Simatupang - Jl. RM Harsono (Kementrian Pertanian) berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -571,6 +733,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Cilandak",
+        "latitude": -6.250928997037219,
+        "longitude": 106.79470974341906,
         "deskripsi": "Traffic Light Jl. TB. Simatupang - Jl. Warung Buncit berlokasi di Cilandak, Jakarta Selatan."
     },
     {
@@ -578,6 +742,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Mampang Prapatan",
+        "latitude": -6.276255438746933,
+        "longitude": 106.8351349765257,
         "deskripsi": "Traffic Light Jl. Mampang Prapatan - Jl. Piere Tendean berlokasi di Mampang Prapatan, Jakarta Selatan."
     },
     {
@@ -585,6 +751,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.259601564529404,
+        "longitude": 106.79132433743158,
         "deskripsi": "Traffic Light Jl. Warung Jati Barat - Jl. Pejaten Raya berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -592,6 +760,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Cilandak",
+        "latitude": -6.256718024139938,
+        "longitude": 106.79817318487154,
         "deskripsi": "Traffic Light Jl. Fatmawati - Jl. Pondok labu/Pasar berlokasi di Cilandak, Jakarta Selatan."
     },
     {
@@ -599,6 +769,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pesanggrahan",
+        "latitude": -6.283378869426963,
+        "longitude": 106.82160181970563,
         "deskripsi": "Traffic Light Jl. Ciledug Raya - Jl. Masjid berlokasi di Pesanggrahan, Jakarta Selatan."
     },
     {
@@ -606,6 +778,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.2496225204938405,
+        "longitude": 106.79146053533846,
         "deskripsi": "Traffic Light Jl. Kemang Raya - Jl. Kemang Barat (Mc Donald) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -613,6 +787,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Tebet",
+        "latitude": -6.241891455922997,
+        "longitude": 106.82507084537771,
         "deskripsi": "Traffic Light Jl. Supomo - Jl. Tebet Raya berlokasi di Tebet, Jakarta Selatan."
     },
     {
@@ -620,6 +796,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Tebet",
+        "latitude": -6.250240034812592,
+        "longitude": 106.83128005719576,
         "deskripsi": "Traffic Light Jl. Tebet Raya - Jl. Tebet Timur berlokasi di Tebet, Jakarta Selatan."
     },
     {
@@ -627,6 +805,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.280466644503772,
+        "longitude": 106.81779316349409,
         "deskripsi": "Traffic Light Simpang Veteran - Tol Bintaro berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -634,6 +814,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Tebet",
+        "latitude": -6.285244479944877,
+        "longitude": 106.78806114937163,
         "deskripsi": "Traffic Light Jl. Gatot Subroto - Jl. Supomo (Pancoran) berlokasi di Tebet, Jakarta Selatan."
     },
     {
@@ -641,6 +823,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Setiabudi",
+        "latitude": -6.259065566235187,
+        "longitude": 106.81092543618723,
         "deskripsi": "Traffic Light Jl. Gatot Subroto - Jl. Rasuna Said (Kuningan) berlokasi di Setiabudi, Jakarta Selatan."
     },
     {
@@ -648,6 +832,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Tebet",
+        "latitude": -6.282868682582548,
+        "longitude": 106.83284411461881,
         "deskripsi": "Traffic Light Jl. Tebet Raya - Jl. Tebet Barat berlokasi di Tebet, Jakarta Selatan."
     },
     {
@@ -655,6 +841,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.240344915585439,
+        "longitude": 106.80394973817486,
         "deskripsi": "Traffic Light Jl. Ciputat Raya - PGA berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -662,6 +850,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Tebet",
+        "latitude": -6.280211764563261,
+        "longitude": 106.81976066937975,
         "deskripsi": "Traffic Light Jl. Tebet Raya - Jl. Tebet Dalam berlokasi di Tebet, Jakarta Selatan."
     },
     {
@@ -669,6 +859,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Cilandak",
+        "latitude": -6.236801362991947,
+        "longitude": 106.80338182288524,
         "deskripsi": "Traffic Light Jl. TB. Simatupang - Jl. Condet Raya berlokasi di Cilandak, Jakarta Selatan."
     },
     {
@@ -676,6 +868,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Cilandak",
+        "latitude": -6.266286467122963,
+        "longitude": 106.83198471572648,
         "deskripsi": "Traffic Light Jl. TB. Simatupang - Jl. Lenteng Agung berlokasi di Cilandak, Jakarta Selatan."
     },
     {
@@ -683,6 +877,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Pasar Minggu",
+        "latitude": -6.281423406108643,
+        "longitude": 106.79336769863691,
         "deskripsi": "Traffic Light Jl. Dewi Sartika - Jl. Kalibata berlokasi di Pasar Minggu, Jakarta Selatan."
     },
     {
@@ -690,6 +886,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.243928886804322,
+        "longitude": 106.79057397581695,
         "deskripsi": "Traffic Light Jln. Kemang Raya - Jln. Kemang Selatan berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -697,6 +895,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.251138595270658,
+        "longitude": 106.80271099003397,
         "deskripsi": "Traffic Light Jl. Asia Afrika - Jl. Pintu I Senayan berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -704,6 +904,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.2394719262329525,
+        "longitude": 106.80280028803956,
         "deskripsi": "Traffic Light Jl. Asia Afrika - Jl. Pintu IX Senayan  (Senayan City) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -711,6 +913,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.27686651563444,
+        "longitude": 106.81396200540736,
         "deskripsi": "Traffic Light Jl. Trunojoyo - Jl. Pattimura (Mabak) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -718,6 +922,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.266436071788872,
+        "longitude": 106.80233827042049,
         "deskripsi": "Traffic Light Jl. Kyai Maja - Jl. KH. Ahmad Dahlan berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -725,6 +931,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.278260220545933,
+        "longitude": 106.81405352974718,
         "deskripsi": "Traffic Light Jl. Iskandarsyah - Jl. Sultan Hasanuddin (Terminal Blok M) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -732,6 +940,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.283294478892213,
+        "longitude": 106.8311679265353,
         "deskripsi": "Traffic Light Jl. Panglima Polim - Jl. Melawai Raya berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -739,6 +949,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.277889038457406,
+        "longitude": 106.81432065451791,
         "deskripsi": "Traffic Light Jl. Panglima Polim - Jl. Wijaya II berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -746,6 +958,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.249741971701555,
+        "longitude": 106.78842002514695,
         "deskripsi": "Traffic Light Jl. Barito I - Jl. Melawai Raya berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -753,6 +967,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.25161444744534,
+        "longitude": 106.83451622765213,
         "deskripsi": "Traffic Light Jl. Patal Senayan - Jl. Patal Senayan I berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -760,6 +976,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.279933969965509,
+        "longitude": 106.82985135746755,
         "deskripsi": "Traffic Light Jl. Woltermongonsidi - Jl. Adytiawarman berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -767,6 +985,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.255005062697868,
+        "longitude": 106.80106661035786,
         "deskripsi": "Traffic Light Jl. Woltermongonsidi - Jl. Gunawarman ( STM Penerbangan ) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -774,6 +994,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.264258904022151,
+        "longitude": 106.80095808144381,
         "deskripsi": "Traffic Light Jl. Woltermongonsidi - Jl. Suryo (Gereja SANTHA) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -781,6 +1003,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.259318209234001,
+        "longitude": 106.83394751388045,
         "deskripsi": "Traffic Light Jl. Kyai Maja - Jl. Barito (RSPP) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -788,6 +1012,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.245230615732381,
+        "longitude": 106.79685596024606,
         "deskripsi": "Traffic Light Jl. Iskandarsyah - Jl. Tirtayasa (Melawai ) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -795,6 +1021,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.272638038290261,
+        "longitude": 106.82500875572123,
         "deskripsi": "Traffic Light Jl. Iskandarsyah - Jl. Wijaya II berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -802,6 +1030,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.273807609159053,
+        "longitude": 106.81572098546475,
         "deskripsi": "Traffic Light Jl. Pakubowono VI - Jl. Hang Tuah berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -809,6 +1039,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.274946049251555,
+        "longitude": 106.7894419226779,
         "deskripsi": "Traffic Light Jl. Radio Dalam - Jl. KH. Ahmad Dahlan berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -816,6 +1048,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.285165708791957,
+        "longitude": 106.80799735891013,
         "deskripsi": "Traffic Light Jl. Kyai Maja - Jl. Bulungan berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -823,6 +1057,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.25183459928869,
+        "longitude": 106.80829377591941,
         "deskripsi": "Traffic Light Jl. Kramat Pela - Jl. Petogogan 1 berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -830,6 +1066,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.26351244105709,
+        "longitude": 106.83015306089732,
         "deskripsi": "Traffic Light Jl. Hang Tuah VII - Jl. Pati Unus berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -837,6 +1075,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.261059780987376,
+        "longitude": 106.78592459823041,
         "deskripsi": "Traffic Light Jl. Joko Sutono - Jl. Tirtayasa VII - Cikajang berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -844,6 +1084,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.275329247119054,
+        "longitude": 106.81098183199941,
         "deskripsi": "Traffic Light Jl. Gandaria I - Jl. KH. Ahmad Dahlan berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -851,6 +1093,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.270785212078506,
+        "longitude": 106.81678574377825,
         "deskripsi": "Traffic Light Jl. Gandaria - Jl. Gandaria I - Syafii Hadzani (Apartemen) berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -858,6 +1102,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.271719703592494,
+        "longitude": 106.8346418116624,
         "deskripsi": "Traffic Light Jl. Pangeran Antasari - Jl. Manunggal Juang berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -865,6 +1111,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.28423788363582,
+        "longitude": 106.79412630465148,
         "deskripsi": "Traffic Light Jl. Pangeran Antasari - Jl. Pelita (Abdul Masjid) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -872,6 +1120,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.2770402697992,
+        "longitude": 106.78720584458843,
         "deskripsi": "Traffic Light Jl. Pangeran Antasari - Jl. Taman Brawijaya berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -879,6 +1129,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.236598071467552,
+        "longitude": 106.79829799455948,
         "deskripsi": "Traffic Light Jl. Pangeran Antasari - Jl. Prapanca - Kemang berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -886,6 +1138,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.268226405108626,
+        "longitude": 106.79168985283408,
         "deskripsi": "Traffic Light Jl. Gerbang Pemuda - Jl. Glora Senayan (Depan Hotel Mulia) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -893,6 +1147,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.2400461495627155,
+        "longitude": 106.8221949435487,
         "deskripsi": "Traffic Light Jl. Metro Pd Indah - Jl. Gedung Hijau berlokasi di Kebayoran Lama, Jakarta Selatan."
     },
     {
@@ -900,6 +1156,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Selatan",
         "lokasi": "Kebayoran Baru",
+        "latitude": -6.242601550386323,
+        "longitude": 106.79026150699175,
         "deskripsi": "Traffic Light Jl. Panglima Polim IV- Jl. Panglima Polim IX (Dunia Buah) berlokasi di Kebayoran Baru, Jakarta Selatan."
     },
     {
@@ -907,6 +1165,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Cakung",
+        "latitude": -6.247301065805134,
+        "longitude": 106.89986843417311,
         "deskripsi": "Traffic Light Jl. Bekasi Raya - Jl. Pulo Gebang berlokasi di Cakung, Jakarta Timur."
     },
     {
@@ -914,6 +1174,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Cakung",
+        "latitude": -6.200298127362417,
+        "longitude": 106.88314237622491,
         "deskripsi": "Traffic Light Jl. Bekasi Raya - Jl. Kawasan Industri (JIEP) berlokasi di Cakung, Jakarta Timur."
     },
     {
@@ -921,6 +1183,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Kembangan",
+        "latitude": -6.210392778633832,
+        "longitude": 106.89235892730613,
         "deskripsi": "Traffic Light Jl. Joglo Raya - Taman Alfa Indah berlokasi di Kembangan, Jakarta Timur."
     },
     {
@@ -928,6 +1192,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Cakung",
+        "latitude": -6.231641592743829,
+        "longitude": 106.92273991009445,
         "deskripsi": "Traffic Light Jl. Bekasi Raya - Jl. Tol Cakung berlokasi di Cakung, Jakarta Timur."
     },
     {
@@ -935,6 +1201,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Ciracas",
+        "latitude": -6.24777667583134,
+        "longitude": 106.92491275137063,
         "deskripsi": "Traffic Light Jl. Raya Bogor - Jl. Cibubur berlokasi di Ciracas, Jakarta Timur."
     },
     {
@@ -942,6 +1210,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Makasar",
+        "latitude": -6.243613260902652,
+        "longitude": 106.90786496757002,
         "deskripsi": "Traffic Light Jl. Halim PK - Jl. Tol Cikampek berlokasi di Makasar, Jakarta Timur."
     },
     {
@@ -949,6 +1219,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.232720107456916,
+        "longitude": 106.91430706366378,
         "deskripsi": "Traffic Light Jl. Inspeksi Kali Malang - Pondok Kelapa Raya berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -956,6 +1228,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.2400099959515964,
+        "longitude": 106.91992527828839,
         "deskripsi": "Traffic Light Jl. Otista Raya - Jl. Otista III (tembus Kb. Nanas) berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -963,6 +1237,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.225447182655746,
+        "longitude": 106.888723235464,
         "deskripsi": "Traffic Light Jl. Otista Raya - Jl. Cipinang Cempedak (Youth Centre) berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -970,6 +1246,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.218444965320611,
+        "longitude": 106.89905466383334,
         "deskripsi": "Traffic Light Jl. Otista Raya - Jl. Cawang Baru berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -977,6 +1255,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Cempaka Putih",
+        "latitude": -6.214604098796924,
+        "longitude": 106.90611413449832,
         "deskripsi": "Traffic Light Jl. A. Yani -  Jl. Utan Kayu Rawamangun berlokasi di Cempaka Putih, Jakarta Timur."
     },
     {
@@ -984,6 +1264,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Makasar",
+        "latitude": -6.249093728265139,
+        "longitude": 106.8981798633941,
         "deskripsi": "Traffic Light Jl. Raya Bogor - Jl. Pondok Gede (HEK) berlokasi di Makasar, Jakarta Timur."
     },
     {
@@ -991,6 +1273,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Cilandak",
+        "latitude": -6.230887475630014,
+        "longitude": 106.87603226915287,
         "deskripsi": "Traffic Light Jl. TB. Simatupang - Jl. Raya Bogor (Pasar Rebo) berlokasi di Cilandak, Jakarta Timur."
     },
     {
@@ -998,6 +1282,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Kramat Jati",
+        "latitude": -6.216976979759926,
+        "longitude": 106.88800356711795,
         "deskripsi": "Traffic Light Jl. Jend Sutoyo - Jl. Dewi Sartika (PGC) berlokasi di Kramat Jati, Jakarta Timur."
     },
     {
@@ -1005,6 +1291,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.2224690713257464,
+        "longitude": 106.89478648289577,
         "deskripsi": "Traffic Light Jl. DI. Panjaitan - Jl. Otista (Kebon Nanas) berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1012,6 +1300,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.225719684989473,
+        "longitude": 106.89696224283975,
         "deskripsi": "Traffic Light Jl. DI. Panjaitan - Jl. Kali Malang berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1019,6 +1309,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Makasar",
+        "latitude": -6.240141870594605,
+        "longitude": 106.88305071973853,
         "deskripsi": "Traffic Light Jl. Raya Pondok Gede - Jl.  TMII (TAMINI SQUARE) berlokasi di Makasar, Jakarta Timur."
     },
     {
@@ -1026,6 +1318,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Makasar",
+        "latitude": -6.221366186842939,
+        "longitude": 106.90474601783303,
         "deskripsi": "Traffic Light Jl. Raya Pondok Gede - Jl. Kampung Dukuh berlokasi di Makasar, Jakarta Timur."
     },
     {
@@ -1033,6 +1327,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Pulo Gadung",
+        "latitude": -6.204757864900461,
+        "longitude": 106.92532875216169,
         "deskripsi": "Traffic Light Jl. Paus - Jl. Waru berlokasi di Pulo Gadung, Jakarta Timur."
     },
     {
@@ -1040,6 +1336,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Pulo Gadung",
+        "latitude": -6.217899791084768,
+        "longitude": 106.90392583464876,
         "deskripsi": "Traffic Light Jl. Balai Pustaka Timur - Jl. Waru berlokasi di Pulo Gadung, Jakarta Timur."
     },
     {
@@ -1047,6 +1345,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Pulo Gadung",
+        "latitude": -6.232062581559792,
+        "longitude": 106.88669085136826,
         "deskripsi": "Traffic Light Jl. Balai Pustaka Timur - Jl. Cipinang Timur (Persahabatan) berlokasi di Pulo Gadung, Jakarta Timur."
     },
     {
@@ -1054,6 +1354,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.234304789578818,
+        "longitude": 106.90958160124441,
         "deskripsi": "Traffic Light Jl. Bekasi Timur Raya - Jl. I. Gusti Ngurah Rai berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1061,6 +1363,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.247816190559587,
+        "longitude": 106.90353871582187,
         "deskripsi": "Traffic Light Jl. Bekasi Timur Raya - Jl. Cipinang Baru Raya berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1068,6 +1372,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.2428061714301775,
+        "longitude": 106.90433625900972,
         "deskripsi": "Traffic Light Jl. I. Gusti Ngurah Rai - Jl. P. Revolusi (sisi timur) berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1075,6 +1381,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.21300746206705,
+        "longitude": 106.9000662277683,
         "deskripsi": "Traffic Light Jl. P. Revolusi - Jl. Basuki Rachmat berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1082,6 +1390,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.217007668478246,
+        "longitude": 106.89459697024908,
         "deskripsi": "Traffic Light Jl. Sugiono - Jl. Raden Inten II berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1089,6 +1399,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.2090096901967025,
+        "longitude": 106.88483371775989,
         "deskripsi": "Traffic Light Jl. Kayu Putih - Jl. Velodrome (Balap Sepeda) berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1096,6 +1408,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Pulo Gadung",
+        "latitude": -6.216719476241677,
+        "longitude": 106.90968809435985,
         "deskripsi": "Traffic Light Jl. Alu Alu - Jl. Pegambiran berlokasi di Pulo Gadung, Jakarta Timur."
     },
     {
@@ -1103,6 +1417,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.2202433394955285,
+        "longitude": 106.91485236662481,
         "deskripsi": "Traffic Light Jl. Raden Inten II - Jl. Perumnas berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1110,6 +1426,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.242356177686399,
+        "longitude": 106.87855176570555,
         "deskripsi": "Traffic Light Jl. Raden Inten II - Jl. Swadaya (Pendidikan) berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1117,6 +1435,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.213756006847254,
+        "longitude": 106.91370698783685,
         "deskripsi": "Traffic Light Jl. P. Revolusi - Jl. Duren Sawit berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1124,6 +1444,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.249193380895123,
+        "longitude": 106.9074350258633,
         "deskripsi": "Traffic Light Jl. P. Revolusi - Jl. Pondok Bambu Atas (Sate) berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1131,6 +1453,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.203681129152047,
+        "longitude": 106.91887532183523,
         "deskripsi": "Traffic Light Jl. P. Revolusi - Jl. Inspeksi Kali Malang (Jati waringin) berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1138,6 +1462,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.218270149784625,
+        "longitude": 106.8767548341544,
         "deskripsi": "Traffic Light Jl. Inspeksi Kali Malang - Jl. Pondok Bambu Atas berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1145,6 +1471,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.205570360016681,
+        "longitude": 106.9061265755249,
         "deskripsi": "Traffic Light Jl. Inspeksi Kali Malang - Jl. H. Naman berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1152,6 +1480,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Makasar",
+        "latitude": -6.210700153293944,
+        "longitude": 106.92077462137902,
         "deskripsi": "Traffic Light Jl. Taman Mini - Jl. Ceger berlokasi di Makasar, Jakarta Timur."
     },
     {
@@ -1159,6 +1489,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jakarta Timur",
+        "latitude": -6.223937540643636,
+        "longitude": 106.88674008225273,
         "deskripsi": "Traffic Light Jl. Rawasari - Jl. Rawasari Selatan berlokasi di Jakarta Timur, Jakarta Timur."
     },
     {
@@ -1166,6 +1498,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Makasar",
+        "latitude": -6.2271940175511515,
+        "longitude": 106.92056615769901,
         "deskripsi": "Traffic Light Jl. Taman Mini Pintu I - Jl.Raya Hankam berlokasi di Makasar, Jakarta Timur."
     },
     {
@@ -1173,6 +1507,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Pasar Rebo",
+        "latitude": -6.244841049775129,
+        "longitude": 106.89711832943748,
         "deskripsi": "Traffic Light Jl. Raya Bogor - Jl. Cijantung berlokasi di Pasar Rebo, Jakarta Timur."
     },
     {
@@ -1180,6 +1516,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Kramat Jati",
+        "latitude": -6.226898710757298,
+        "longitude": 106.87632179940145,
         "deskripsi": "Traffic Light Jl. MT. Haryono - Jl. Jend. Sutoyo (UKI) berlokasi di Kramat Jati, Jakarta Timur."
     },
     {
@@ -1187,6 +1525,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Kramat Jati",
+        "latitude": -6.234906595349031,
+        "longitude": 106.90141525727502,
         "deskripsi": "Traffic Light Jl. MT. Haryono - Jl. Dewi Sartika (Cawang Kompor) berlokasi di Kramat Jati, Jakarta Timur."
     },
     {
@@ -1194,6 +1534,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.221753020453093,
+        "longitude": 106.91227001883684,
         "deskripsi": "Traffic Light Jl. Bekasi Timur Raya - Jl DI. Panjaitan (KODIM) berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1201,6 +1543,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.209899624963294,
+        "longitude": 106.88220959702748,
         "deskripsi": "Traffic Light Jl. Jend Sutoyo -  Depan KODAM berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1208,6 +1552,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.249110126083301,
+        "longitude": 106.88609257991614,
         "deskripsi": "Traffic Light Jl. R.S Sukamto - Jl. Pondok Kelapa Raya (Pom Bensin) berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1215,6 +1561,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.2235136053118545,
+        "longitude": 106.8977452390662,
         "deskripsi": "Traffic Light Jl. Bekasi Timur Raya - Jl. Jatinegara Kaum berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1222,6 +1570,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Cakung",
+        "latitude": -6.2297059207843155,
+        "longitude": 106.87947875478129,
         "deskripsi": "Traffic Light Jl. Bekasi Raya - Jl. Dr. Rajiman (PUPAR) berlokasi di Cakung, Jakarta Timur."
     },
     {
@@ -1229,6 +1579,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Koja",
+        "latitude": -6.239673106071874,
+        "longitude": 106.8926594880332,
         "deskripsi": "Traffic Light Jl. Keramat Jaya - Depan Islamic Centre berlokasi di Koja, Jakarta Timur."
     },
     {
@@ -1236,6 +1588,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Ciracas",
+        "latitude": -6.248498317293221,
+        "longitude": 106.91710673588902,
         "deskripsi": "Traffic Light Jl. Ciracas Raya - Depan ALHUDA berlokasi di Ciracas, Jakarta Timur."
     },
     {
@@ -1243,6 +1597,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.218531130601967,
+        "longitude": 106.90758183817924,
         "deskripsi": "Traffic Light Jl. Lapangan Tembak - Jl. Kelapa Dua Wetan (Ramayana) berlokasi di Kebayoran Lama, Jakarta Timur."
     },
     {
@@ -1250,6 +1606,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Cakung",
+        "latitude": -6.244512278628637,
+        "longitude": 106.89134941616125,
         "deskripsi": "Traffic Light Jl. Bekasi Raya - Jl. Tipar Cakung berlokasi di Cakung, Jakarta Timur."
     },
     {
@@ -1257,6 +1615,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Kramat Jati",
+        "latitude": -6.204257495830502,
+        "longitude": 106.90580898313068,
         "deskripsi": "Traffic Light Jl. Raya Bogor - Jl. Bulak Rantai berlokasi di Kramat Jati, Jakarta Timur."
     },
     {
@@ -1264,6 +1624,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jakarta Timur",
+        "latitude": -6.21937607843802,
+        "longitude": 106.91796207517837,
         "deskripsi": "Traffic Light Jl. Jatinegara Barat - Jl. Jatinegara Barat I berlokasi di Jakarta Timur, Jakarta Timur."
     },
     {
@@ -1271,6 +1633,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jakarta Timur",
+        "latitude": -6.229310121499037,
+        "longitude": 106.89117329267289,
         "deskripsi": "Traffic Light Jl. Jatinegara Timur - Jl. Jatinegara Timur II berlokasi di Jakarta Timur, Jakarta Timur."
     },
     {
@@ -1278,6 +1642,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Ciracas",
+        "latitude": -6.2235528226071155,
+        "longitude": 106.88540148265838,
         "deskripsi": "Traffic Light Jl. Raya Bogor - Jl. Ciracas berlokasi di Ciracas, Jakarta Timur."
     },
     {
@@ -1285,6 +1651,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.2301259946994945,
+        "longitude": 106.9192677716703,
         "deskripsi": "Traffic Light Jl. Kolonel Sugiono - Jl. Swadaya (Pendidikan) berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1292,6 +1660,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.230602476500319,
+        "longitude": 106.90562384026501,
         "deskripsi": "Traffic Light Jl. I. Gusti Ngurah Rai - Jl. Raden Inten II (Buaran) berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1299,6 +1669,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.235121462937225,
+        "longitude": 106.9216676104469,
         "deskripsi": "Traffic Light Jl. Cipinang Baru - Jl Cipinang Baru Bunder berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1306,6 +1678,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.200737066612124,
+        "longitude": 106.90167630216591,
         "deskripsi": "Traffic Light Jln. Robusta, Pondok Kopi berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1313,6 +1687,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.2297192178831535,
+        "longitude": 106.88230708563572,
         "deskripsi": "Traffic Light Simpang Sukanto - Pondok Kopi (BKT) berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1320,6 +1696,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Cakung",
+        "latitude": -6.209686499126762,
+        "longitude": 106.92181580348341,
         "deskripsi": "Traffic Light Jl.Raya Bekasi - FO Cakung Cilincing berlokasi di Cakung, Jakarta Timur."
     },
     {
@@ -1327,6 +1705,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Cakung",
+        "latitude": -6.219576923117105,
+        "longitude": 106.91859975649298,
         "deskripsi": "Traffic Light Terminal Terpadu Pulo gebang berlokasi di Cakung, Jakarta Timur."
     },
     {
@@ -1334,6 +1714,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Pulo Gadung",
+        "latitude": -6.233674134045475,
+        "longitude": 106.89857539415293,
         "deskripsi": "Traffic Light Jl. Pegambiran - depan terminal Rawamangun berlokasi di Pulo Gadung, Jakarta Timur."
     },
     {
@@ -1341,6 +1723,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Duren Sawit",
+        "latitude": -6.2155323020554745,
+        "longitude": 106.8818686149745,
         "deskripsi": "Traffic Light Jl. I. Gusti Ngurah Rai - Jl. P. Revolusi (sisi barat) berlokasi di Duren Sawit, Jakarta Timur."
     },
     {
@@ -1348,6 +1732,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.20630254707347,
+        "longitude": 106.90769607676599,
         "deskripsi": "Traffic Light Jl. Bekasi Timur Raya - Jl DI. Panjaitan (sisi Timur) berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1355,6 +1741,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Timur",
         "lokasi": "Jatinegara",
+        "latitude": -6.225909661411821,
+        "longitude": 106.9045004447859,
         "deskripsi": "Traffic Light Jl. Jend Sutoyo - Jl. Tol Jagorawi berlokasi di Jatinegara, Jakarta Timur."
     },
     {
@@ -1362,6 +1750,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kembangan",
+        "latitude": -6.158148773378691,
+        "longitude": 106.7766338316376,
         "deskripsi": "Traffic Light Jl. Meruya Selatan-Jl. Joglo berlokasi di Kembangan, Jakarta Barat."
     },
     {
@@ -1369,6 +1759,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kembangan",
+        "latitude": -6.176728799361588,
+        "longitude": 106.77023158459876,
         "deskripsi": "Traffic Light Jl. Meruya Ilir-Jl. Taman Kebon Jeruk (Intercone) berlokasi di Kembangan, Jakarta Barat."
     },
     {
@@ -1376,6 +1768,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kembangan",
+        "latitude": -6.184915267158307,
+        "longitude": 106.74557400603747,
         "deskripsi": "Traffic Light Jl. Meruya Ilir-Jl. Srengseng / Jl. Pesanggrahan berlokasi di Kembangan, Jakarta Barat."
     },
     {
@@ -1383,6 +1777,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kembangan",
+        "latitude": -6.18646067675105,
+        "longitude": 106.73658349193401,
         "deskripsi": "Traffic Light Jl. Meruya Ilir-Jl. Panjang (Relasi) berlokasi di Kembangan, Jakarta Barat."
     },
     {
@@ -1390,6 +1786,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kebon Jeruk",
+        "latitude": -6.150306666143421,
+        "longitude": 106.78103361967561,
         "deskripsi": "Traffic Light Jl. Panjang-Jl. Kedoya Duri berlokasi di Kebon Jeruk, Jakarta Barat."
     },
     {
@@ -1397,6 +1795,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kebon Jeruk",
+        "latitude": -6.174948481919993,
+        "longitude": 106.77937272523012,
         "deskripsi": "Traffic Light Jl. Panjang-Jl. Surya Utama berlokasi di Kebon Jeruk, Jakarta Barat."
     },
     {
@@ -1404,6 +1804,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kebon Jeruk",
+        "latitude": -6.184989278221658,
+        "longitude": 106.74339119105643,
         "deskripsi": "Traffic Light Jl. Panjang-Jl. Kedoya Raya berlokasi di Kebon Jeruk, Jakarta Barat."
     },
     {
@@ -1411,6 +1813,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kebon Jeruk",
+        "latitude": -6.155943003732123,
+        "longitude": 106.75876791970104,
         "deskripsi": "Traffic Light Jl. Panjang-Jl. Green Garden 2 (SPBU) berlokasi di Kebon Jeruk, Jakarta Barat."
     },
     {
@@ -1418,6 +1822,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kebon Jeruk",
+        "latitude": -6.155031692494598,
+        "longitude": 106.77344841109074,
         "deskripsi": "Traffic Light Jl. Panjang-Jl. Green Garden 1 berlokasi di Kebon Jeruk, Jakarta Barat."
     },
     {
@@ -1425,6 +1831,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kebon Jeruk",
+        "latitude": -6.190793544474949,
+        "longitude": 106.74153654858706,
         "deskripsi": "Traffic Light Jl. Panjang-Jl. Daan Mogot berlokasi di Kebon Jeruk, Jakarta Barat."
     },
     {
@@ -1432,6 +1840,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Tambora",
+        "latitude": -6.151255266675864,
+        "longitude": 106.75244726160389,
         "deskripsi": "Traffic Light Jl. Tubagus Angke-Jl. Daan Mogot (Pesing) berlokasi di Tambora, Jakarta Barat."
     },
     {
@@ -1439,6 +1849,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Tambora",
+        "latitude": -6.154299851204666,
+        "longitude": 106.73419170507164,
         "deskripsi": "Traffic Light Jl. Tampak Siring-Jl. Daan Mogot berlokasi di Tambora, Jakarta Barat."
     },
     {
@@ -1446,6 +1858,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Tambora",
+        "latitude": -6.162069222537433,
+        "longitude": 106.77801991068107,
         "deskripsi": "Traffic Light Depan Terminal Kl. Deres-Jl. Daan Mogot berlokasi di Tambora, Jakarta Barat."
     },
     {
@@ -1453,6 +1867,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kembangan",
+        "latitude": -6.192417727724502,
+        "longitude": 106.76543563904525,
         "deskripsi": "Traffic Light Jl. Amir Hamzah-Jl. Kembangan Raya berlokasi di Kembangan, Jakarta Barat."
     },
     {
@@ -1460,6 +1876,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Jakarta Barat",
+        "latitude": -6.187079621697345,
+        "longitude": 106.77599398004642,
         "deskripsi": "Traffic Light Jl. Puri Indah-Jl. Pasanggrahan berlokasi di Jakarta Barat, Jakarta Barat."
     },
     {
@@ -1467,6 +1885,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kebayoran Lama",
+        "latitude": -6.166592117680237,
+        "longitude": 106.74725609316741,
         "deskripsi": "Traffic Light Jl. Tentara Pelajar-Jl. Gelora (Palmerah) berlokasi di Kebayoran Lama, Jakarta Barat."
     },
     {
@@ -1474,6 +1894,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Tambora",
+        "latitude": -6.174270834685179,
+        "longitude": 106.76160397290283,
         "deskripsi": "Traffic Light Jl. Tubagus Angke-Kalijodo berlokasi di Tambora, Jakarta Barat."
     },
     {
@@ -1481,6 +1903,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Palmerah",
+        "latitude": -6.16256265527114,
+        "longitude": 106.7534384778985,
         "deskripsi": "Traffic Light Jl. Pal Merah (Barat)-Jl. Rawa Belong berlokasi di Palmerah, Jakarta Barat."
     },
     {
@@ -1488,6 +1912,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kebon Jeruk",
+        "latitude": -6.178724149177021,
+        "longitude": 106.75878060557677,
         "deskripsi": "Traffic Light Jl. Batusari-Jl. Kebun Jeruk berlokasi di Kebon Jeruk, Jakarta Barat."
     },
     {
@@ -1495,6 +1921,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kembangan",
+        "latitude": -6.173795003001058,
+        "longitude": 106.74800822119899,
         "deskripsi": "Traffic Light Jl. Meruya Ilir-Jl. Kembang Kerep (Pos Polisi) berlokasi di Kembangan, Jakarta Barat."
     },
     {
@@ -1502,6 +1930,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kembangan",
+        "latitude": -6.154628875602374,
+        "longitude": 106.73729804198435,
         "deskripsi": "Traffic Light Jl. Kembang Kerep (Pom Bensin) berlokasi di Kembangan, Jakarta Barat."
     },
     {
@@ -1509,6 +1939,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Tambora",
+        "latitude": -6.167642091726421,
+        "longitude": 106.74126112534917,
         "deskripsi": "Traffic Light Jl. Moch Mansyur - Jl. Tubagus Angke berlokasi di Tambora, Jakarta Barat."
     },
     {
@@ -1516,6 +1948,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Grogol Petamburan",
+        "latitude": -6.1851211372691655,
+        "longitude": 106.77088422175885,
         "deskripsi": "Traffic Light Jl. Latumenten - Keluar TOL (Jembatan Besi) berlokasi di Grogol Petamburan, Jakarta Barat."
     },
     {
@@ -1523,6 +1957,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Cengkareng",
+        "latitude": -6.181391890633872,
+        "longitude": 106.74145715386184,
         "deskripsi": "Traffic Light Simpang Kapuk - Kamal berlokasi di Cengkareng, Jakarta Barat."
     },
     {
@@ -1530,6 +1966,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kembangan",
+        "latitude": -6.180286608522565,
+        "longitude": 106.76531231081219,
         "deskripsi": "Traffic Light Simpang Walikota Jakarta Barat berlokasi di Kembangan, Jakarta Barat."
     },
     {
@@ -1537,6 +1975,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Palmerah",
+        "latitude": -6.179480259672185,
+        "longitude": 106.7687228088229,
         "deskripsi": "Traffic Light Jl. S Parman - Jl. Tomang Raya berlokasi di Palmerah, Jakarta Barat."
     },
     {
@@ -1544,6 +1984,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Palmerah",
+        "latitude": -6.155930961477263,
+        "longitude": 106.74157158774908,
         "deskripsi": "Traffic Light Jl. S Parman - Jl. KS Tubun - Jl. Gatot Subroto (Slipi) berlokasi di Palmerah, Jakarta Barat."
     },
     {
@@ -1551,6 +1993,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kembangan",
+        "latitude": -6.185631199821376,
+        "longitude": 106.75449036110643,
         "deskripsi": "Traffic Light Jl. Kembangan Raya - Jl. Puri Kembangan berlokasi di Kembangan, Jakarta Barat."
     },
     {
@@ -1558,6 +2002,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Tambora",
+        "latitude": -6.162780092191485,
+        "longitude": 106.741380198788,
         "deskripsi": "Traffic Light Jl. Jembatan II - Jl. Tubagus Angke berlokasi di Tambora, Jakarta Barat."
     },
     {
@@ -1565,6 +2011,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Tambora",
+        "latitude": -6.166170075637296,
+        "longitude": 106.74401991382088,
         "deskripsi": "Traffic Light Jl. Mangga Besar (12)- Jl. Mangga Besar VII berlokasi di Tambora, Jakarta Barat."
     },
     {
@@ -1572,6 +2020,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Kebon Jeruk",
+        "latitude": -6.149535426392712,
+        "longitude": 106.74832428838408,
         "deskripsi": "Traffic Light Jl. Batu sari-Jl. Panjang berlokasi di Kebon Jeruk, Jakarta Barat."
     },
     {
@@ -1579,6 +2029,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Tambora",
+        "latitude": -6.18902462197475,
+        "longitude": 106.73625585255394,
         "deskripsi": "Traffic Light Jl. Mangga Besar - Jl. Mangga Besar IX berlokasi di Tambora, Jakarta Barat."
     },
     {
@@ -1586,6 +2038,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Barat",
         "lokasi": "Tambora",
+        "latitude": -6.180133472641657,
+        "longitude": 106.75161978084087,
         "deskripsi": "Traffic Light Jl. Daan Mogot - Jl. Peta Barat (Selatan) berlokasi di Tambora, Jakarta Barat."
     },
     {
@@ -1593,6 +2047,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Penjaringan",
+        "latitude": -6.119550973764088,
+        "longitude": 106.88892799055355,
         "deskripsi": "Traffic Light Jl. Pluit Timur - Jl. Pluit Indah (Mall Pluit sisi Selatan) berlokasi di Penjaringan, Jakarta Utara."
     },
     {
@@ -1600,6 +2056,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Penjaringan",
+        "latitude": -6.117465814971696,
+        "longitude": 106.86342627653472,
         "deskripsi": "Traffic Light Jl. Pluit Sakti - Jl. Pluit Putera berlokasi di Penjaringan, Jakarta Utara."
     },
     {
@@ -1607,6 +2065,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Penjaringan",
+        "latitude": -6.128337828114015,
+        "longitude": 106.85776386881565,
         "deskripsi": "Traffic Light Jl. Pluit Selatan - Jl. Pluit Raya berlokasi di Penjaringan, Jakarta Utara."
     },
     {
@@ -1614,6 +2074,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Tambora",
+        "latitude": -6.148236679651475,
+        "longitude": 106.87227931248877,
         "deskripsi": "Traffic Light Jl. Kopi-Jl. Orpa berlokasi di Tambora, Jakarta Utara."
     },
     {
@@ -1621,6 +2083,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Tanjung Priok",
+        "latitude": -6.1272996865341804,
+        "longitude": 106.87631997701519,
         "deskripsi": "Traffic Light Jl. Danau Sunter Barat - Jl. D. Sunter Utara (GRIYA) berlokasi di Tanjung Priok, Jakarta Utara."
     },
     {
@@ -1628,6 +2092,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Tanjung Priok",
+        "latitude": -6.130286946141435,
+        "longitude": 106.88422918326032,
         "deskripsi": "Traffic Light Jl. Danau Sunter Selatan - Jl. Karya Beton berlokasi di Tanjung Priok, Jakarta Utara."
     },
     {
@@ -1635,6 +2101,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Kelapa Gading",
+        "latitude": -6.14255515456049,
+        "longitude": 106.87325731450153,
         "deskripsi": "Traffic Light Jl. Boulevard Timur - Jl. Kelapa Gading (Depan Kecamatan) berlokasi di Kelapa Gading, Jakarta Utara."
     },
     {
@@ -1642,6 +2110,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Tanjung Priok",
+        "latitude": -6.129394678310791,
+        "longitude": 106.88078788036329,
         "deskripsi": "Traffic Light Jl. Danau Sunter Selatan - Jl. Danau sunter Podomoro (TOYOTA) berlokasi di Tanjung Priok, Jakarta Utara."
     },
     {
@@ -1649,6 +2119,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Tanjung Priok",
+        "latitude": -6.1421117899216675,
+        "longitude": 106.84790101491161,
         "deskripsi": "Traffic Light Jl. Danau Sunter Selatan - Jl. D. Sunter Barat (JUBILE) berlokasi di Tanjung Priok, Jakarta Utara."
     },
     {
@@ -1656,6 +2128,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Tambora",
+        "latitude": -6.150750347984678,
+        "longitude": 106.84494952068565,
         "deskripsi": "Traffic Light Jl. Jembatan III- Jl. Bandengan berlokasi di Tambora, Jakarta Utara."
     },
     {
@@ -1663,6 +2137,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Tanjung Priok",
+        "latitude": -6.163261066575364,
+        "longitude": 106.85086284085669,
         "deskripsi": "Traffic Light Jl. Enggano - Jl. Enim berlokasi di Tanjung Priok, Jakarta Utara."
     },
     {
@@ -1670,6 +2146,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Tanjung Priok",
+        "latitude": -6.120793839894313,
+        "longitude": 106.84602599555205,
         "deskripsi": "Traffic Light Jl. RE. Martadinata - Jl. Danau Sunter (Rel Kereta) berlokasi di Tanjung Priok, Jakarta Utara."
     },
     {
@@ -1677,6 +2155,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Penjaringan",
+        "latitude": -6.153659229114662,
+        "longitude": 106.87600063798449,
         "deskripsi": "Traffic Light Kampung Gusti Teluk Gong berlokasi di Penjaringan, Jakarta Utara."
     },
     {
@@ -1684,6 +2164,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Tanjung Priok",
+        "latitude": -6.1346591470109875,
+        "longitude": 106.84360361867624,
         "deskripsi": "Traffic Light Jln. Danau Sunter Barat - Jln. Danau Agung 2 berlokasi di Tanjung Priok, Jakarta Utara."
     },
     {
@@ -1691,6 +2173,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Jatinegara",
+        "latitude": -6.152358019453244,
+        "longitude": 106.86769416276691,
         "deskripsi": "Traffic Light Simpang Kodamar berlokasi di Jatinegara, Jakarta Utara."
     },
     {
@@ -1698,6 +2182,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Sawah Besar",
+        "latitude": -6.142644695615553,
+        "longitude": 106.85696331892952,
         "deskripsi": "Traffic Light Jl. Pangeran Jayakarta - Jl. Mangga Dua (Gereja SION) berlokasi di Sawah Besar, Jakarta Utara."
     },
     {
@@ -1705,6 +2191,8 @@
         "jenis": "Traffic Light",
         "wilayah": "Jakarta Utara",
         "lokasi": "Kelapa Gading",
+        "latitude": -6.128394461123027,
+        "longitude": 106.85560189312964,
         "deskripsi": "Traffic Light Jl. Boulevard Raya - Jl. Kelapa Nias (sisi selatan) berlokasi di Kelapa Gading, Jakarta Utara."
     }
 ]

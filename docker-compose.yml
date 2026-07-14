@@ -10,6 +10,7 @@ services:
       - XDEBUG=${XDEBUG:-false}
     volumes:
       - ./src:/var/www/html
+      - ./leaflet:/var/www/html/public/leaflet
     depends_on:
       db:
         condition: service_healthy
@@ -22,6 +23,7 @@ services:
       - "80:80"
     volumes:
       - ./src:/var/www/html
+      - ./leaflet:/var/www/html/public/leaflet
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./nginx/ssl:/etc/nginx/ssl:ro
     depends_on:

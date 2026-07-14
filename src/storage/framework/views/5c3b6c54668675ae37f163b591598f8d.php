@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NOC - Sistem Manajemen Laporan Gangguan Perangkat Jaringan">
-    <title>NOC - Manajemen Laporan Gangguan</title>
+    <meta name="description" content="Dinas Perhubungan DKI Jakarta - Sistem Manajemen Laporan Gangguan Perangkat Jaringan">
+    <title>Dinas Perhubungan DKI Jakarta - Manajemen Laporan Gangguan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
@@ -20,7 +20,8 @@
     </style>
 </head>
 <?php ($isHomePage = request()->routeIs('home')); ?>
-<?php ($actor = Auth::guard('admin')->user() ?? Auth::guard('web')->user()); ?>
+<?php ($actor = Auth::guard('web')->user()); ?>
+<?php ($actor = $actor && in_array($actor->role, ['user', 'teknisi'], true) ? $actor : null); ?>
 <body class="bg-slate-50 text-slate-700 antialiased">
 
     <?php if($isHomePage): ?>
@@ -36,10 +37,10 @@
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                     </button>
                     <div class="flex items-center gap-2.5">
-                        <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-600 text-xs font-extrabold text-white">N</div>
+                        <img src="<?php echo e(asset('images/logo-dishub.png')); ?>" alt="Logo Dinas Perhubungan" class="h-9 w-auto object-contain" />
                         <div class="hidden sm:block">
-                            <div class="text-sm font-bold text-slate-900">NOC Panel</div>
-                            <div class="text-[11px] text-slate-400">Network Operation Center</div>
+                            <div class="text-sm font-bold text-slate-900">Dinas Perhubungan</div>
+                            <div class="text-[11px] text-slate-400">DKI Jakarta</div>
                         </div>
                     </div>
                 </div>
@@ -99,7 +100,7 @@
                             <div class="text-[11px] capitalize text-slate-400"><?php echo e($actor->role); ?></div>
                         </div>
                     </div>
-                    <form method="POST" action="<?php echo e(Auth::guard('admin')->check() ? route('adminnoc.logout') : route('logout')); ?>">
+                    <form method="POST" action="<?php echo e(route('logout')); ?>">
                         <?php echo csrf_field(); ?>
                         <button type="submit" class="rounded-lg px-3 py-1.5 text-xs font-semibold text-red-600 hover:bg-red-50">Keluar</button>
                     </form>
@@ -112,34 +113,26 @@
             <aside class="hidden w-56 shrink-0 border-r border-slate-200 bg-white lg:block">
                 <nav class="space-y-0.5 px-2 py-4">
                     <?php if($actor->role === 'admin'): ?>
-                        <?php if(!request()->routeIs('adminnoc.portal')): ?>
-                            <a href="<?php echo e(route('admin.dashboard')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('admin.dashboard') ? 'active' : ''); ?>">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                                Dashboard
-                            </a>
-                        <?php endif; ?>
-                        <a href="<?php echo e(route('adminnoc.portal')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-bold text-slate-600 <?php echo e(request()->routeIs('adminnoc.portal') && !request()->has('tab') ? 'active' : ''); ?>">
+                        <a href="<?php echo e(route('filament.admin.pages.dashboard')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-bold text-slate-600 <?php echo e(request()->routeIs('filament.admin.pages.dashboard') ? 'active' : ''); ?>">
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-                            Portal Admin
+                            Dashboard Admin
                         </a>
-                        <a href="<?php echo e(route('adminnoc.portal', ['tab' => 'perangkat'])); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e((request()->routeIs('adminnoc.portal') && request()->query('tab') === 'perangkat') || request()->routeIs('admin.perangkat') ? 'active' : ''); ?>">
+                        <a href="<?php echo e(route('filament.admin.resources.perangkats.index')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('filament.admin.resources.perangkats.*') ? 'active' : ''); ?>">
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/></svg>
                             Perangkat
                         </a>
-                        <a href="<?php echo e(route('adminnoc.portal', ['tab' => 'gangguan'])); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e((request()->routeIs('adminnoc.portal') && request()->query('tab') === 'gangguan') || request()->routeIs('admin.gangguan') ? 'active' : ''); ?>">
+                        <a href="<?php echo e(route('filament.admin.resources.gangguans.index')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('filament.admin.resources.gangguans.*') ? 'active' : ''); ?>">
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                             Laporan Masuk
                         </a>
-                        <?php if(!request()->routeIs('adminnoc.portal')): ?>
-                            <a href="<?php echo e(url('/admin')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                Filament Panel
-                            </a>
-                        <?php endif; ?>
+                        <a href="<?php echo e(route('filament.admin.pages.reports-overview')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('filament.admin.pages.reports-overview') ? 'active' : ''); ?>">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/></svg>
+                            Ringkasan Laporan
+                        </a>
                     <?php elseif($actor->role === 'operator'): ?>
-                        <a href="<?php echo e(route('user.gangguan')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('user.gangguan*') ? 'active' : ''); ?>">
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
-                            Buat Laporan
+                        <a href="<?php echo e(route('filament.admin.pages.dashboard')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('filament.admin.pages.dashboard') ? 'active' : ''); ?>">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0h6"/></svg>
+                            Panel Operator
                         </a>
                     <?php elseif($actor->role === 'teknisi'): ?>
                         <a href="<?php echo e(route('teknisi.task')); ?>" class="sidebar-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('teknisi.task') ? 'active' : ''); ?>">
@@ -171,14 +164,12 @@
                     </div>
                     <nav class="space-y-0.5 px-2 py-3">
                         <?php if($actor->role === 'admin'): ?>
-                            <?php if(!request()->routeIs('adminnoc.portal')): ?>
-                                <a href="<?php echo e(route('admin.dashboard')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Dashboard</a>
-                            <?php endif; ?>
-                            <a href="<?php echo e(route('adminnoc.portal')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-bold text-slate-600 <?php echo e(request()->routeIs('adminnoc.portal') && !request()->has('tab') ? 'active' : ''); ?>" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Portal Admin</a>
-                            <a href="<?php echo e(route('adminnoc.portal', ['tab' => 'perangkat'])); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e((request()->routeIs('adminnoc.portal') && request()->query('tab') === 'perangkat') || request()->routeIs('admin.perangkat') ? 'active' : ''); ?>" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Perangkat</a>
-                            <a href="<?php echo e(route('adminnoc.portal', ['tab' => 'gangguan'])); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e((request()->routeIs('adminnoc.portal') && request()->query('tab') === 'gangguan') || request()->routeIs('admin.gangguan') ? 'active' : ''); ?>" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Laporan Masuk</a>
+                            <a href="<?php echo e(route('filament.admin.pages.dashboard')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('filament.admin.pages.dashboard') ? 'active' : ''); ?>" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Dashboard Admin</a>
+                            <a href="<?php echo e(route('filament.admin.resources.perangkats.index')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('filament.admin.resources.perangkats.*') ? 'active' : ''); ?>" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Perangkat</a>
+                            <a href="<?php echo e(route('filament.admin.resources.gangguans.index')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('filament.admin.resources.gangguans.*') ? 'active' : ''); ?>" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Laporan Masuk</a>
+                            <a href="<?php echo e(route('filament.admin.pages.reports-overview')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('filament.admin.pages.reports-overview') ? 'active' : ''); ?>" onclick="document.getElementById('mobileSidebar').classList.add('hidden')">Ringkasan Laporan</a>
                         <?php elseif($actor->role === 'operator'): ?>
-                            <a href="<?php echo e(route('user.gangguan')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600">Buat Laporan</a>
+                            <a href="<?php echo e(route('filament.admin.pages.dashboard')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 <?php echo e(request()->routeIs('filament.admin.pages.dashboard') ? 'active' : ''); ?>">Panel Operator</a>
                         <?php elseif($actor->role === 'teknisi'): ?>
                             <a href="<?php echo e(route('teknisi.task')); ?>" class="sidebar-link block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600">Daftar Tugas</a>
                         <?php elseif($actor->role === 'user'): ?>

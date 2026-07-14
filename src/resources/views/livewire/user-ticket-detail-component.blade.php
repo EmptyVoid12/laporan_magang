@@ -19,7 +19,7 @@
             <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                 <div class="mb-4 flex items-center justify-between border-b border-slate-100 pb-4">
                     <h2 class="text-lg font-bold text-slate-800">Informasi Laporan</h2>
-                    <span class="inline-flex rounded-full px-3 py-1 text-xs font-semibold @if($gangguan->isFinallyVerified()) bg-emerald-100 text-emerald-700 @elseif($gangguan->isAwaitingFinalVerification()) bg-amber-100 text-amber-700 @elseif($gangguan->status == 'Selesai') bg-green-100 text-green-700 @elseif($gangguan->status == 'Proses') bg-sky-100 text-sky-700 @elseif($gangguan->status == 'Diverifikasi') bg-indigo-100 text-indigo-700 @elseif($gangguan->status == 'Menunggu') bg-orange-100 text-orange-700 @elseif($gangguan->status == 'Ditolak') bg-slate-100 text-slate-500 @else bg-red-100 text-red-700 @endif">{{ $gangguan->workflow_status_label }}</span>
+                    <span class="inline-flex rounded-full px-3 py-1 text-xs font-semibold @if($gangguan->isFinallyVerified()) bg-emerald-100 text-emerald-700 @elseif($gangguan->isAwaitingFinalVerification()) bg-amber-100 text-amber-700 @elseif($gangguan->status == 'Selesai') bg-green-100 text-green-700 @elseif($gangguan->status == 'Proses') bg-sky-100 text-sky-700 @elseif($gangguan->status == 'Diterima') bg-indigo-100 text-indigo-700 @elseif($gangguan->status == 'Menunggu') bg-orange-100 text-orange-700 @elseif($gangguan->status == 'Ditolak') bg-slate-100 text-slate-500 @else bg-red-100 text-red-700 @endif">{{ $gangguan->workflow_status_label }}</span>
                 </div>
 
                 <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2">

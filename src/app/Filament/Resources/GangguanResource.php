@@ -36,7 +36,6 @@ class GangguanResource extends Resource
                             $perangkat->id => "{$perangkat->nama_perangkat} - {$perangkat->jenis} - " . ($perangkat->wilayah ?: 'Tanpa Wilayah') . " ({$perangkat->lokasi})",
                         ])
                         ->all())
-                    ->searchable()
                     ->required(),
                 Forms\Components\DatePicker::make('tanggal')->required(),
                 Forms\Components\Select::make('prioritas')
@@ -48,7 +47,6 @@ class GangguanResource extends Resource
                 Forms\Components\Select::make('teknisi_id')
                     ->label('Assign Teknisi')
                     ->options(User::where('role', 'teknisi')->pluck('name', 'id'))
-                    ->searchable()
                     ->nullable(),
                 Forms\Components\Textarea::make('deskripsi')->required()->columnSpanFull(),
             ]);
@@ -77,10 +75,11 @@ class GangguanResource extends Resource
                     ->badge()
                     ->color(fn (string $state): string => match ($state) {
                         'Open' => 'danger',
-                        'Diverifikasi' => 'info',
+                        'Diterima' => 'info',
                         'Proses' => 'warning',
                         'Menunggu' => 'warning',
-                        'Selesai' => 'success',
+                        'Selesai' => 'warning',
+                        'Diverifikasi' => 'success',
                         'Ditolak' => 'gray',
                         default => 'gray',
                     }),

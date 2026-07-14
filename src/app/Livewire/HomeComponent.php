@@ -38,9 +38,8 @@ class HomeComponent extends Component
         $open = Gangguan::where('status', Gangguan::STATUS_OPEN)->count();
         $proses = Gangguan::where('status', Gangguan::STATUS_PROSES)->count();
         $menunggu = Gangguan::where('status', Gangguan::STATUS_MENUNGGU)->count();
-        $diverifikasi = Gangguan::where('status', Gangguan::STATUS_SELESAI)
-            ->whereNotNull('verified_at')
-            ->count();
+        $selesai = Gangguan::where('status', Gangguan::STATUS_SELESAI)->count();
+        $diverifikasi = Gangguan::where('status', Gangguan::STATUS_DIVERIFIKASI)->count();
         $recentReports = Gangguan::with(['perangkat', 'teknisi'])
             ->latest()
             ->take(5)
@@ -51,6 +50,7 @@ class HomeComponent extends Component
             'open' => $open,
             'proses' => $proses,
             'menunggu' => $menunggu,
+            'selesai' => $selesai,
             'diverifikasi' => $diverifikasi,
             'recentReports' => $recentReports,
         ]);

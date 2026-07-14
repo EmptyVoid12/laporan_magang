@@ -42,7 +42,7 @@ class AdminGangguanComponent extends Component
         if($gangguan) {
             $gangguan->teknisi_id = $teknisiId ?: null;
             if($teknisiId && $gangguan->status === Gangguan::STATUS_OPEN) {
-                $gangguan->status = Gangguan::STATUS_DIVERIFIKASI;
+                $gangguan->status = Gangguan::STATUS_DITERIMA;
             }
             $gangguan->save();
             session()->flash('message', 'Teknisi berhasil ditugaskan.');

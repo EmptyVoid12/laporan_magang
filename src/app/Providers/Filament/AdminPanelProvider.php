@@ -33,6 +33,9 @@ class AdminPanelProvider extends PanelProvider
             ->spa()
             ->login()
             ->passwordReset()
+            ->brandName('Dinas Perhubungan DKI Jakarta')
+            ->brandLogo(fn () => view('filament.logo'))
+            ->brandLogoHeight('2.5rem')
             ->profile(\App\Filament\Pages\Auth\EditProfile::class, isSimple: false)
             ->defaultThemeMode(ThemeMode::Light)
             ->font('Montserrat')
@@ -51,6 +54,9 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Admin/Widgets'), for: 'App\\Filament\\Admin\\Widgets')
             ->widgets([
                 \Awcodes\Overlook\Widgets\OverlookWidget::class,
+                \App\Filament\Admin\Widgets\ServicePerformanceOverview::class,
+                \App\Filament\Admin\Widgets\MapDashboardWidget::class,
+                \App\Filament\Admin\Widgets\LatestAccessLogs::class,
             ])
             ->navigationGroups([
                 NavigationGroup::make()
@@ -86,8 +92,8 @@ class AdminPanelProvider extends PanelProvider
                     ->showEmptyPanelOnMobile(false)
                     ->formPanelPosition('right')
                     ->formPanelWidth('40%')
-                    ->emptyPanelBackgroundImageOpacity('70%')
-                    ->emptyPanelBackgroundImageUrl('https://picsum.photos/seed/picsum/1260/750.webp/?blur=1'),
+                    ->emptyPanelBackgroundColor(Color::hex('#ffffff'))
+                    ->emptyPanelView('filament.login-empty-panel'),
                 \Awcodes\LightSwitch\LightSwitchPlugin::make()
                     ->position(\Awcodes\LightSwitch\Enums\Alignment::BottomCenter)
                     ->enabledOn([

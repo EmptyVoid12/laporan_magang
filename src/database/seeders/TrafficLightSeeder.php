@@ -30,6 +30,8 @@ class TrafficLightSeeder extends Seeder
                     'jenis' => $item['jenis'],
                     'wilayah' => $item['wilayah'],
                     'lokasi' => $item['lokasi'],
+                    'latitude' => $item['latitude'] ?? null,
+                    'longitude' => $item['longitude'] ?? null,
                     'deskripsi' => $item['deskripsi'],
                 ]
             );

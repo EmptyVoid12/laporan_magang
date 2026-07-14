@@ -39,7 +39,6 @@ class GangguanResource extends Resource
                             $perangkat->id => "{$perangkat->nama_perangkat} - {$perangkat->jenis} - " . ($perangkat->wilayah ?: 'Tanpa Wilayah') . " ({$perangkat->lokasi})",
                         ])
                         ->all())
-                    ->searchable()
                     ->required(),
                 Forms\Components\DatePicker::make('tanggal')->required(),
                 Forms\Components\Select::make('prioritas')
@@ -51,7 +50,6 @@ class GangguanResource extends Resource
                 Forms\Components\Select::make('teknisi_id')
                     ->label('Assign Teknisi')
                     ->options(User::where('role', 'teknisi')->pluck('name', 'id'))
-                    ->searchable()
                     ->nullable(),
                 Forms\Components\Placeholder::make('final_verification_status')
                     ->label('Status Verifikasi Akhir')
@@ -96,7 +94,7 @@ class GangguanResource extends Resource
                         'Menunggu Verifikasi Akhir' => 'warning',
                         'Selesai Terverifikasi' => 'success',
                         'Open' => 'danger',
-                        'Diverifikasi' => 'info',
+                        'Diterima' => 'info',
                         'Proses' => 'warning',
                         'Menunggu' => 'warning',
                         'Selesai' => 'success',
@@ -146,6 +144,7 @@ class GangguanResource extends Resource
                     ])
                     ->action(function (Gangguan $record, array $data): void {
                         $record->update([
+                            'status' => Gangguan::STATUS_DIVERIFIKASI,
                             'verified_at' => now(),
                             'verified_by' => auth()->id(),
                             'verification_notes' => $data['verification_notes'] ?? null,

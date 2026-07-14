@@ -137,7 +137,7 @@
                                         @elseif($laporan->isAwaitingFinalVerification()) bg-amber-100 text-amber-700
                                         @elseif($laporan->status == 'Selesai') bg-green-100 text-green-700
                                         @elseif($laporan->status == 'Proses') bg-sky-100 text-sky-700
-                                        @elseif($laporan->status == 'Diverifikasi') bg-indigo-100 text-indigo-700
+                                        @elseif($laporan->status == 'Diterima') bg-indigo-100 text-indigo-700
                                         @elseif($laporan->status == 'Menunggu') bg-orange-100 text-orange-700
                                         @elseif($laporan->status == 'Ditolak') bg-slate-100 text-slate-500
                                         @else bg-red-100 text-red-700 @endif">

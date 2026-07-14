@@ -28,7 +28,14 @@ class Perangkat extends Model
         'jenis',
         'wilayah',
         'lokasi',
+        'latitude',
+        'longitude',
         'deskripsi',
+    ];
+
+    protected $casts = [
+        'latitude' => 'float',
+        'longitude' => 'float',
     ];
 
     public function gangguans()

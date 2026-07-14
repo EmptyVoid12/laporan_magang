@@ -12,7 +12,7 @@ it('labels pending and verified completion states correctly', function () {
     ]);
 
     $verified = new Gangguan([
-        'status' => Gangguan::STATUS_SELESAI,
+        'status' => Gangguan::STATUS_DIVERIFIKASI,
         'submitted_for_verification_at' => now(),
         'verified_at' => now(),
     ]);
